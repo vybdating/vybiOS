@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		569597FC255C158F0087575E /* DefaultButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569597FB255C158F0087575E /* DefaultButtonView.swift */; };
+		56959807255C41CC0087575E /* NumberInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56959806255C41CC0087575E /* NumberInputView.swift */; };
+		56959810255C5ADC0087575E /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5695980F255C5ADC0087575E /* ColorExtension.swift */; };
+		56959815255C5D3C0087575E /* GenericViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56959814255C5D3C0087575E /* GenericViewExtension.swift */; };
+		5695981A255C64260087575E /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56959819255C64260087575E /* LoginController.swift */; };
 		56AA38DD255B75CE0049997E /* Vyb_DatingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AA38DC255B75CE0049997E /* Vyb_DatingApp.swift */; };
-		56AA38DF255B75CE0049997E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AA38DE255B75CE0049997E /* ContentView.swift */; };
+		56AA38DF255B75CE0049997E /* PhoneNumberController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AA38DE255B75CE0049997E /* PhoneNumberController.swift */; };
 		56AA38E1255B75D00049997E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56AA38E0255B75D00049997E /* Assets.xcassets */; };
 		56AA38E4255B75D00049997E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56AA38E3255B75D00049997E /* Preview Assets.xcassets */; };
 		56AA38EF255B75D10049997E /* Vyb_DatingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AA38EE255B75D10049997E /* Vyb_DatingTests.swift */; };
@@ -33,9 +38,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		569597FB255C158F0087575E /* DefaultButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultButtonView.swift; sourceTree = "<group>"; };
+		56959806255C41CC0087575E /* NumberInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberInputView.swift; sourceTree = "<group>"; };
+		5695980F255C5ADC0087575E /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		56959814255C5D3C0087575E /* GenericViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericViewExtension.swift; sourceTree = "<group>"; };
+		56959819255C64260087575E /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		56AA38D9255B75CE0049997E /* Vyb Dating.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vyb Dating.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		56AA38DC255B75CE0049997E /* Vyb_DatingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vyb_DatingApp.swift; sourceTree = "<group>"; };
-		56AA38DE255B75CE0049997E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		56AA38DE255B75CE0049997E /* PhoneNumberController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberController.swift; sourceTree = "<group>"; };
 		56AA38E0255B75D00049997E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		56AA38E3255B75D00049997E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		56AA38E5255B75D00049997E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -72,6 +82,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		569597F5255C14AA0087575E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				56AA38DC255B75CE0049997E /* Vyb_DatingApp.swift */,
+				56AA38DE255B75CE0049997E /* PhoneNumberController.swift */,
+				56959819255C64260087575E /* LoginController.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		569597F9255C14B70087575E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				569597FB255C158F0087575E /* DefaultButtonView.swift */,
+				56959806255C41CC0087575E /* NumberInputView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		569597FA255C14E00087575E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5695980E255C5AB20087575E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5695980F255C5ADC0087575E /* ColorExtension.swift */,
+				56959814255C5D3C0087575E /* GenericViewExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		56AA38D0255B75CE0049997E = {
 			isa = PBXGroup;
 			children = (
@@ -95,8 +140,10 @@
 		56AA38DB255B75CE0049997E /* Vyb Dating */ = {
 			isa = PBXGroup;
 			children = (
-				56AA38DC255B75CE0049997E /* Vyb_DatingApp.swift */,
-				56AA38DE255B75CE0049997E /* ContentView.swift */,
+				5695980E255C5AB20087575E /* Extensions */,
+				569597FA255C14E00087575E /* Models */,
+				569597F9255C14B70087575E /* Views */,
+				569597F5255C14AA0087575E /* App */,
 				56AA38E0255B75D00049997E /* Assets.xcassets */,
 				56AA38E5255B75D00049997E /* Info.plist */,
 				56AA38E2255B75D00049997E /* Preview Content */,
@@ -259,8 +306,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56AA38DF255B75CE0049997E /* ContentView.swift in Sources */,
+				56959807255C41CC0087575E /* NumberInputView.swift in Sources */,
+				56AA38DF255B75CE0049997E /* PhoneNumberController.swift in Sources */,
+				569597FC255C158F0087575E /* DefaultButtonView.swift in Sources */,
 				56AA38DD255B75CE0049997E /* Vyb_DatingApp.swift in Sources */,
+				56959815255C5D3C0087575E /* GenericViewExtension.swift in Sources */,
+				56959810255C5ADC0087575E /* ColorExtension.swift in Sources */,
+				5695981A255C64260087575E /* LoginController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,7 +478,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "vybdating.com.Vyb-Dating";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vyb-dating.app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -447,7 +499,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "vybdating.com.Vyb-Dating";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vyb-dating.app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

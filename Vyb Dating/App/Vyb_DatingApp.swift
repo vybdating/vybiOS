@@ -11,7 +11,7 @@ import SwiftUI
 struct Vyb_DatingApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            PhoneNumberController()
         }
     }
 }
