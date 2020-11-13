@@ -11,8 +11,11 @@ struct ProfileController: View {
     //MARK: Properties
     @State var selection: NavigationPushedAction? = nil
     @State var showAlert = false
-    @State var alertMessage = "Something went wrong, Ttry again."
+    @State var alertMessage = "Something went wrong, Try again."
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @State var feetSelected = 5
+    @State var inchSelected = 5
+    let bodyTypes = ["Ectomorphs","Endomorphs","Mesomorphs"]
     
    
     //MARK: Body
@@ -28,13 +31,48 @@ struct ProfileController: View {
                 .padding(.bottom, 32)
             
             VStack(alignment: .leading, spacing: 16){
-                PickerInputView(placeHolder: "Height", selection: { selected in
+                VStack (alignment: .leading, spacing: 8) {
+                    Text("Height")
+                        .foregroundColor(.black)
+                        .font(.headline)
+                        .padding(.bottom, 0)
+                    
+                    HStack(alignment: .center, spacing: /*@START_MENU_TOKEN@*/nil/*@END_MENU_TOKEN@*/) {
+                        VStack {
+                            Text("Feet")
+                                .foregroundColor(.gray)
+                                .font(.body)
+                                .padding(.bottom, 0)
+                            Picker(selection: $feetSelected, label: Text("Feet")) {
+                                   ForEach(0..<10) {
+                                     Text("\($0)").tag($0)
+                                    }
+                            }.labelsHidden()
+                            .clipped()
+                        }
+                        .labelsHidden()
+                        .frame(width: 150, height: .infinity, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                        .clipped()
+                        Spacer()
+                        VStack {
+                            Text("Inch")
+                                .foregroundColor(.gray)
+                                .font(.body)
+                                .padding(.bottom, 0)
+                            Picker(selection: $inchSelected, label: Text("Inch")) {
+                                ForEach(0..<10) {
+                                  Text("\($0)").tag($0)
+                                 }
+                            }
+                        }.frame(width: 150, height: .infinity, alignment: .center)
+                        .clipped()
+                    }
+                    .clipped()
+                }
+               
+                PickerInputView(placeHolder: "Body Type", options: self.bodyTypes, selection: { selected in
                     print("SELECTED \(selected)")
-                })
-                
-                PickerInputView(placeHolder: "Body Type", selection: { selected in
-                    print("SELECTED \(selected)")
-                })
+                }).padding(.top, 16)
                 
                 NavigationLink(destination: PhoneNumberController(), tag: NavigationPushedAction.phoneNumberAction, selection: $selection) {
                     DefaultButton(title: "Next", action:{

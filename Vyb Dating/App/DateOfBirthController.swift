@@ -44,7 +44,9 @@ struct DateOfBirthController: View {
             DatePicker("Picker", selection: $pickerDate, in: dateClosedRange, displayedComponents: .date)
                 .labelsHidden()
                 .datePickerStyle(WheelDatePickerStyle())
-            
+                .colorMultiply(Color.primaryVybe)
+                .accentColor(Color.primaryVybe)
+           
             NavigationLink(destination: PhoneNumberController(), tag: NavigationPushedAction.phoneNumberAction, selection: $selection) {
                 DefaultButton(title: "Next", action:{
                     self.selection = NavigationPushedAction.phoneNumberAction

@@ -8,22 +8,29 @@
 import SwiftUI
 
 struct PickerInputView: View {
-     var placeText: String = "Height"
-     private var selection: (String) -> Void
+    //MARK: Properties
+    @State var selectedType: String = ""
+    var placeHolder: String = ""
+    var options: [String] = []
+    @State private var optionActions: [ActionSheet.Button] = []
+    private var selection: (String) -> Void
     @State private var showingActionSheet = false
-   
+    
     //MARK: init this action
-    init(placeHolder: String, selection: @escaping (String) -> Void) {
-        self.placeText = placeHolder
+    init(placeHolder: String, options: [String], selection: @escaping (String) -> Void) {
         self.selection = selection
+        self.options = options
+        self.placeHolder = placeHolder
     }
     
     var body: some View {
         Button(action: {
             self.showingActionSheet = true
         }) {
-            HStack(spacing: 8) {
-                Text(self.placeText)
+            HStack(spacing: 0) {
+                Text(self.selectedType.isEmpty ? placeHolder : self.selectedType)
+                    .font(.headline)
+                    .foregroundColor(self.selectedType.isEmpty ? Color.gray : Color.primaryVybe)
                 Spacer()
                 Image("DownArrow")
                     .resizable()
@@ -36,34 +43,35 @@ struct PickerInputView: View {
          //: BUTTON
         }.accentColor(.black)
         .foregroundColor(.black)
-        .background(Color.textFieldGrey)
-        .cornerRadius(40)
-        .overlay(
-            RoundedRectangle(cornerRadius: 40)
-                .stroke(Color.textFieldGrey, lineWidth: 0)
-                .shadow(color: .black, radius: 2, x: 0, y: 2)
-    )
+        .background(RoundedRectangle(cornerRadius: 44)
+                        .stroke(Color.textFieldGrey, lineWidth: 0)
+                        .shadow(color: .black, radius: 2, x: 0, y: 2)
+                        .frame(width: .infinity, height: 44, alignment: .leading)
+                        .background(Color.textFieldGrey)
+                        .cornerRadius(44))
+        .cornerRadius(22)
         .padding([.top, .bottom], 0)
         .font(Font.system(size: 19, weight: .semibold))
+        .frame(width: .infinity, height: 44, alignment: .leading)
+        .clipped()
         .actionSheet(isPresented: $showingActionSheet) {
-            ActionSheet(title: Text("Vyb Action"), message: Text("Select Action"), buttons: [
-                .default(Text("Fight")) {
-                    self.selection("Fight")
-                },
-                .default(Text("Flight")) {
-                    self.selection("Flight")
-                },
-                .default(Text("False Alarm")) {
-                    self.selection("False Alarm")
-                },
-            ])
+            ActionSheet(title: Text(Constants.displayName), message: Text("Select Action"), buttons: optionActions
+            )
+        }.onAppear(){
+            options.forEach { actionText in
+                optionActions.append(ActionSheet.Button.default(Text(actionText), action: {
+                    self.selection(actionText)
+                    self.selectedType = actionText
+                }))
             }
+            optionActions.append(ActionSheet.Button.cancel())
+        }
     }
 }
 
 struct PickerInputView_Previews: PreviewProvider {
     static var previews: some View {
-        PickerInputView(placeHolder: "Height", selection: {_ in
+        PickerInputView(placeHolder: "Height", options: ["Test 1", "Test 2"], selection: {_ in
             
         } ).previewLayout(.sizeThatFits)
     }

@@ -50,7 +50,7 @@ struct ProfessionalDetailsController: View {
                       .background(RoundedRectangle(cornerRadius: 40).fill(Color.textFieldGrey))
                 
             }
-            
+            //: VSTACK
            
             
                 NavigationLink(destination: PhoneNumberController(), tag: NavigationPushedAction.phoneNumberAction, selection: $selection) {
@@ -60,6 +60,7 @@ struct ProfessionalDetailsController: View {
                 }.padding(.top, 64)
             
                 Spacer()
+            
         }.padding([.leading,.trailing],32)
         .navigationTitle("")
         .navigationBarTitle(Text(""))

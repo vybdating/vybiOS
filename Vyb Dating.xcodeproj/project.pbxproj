@@ -28,6 +28,7 @@
 		56F422A4255E8BF000A1ABAC /* DateOfBirthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F422A3255E8BF000A1ABAC /* DateOfBirthController.swift */; };
 		56F422A9255E960400A1ABAC /* ProfilePictureContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F422A8255E960400A1ABAC /* ProfilePictureContoller.swift */; };
 		56F422AE255EA86800A1ABAC /* ProfessionalDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F422AD255EA86800A1ABAC /* ProfessionalDetailsController.swift */; };
+		56F422B3255EABBF00A1ABAC /* VerificationCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F422B2255EABBF00A1ABAC /* VerificationCodeController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		56F422A3255E8BF000A1ABAC /* DateOfBirthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateOfBirthController.swift; sourceTree = "<group>"; };
 		56F422A8255E960400A1ABAC /* ProfilePictureContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePictureContoller.swift; sourceTree = "<group>"; };
 		56F422AD255EA86800A1ABAC /* ProfessionalDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessionalDetailsController.swift; sourceTree = "<group>"; };
+		56F422B2255EABBF00A1ABAC /* VerificationCodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationCodeController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				56F422A3255E8BF000A1ABAC /* DateOfBirthController.swift */,
 				56F422A8255E960400A1ABAC /* ProfilePictureContoller.swift */,
 				56F422AD255EA86800A1ABAC /* ProfessionalDetailsController.swift */,
+				56F422B2255EABBF00A1ABAC /* VerificationCodeController.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				56C938BE255D81B800E94A98 /* Mics.swift in Sources */,
 				56959810255C5ADC0087575E /* Color+Extension.swift in Sources */,
 				56C9389B255D6E4200E94A98 /* FullNameController.swift in Sources */,
+				56F422B3255EABBF00A1ABAC /* VerificationCodeController.swift in Sources */,
 				5695981A255C64260087575E /* LoginController.swift in Sources */,
 				56F422AE255EA86800A1ABAC /* ProfessionalDetailsController.swift in Sources */,
 				56C93893255CAE1E00E94A98 /* Constants.swift in Sources */,
