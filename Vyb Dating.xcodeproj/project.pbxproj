@@ -26,6 +26,8 @@
 		56C938D1255DA30400E94A98 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C938D0255DA30400E94A98 /* ProfileController.swift */; };
 		56C938D6255DA66C00E94A98 /* PickerInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C938D5255DA66C00E94A98 /* PickerInputView.swift */; };
 		56F422A4255E8BF000A1ABAC /* DateOfBirthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F422A3255E8BF000A1ABAC /* DateOfBirthController.swift */; };
+		56F422A9255E960400A1ABAC /* ProfilePictureContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F422A8255E960400A1ABAC /* ProfilePictureContoller.swift */; };
+		56F422AE255EA86800A1ABAC /* ProfessionalDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F422AD255EA86800A1ABAC /* ProfessionalDetailsController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		56C938D0255DA30400E94A98 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		56C938D5255DA66C00E94A98 /* PickerInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerInputView.swift; sourceTree = "<group>"; };
 		56F422A3255E8BF000A1ABAC /* DateOfBirthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateOfBirthController.swift; sourceTree = "<group>"; };
+		56F422A8255E960400A1ABAC /* ProfilePictureContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePictureContoller.swift; sourceTree = "<group>"; };
+		56F422AD255EA86800A1ABAC /* ProfessionalDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessionalDetailsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,8 @@
 				56C9389A255D6E4200E94A98 /* FullNameController.swift */,
 				56C938D0255DA30400E94A98 /* ProfileController.swift */,
 				56F422A3255E8BF000A1ABAC /* DateOfBirthController.swift */,
+				56F422A8255E960400A1ABAC /* ProfilePictureContoller.swift */,
+				56F422AD255EA86800A1ABAC /* ProfessionalDetailsController.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -345,6 +351,7 @@
 				569597FC255C158F0087575E /* DefaultButtonView.swift in Sources */,
 				56C938CC255D997A00E94A98 /* String+Extension.swift in Sources */,
 				56C938D1255DA30400E94A98 /* ProfileController.swift in Sources */,
+				56F422A9255E960400A1ABAC /* ProfilePictureContoller.swift in Sources */,
 				56AA38DD255B75CE0049997E /* Vyb_DatingApp.swift in Sources */,
 				56F422A4255E8BF000A1ABAC /* DateOfBirthController.swift in Sources */,
 				56959815255C5D3C0087575E /* GenericView+Extension.swift in Sources */,
@@ -352,6 +359,7 @@
 				56959810255C5ADC0087575E /* Color+Extension.swift in Sources */,
 				56C9389B255D6E4200E94A98 /* FullNameController.swift in Sources */,
 				5695981A255C64260087575E /* LoginController.swift in Sources */,
+				56F422AE255EA86800A1ABAC /* ProfessionalDetailsController.swift in Sources */,
 				56C93893255CAE1E00E94A98 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

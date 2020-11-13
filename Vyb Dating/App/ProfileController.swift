@@ -10,12 +10,14 @@ import SwiftUI
 struct ProfileController: View {
     //MARK: Properties
     @State var selection: NavigationPushedAction? = nil
+    @State var showAlert = false
+    @State var alertMessage = "Something went wrong, Ttry again."
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
    
     //MARK: Body
     var body: some View {
-        NavigationView {
-         VStack(alignment: .leading, spacing: 16, content: {
+         VStack(alignment: .leading, spacing: 4, content: {
             Text("Profile")
                 .foregroundColor(.black)
                 .font(Font.system(size: 30, weight: .bold))
@@ -43,7 +45,24 @@ struct ProfileController: View {
             }
             Spacer()
         }).padding([.leading,.trailing],32)
-      }
+         .navigationTitle("")
+         .navigationBarTitle(Text(""))
+         .navigationBarBackButtonHidden(true)
+         .navigationBarItems(leading:
+                     Button(action: {
+                         self.presentationMode.wrappedValue.dismiss()
+                     }) {
+                         Image("NavigationBack")
+                             .resizable()
+                             .imageScale(.large)
+                             .scaledToFit()
+                             .frame(width: 32, height: 64, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                             .clipped()
+                     }
+             ).alert(isPresented: $showAlert) { () -> Alert in
+                 Alert(title: Text(Constants.displayName), message: Text("\(alertMessage)"))
+             }
+      
     }
 }
 

@@ -12,26 +12,36 @@ struct FullNameController: View {
     @State var selection: NavigationPushedAction? = nil
     @State var firstName: String = ""
     @State var lastName: String = ""
+    @State var showAlert = false
+    @State var alertMessage = "Something went wrong, Ttry again."
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+
     
     //MARK:Body
     var body: some View {
         
-            VStack (alignment: .leading, spacing: 16) {
+            VStack (alignment: .leading, spacing: 4) {
                   Text("What's your name")
                         .foregroundColor(.black)
                         .font(Font.system(size: 30, weight: .bold))
-                        .padding(.bottom, 32)
+                      
+                Text("People identify you by these details.\nMake it cont")
+                    .foregroundColor(.gray)
+                    .font(.body)
+                    .padding(.bottom, 32)
                     
-                   TextField("Enter First Name", text: $firstName)
-                        .textContentType(.givenName)
-                        .keyboardType(.alphabet)
-                        .padding(16)
-                        .font(.title3)
-                        .foregroundColor(Color.black)
-                        .accentColor(Color.black)
-                        .background(RoundedRectangle(cornerRadius: 40).fill(Color.textFieldGrey))
-                
-                VStack {
+                  
+                VStack (alignment: .leading, spacing: 16) {
+                    TextField("Enter First Name", text: $firstName)
+                         .textContentType(.givenName)
+                         .keyboardType(.alphabet)
+                         .padding(16)
+                         .font(.title3)
+                         .foregroundColor(Color.black)
+                         .accentColor(Color.black)
+                         .background(RoundedRectangle(cornerRadius: 40).fill(Color.textFieldGrey))
+                 
+                    
                     TextField("Enter Last Name", text: $lastName)
                           .textContentType(.familyName)
                           .keyboardType(.alphabet)
@@ -44,7 +54,7 @@ struct FullNameController: View {
                     Text("we dont share your last name o your profile.")
                         .foregroundColor(.black)
                         .font(.callout)
-                        .padding(0)
+                        .padding(.leading, 16)
                 }
                 
                
@@ -57,6 +67,23 @@ struct FullNameController: View {
                 
                     Spacer()
             }.padding([.leading,.trailing],32)
+            .navigationTitle("")
+            .navigationBarTitle(Text(""))
+            .navigationBarBackButtonHidden(true)
+            .navigationBarItems(leading:
+                        Button(action: {
+                            self.presentationMode.wrappedValue.dismiss()
+                        }) {
+                            Image("NavigationBack")
+                                .resizable()
+                                .imageScale(.large)
+                                .scaledToFit()
+                                .frame(width: 32, height: 64, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                .clipped()
+                        }
+                ).alert(isPresented: $showAlert) { () -> Alert in
+                    Alert(title: Text(Constants.displayName), message: Text("\(alertMessage)"))
+                }
         
     }
 }

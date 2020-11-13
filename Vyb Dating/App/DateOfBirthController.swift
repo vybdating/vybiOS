@@ -11,6 +11,9 @@ struct DateOfBirthController: View {
     //MARK: properties
     @State var pickerDate: Date = Calendar.current.date(byAdding: .year, value: -18, to: Date()) ?? Date()
     @State var selection: NavigationPushedAction? = nil
+    @State var showAlert = false
+    @State var alertMessage = "Something went wrong, Ttry again."
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     //MARK: format the date
     let dateFormatter: DateFormatter = {
@@ -26,12 +29,17 @@ struct DateOfBirthController: View {
         return min...max
     }
     
+    //MARK: body
     var body: some View {
-        VStack(alignment: .leading, spacing: 16) {
+        VStack(alignment: .leading, spacing: 4) {
             Text("What's your date of birth?")
                   .foregroundColor(.black)
                   .font(Font.system(size: 30, weight: .bold))
-                  .padding(.bottom, 32)
+            
+            Text("Your date of birth will really help.")
+                .foregroundColor(.gray)
+                .font(.body)
+                .padding(.bottom, 32)
             
             DatePicker("Picker", selection: $pickerDate, in: dateClosedRange, displayedComponents: .date)
                 .labelsHidden()
@@ -45,6 +53,23 @@ struct DateOfBirthController: View {
             
             Spacer()
         }.padding([.leading,.trailing],32)
+        .navigationTitle("")
+        .navigationBarTitle(Text(""))
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading:
+                    Button(action: {
+                        self.presentationMode.wrappedValue.dismiss()
+                    }) {
+                        Image("NavigationBack")
+                            .resizable()
+                            .imageScale(.large)
+                            .scaledToFit()
+                            .frame(width: 32, height: 64, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                            .clipped()
+                    }
+            ).alert(isPresented: $showAlert) { () -> Alert in
+                Alert(title: Text(Constants.displayName), message: Text("\(alertMessage)"))
+            }
     }
 }
 

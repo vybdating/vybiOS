@@ -31,12 +31,12 @@ struct PhoneNumberController: View {
     
     //MARK:Body
     var body: some View {
-            VStack(alignment: .leading, spacing: 0) {
+            VStack(alignment: .leading, spacing: 4) {
                 Text("What's your number?")
                     .foregroundColor(.black)
                     .font(Font.system(size: 30, weight: .bold))
                     
-                Text("we dont share your information with anyone.")
+                Text("We dont share your information with anyone.")
                     .foregroundColor(.gray)
                     .font(.body)
                 
