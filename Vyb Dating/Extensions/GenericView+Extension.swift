@@ -8,15 +8,16 @@
 import SwiftUI
 
 
-struct ImageOverlay: View {
+struct ImageOverlayText: View {
+    private let title: String
     
     init(text: String) {
-        
+        self.title = text
     }
     
     var body: some View {
         ZStack {
-            Text("Credit: Ricardo Gomez Angel")
+            Text(self.title)
                 .font(.callout)
                 .padding(6)
                 .foregroundColor(.white)

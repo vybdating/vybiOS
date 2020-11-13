@@ -9,60 +9,63 @@ import SwiftUI
 
 struct PhoneNumberController: View {
     //MARK: Properties
+    @State var showAlert = false
+    @State var alertMessage = "Enter a valid phone to proceed."
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+
+    //Number view called
+    var numberInputView =  NumberInputView(action: {
+        //MARK: START Country picker action
+    })
     
+    private func startCheckingNumber(){
+        let phone = numberInputView.code + numberInputView.phoneNumber
+        print("NO. \(phone)")
+        if  numberInputView.phoneNumber.isEmpty {
+            self.showAlert = true
+            return
+        }
+        
+        print("VALID NO. \(phone)")
+    }
     
     //MARK:Body
     var body: some View {
-        ZStack {
-            Image("background")
-                      .resizable()
-                      .scaledToFill()
-                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-                      .edgesIgnoringSafeArea(.all)
-                .blur(radius: /*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
-      
-            Rectangle()
-                   .foregroundColor(.clear)
-                .background(LinearGradient(gradient: Gradient(colors: [Color.primaryVybe.opacity(0.5), Color.primaryVybe.opacity(0.6)]), startPoint: .top, endPoint: .bottom))
-                .edgesIgnoringSafeArea(.all)
-               
-          
-            VStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: 0) {
+            VStack(alignment: .leading, spacing: 0) {
+                Text("What's your number?")
+                    .foregroundColor(.black)
+                    .font(Font.system(size: 30, weight: .bold))
+                    
+                Text("we dont share your information with anyone.")
+                    .foregroundColor(.gray)
+                    .font(.body)
+                
+                VStack (alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: 32) {
+                        numberInputView
+                        DefaultButton(title: "Get Started" ,action:{
+                            self.startCheckingNumber()
+                        }).clipped().padding(.top, 64)
+                }.padding([.top],64)
+                //: VSTACK
                 Spacer()
-                
-                Image("LogoWhite")
-                    .resizable()
-                    .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                    .scaledToFill()
-                    .padding(.bottom, 16)
-                    .clipped()
-                    
-                
-                Text("Welcome to Vyb")
-                    .foregroundColor(.white)
-                    .padding()
-                    .font(.largeTitle)
-                
-                
-                Text("Stop swiping and put your personality first. Feel the Vyb")
-                    .foregroundColor(.white)
-                    .multilineTextAlignment(.center)
-                    .padding(.bottom, 64)
-
-                DefaultButton(title: "Get Started", backgroundColor: .primaryVybe, action:{
-                    
-                })
-                
-                Button(action: {
-                               print("Click")
-                }) {
-                    Text("Terms & Conditions").font(.body).foregroundColor(.white)
+            }.padding([.leading,.trailing],32)
+            .navigationTitle("")
+            .navigationBarTitle(Text(""))
+            .navigationBarBackButtonHidden(true)
+            .navigationBarItems(leading:
+                        Button(action: {
+                            self.presentationMode.wrappedValue.dismiss()
+                        }) {
+                            Image("NavigationBack")
+                                .resizable()
+                                .imageScale(.large)
+                                .scaledToFit()
+                                .frame(width: 32, height: 64, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                .clipped()
+                        }
+                ).alert(isPresented: $showAlert) { () -> Alert in
+                    Alert(title: Text(Constants.displayName), message: Text("\(alertMessage)"))
                 }
-                .padding(.top, 32)
-                .padding(.bottom, 32)
-                
-            }.padding(16)
-        }
     }
 }
 

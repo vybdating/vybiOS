@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		569597FC255C158F0087575E /* DefaultButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569597FB255C158F0087575E /* DefaultButtonView.swift */; };
 		56959807255C41CC0087575E /* NumberInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56959806255C41CC0087575E /* NumberInputView.swift */; };
-		56959810255C5ADC0087575E /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5695980F255C5ADC0087575E /* ColorExtension.swift */; };
-		56959815255C5D3C0087575E /* GenericViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56959814255C5D3C0087575E /* GenericViewExtension.swift */; };
+		56959810255C5ADC0087575E /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5695980F255C5ADC0087575E /* Color+Extension.swift */; };
+		56959815255C5D3C0087575E /* GenericView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56959814255C5D3C0087575E /* GenericView+Extension.swift */; };
 		5695981A255C64260087575E /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56959819255C64260087575E /* LoginController.swift */; };
 		56AA38DD255B75CE0049997E /* Vyb_DatingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AA38DC255B75CE0049997E /* Vyb_DatingApp.swift */; };
 		56AA38DF255B75CE0049997E /* PhoneNumberController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AA38DE255B75CE0049997E /* PhoneNumberController.swift */; };
@@ -18,6 +18,14 @@
 		56AA38E4255B75D00049997E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56AA38E3255B75D00049997E /* Preview Assets.xcassets */; };
 		56AA38EF255B75D10049997E /* Vyb_DatingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AA38EE255B75D10049997E /* Vyb_DatingTests.swift */; };
 		56AA38FA255B75D10049997E /* Vyb_DatingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AA38F9255B75D10049997E /* Vyb_DatingUITests.swift */; };
+		56C9388D255C88B200E94A98 /* LinkedInButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C9388C255C88B200E94A98 /* LinkedInButtonView.swift */; };
+		56C93893255CAE1E00E94A98 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C93892255CAE1E00E94A98 /* Constants.swift */; };
+		56C9389B255D6E4200E94A98 /* FullNameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C9389A255D6E4200E94A98 /* FullNameController.swift */; };
+		56C938BE255D81B800E94A98 /* Mics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C938BD255D81B800E94A98 /* Mics.swift */; };
+		56C938CC255D997A00E94A98 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C938CB255D997A00E94A98 /* String+Extension.swift */; };
+		56C938D1255DA30400E94A98 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C938D0255DA30400E94A98 /* ProfileController.swift */; };
+		56C938D6255DA66C00E94A98 /* PickerInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C938D5255DA66C00E94A98 /* PickerInputView.swift */; };
+		56F422A4255E8BF000A1ABAC /* DateOfBirthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F422A3255E8BF000A1ABAC /* DateOfBirthController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +48,8 @@
 /* Begin PBXFileReference section */
 		569597FB255C158F0087575E /* DefaultButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultButtonView.swift; sourceTree = "<group>"; };
 		56959806255C41CC0087575E /* NumberInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberInputView.swift; sourceTree = "<group>"; };
-		5695980F255C5ADC0087575E /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
-		56959814255C5D3C0087575E /* GenericViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericViewExtension.swift; sourceTree = "<group>"; };
+		5695980F255C5ADC0087575E /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		56959814255C5D3C0087575E /* GenericView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GenericView+Extension.swift"; sourceTree = "<group>"; };
 		56959819255C64260087575E /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		56AA38D9255B75CE0049997E /* Vyb Dating.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vyb Dating.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		56AA38DC255B75CE0049997E /* Vyb_DatingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vyb_DatingApp.swift; sourceTree = "<group>"; };
@@ -55,6 +63,14 @@
 		56AA38F5255B75D10049997E /* Vyb DatingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Vyb DatingUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		56AA38F9255B75D10049997E /* Vyb_DatingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vyb_DatingUITests.swift; sourceTree = "<group>"; };
 		56AA38FB255B75D10049997E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		56C9388C255C88B200E94A98 /* LinkedInButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedInButtonView.swift; sourceTree = "<group>"; };
+		56C93892255CAE1E00E94A98 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		56C9389A255D6E4200E94A98 /* FullNameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullNameController.swift; sourceTree = "<group>"; };
+		56C938BD255D81B800E94A98 /* Mics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mics.swift; sourceTree = "<group>"; };
+		56C938CB255D997A00E94A98 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		56C938D0255DA30400E94A98 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		56C938D5255DA66C00E94A98 /* PickerInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerInputView.swift; sourceTree = "<group>"; };
+		56F422A3255E8BF000A1ABAC /* DateOfBirthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateOfBirthController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +104,9 @@
 				56AA38DC255B75CE0049997E /* Vyb_DatingApp.swift */,
 				56AA38DE255B75CE0049997E /* PhoneNumberController.swift */,
 				56959819255C64260087575E /* LoginController.swift */,
+				56C9389A255D6E4200E94A98 /* FullNameController.swift */,
+				56C938D0255DA30400E94A98 /* ProfileController.swift */,
+				56F422A3255E8BF000A1ABAC /* DateOfBirthController.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -97,6 +116,8 @@
 			children = (
 				569597FB255C158F0087575E /* DefaultButtonView.swift */,
 				56959806255C41CC0087575E /* NumberInputView.swift */,
+				56C9388C255C88B200E94A98 /* LinkedInButtonView.swift */,
+				56C938D5255DA66C00E94A98 /* PickerInputView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -111,8 +132,9 @@
 		5695980E255C5AB20087575E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				5695980F255C5ADC0087575E /* ColorExtension.swift */,
-				56959814255C5D3C0087575E /* GenericViewExtension.swift */,
+				5695980F255C5ADC0087575E /* Color+Extension.swift */,
+				56959814255C5D3C0087575E /* GenericView+Extension.swift */,
+				56C938CB255D997A00E94A98 /* String+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -140,6 +162,7 @@
 		56AA38DB255B75CE0049997E /* Vyb Dating */ = {
 			isa = PBXGroup;
 			children = (
+				56C93891255CAE0A00E94A98 /* Utils */,
 				5695980E255C5AB20087575E /* Extensions */,
 				569597FA255C14E00087575E /* Models */,
 				569597F9255C14B70087575E /* Views */,
@@ -175,6 +198,15 @@
 				56AA38FB255B75D10049997E /* Info.plist */,
 			);
 			path = "Vyb DatingUITests";
+			sourceTree = "<group>";
+		};
+		56C93891255CAE0A00E94A98 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				56C93892255CAE1E00E94A98 /* Constants.swift */,
+				56C938BD255D81B800E94A98 /* Mics.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,13 +338,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56C9388D255C88B200E94A98 /* LinkedInButtonView.swift in Sources */,
 				56959807255C41CC0087575E /* NumberInputView.swift in Sources */,
 				56AA38DF255B75CE0049997E /* PhoneNumberController.swift in Sources */,
+				56C938D6255DA66C00E94A98 /* PickerInputView.swift in Sources */,
 				569597FC255C158F0087575E /* DefaultButtonView.swift in Sources */,
+				56C938CC255D997A00E94A98 /* String+Extension.swift in Sources */,
+				56C938D1255DA30400E94A98 /* ProfileController.swift in Sources */,
 				56AA38DD255B75CE0049997E /* Vyb_DatingApp.swift in Sources */,
-				56959815255C5D3C0087575E /* GenericViewExtension.swift in Sources */,
-				56959810255C5ADC0087575E /* ColorExtension.swift in Sources */,
+				56F422A4255E8BF000A1ABAC /* DateOfBirthController.swift in Sources */,
+				56959815255C5D3C0087575E /* GenericView+Extension.swift in Sources */,
+				56C938BE255D81B800E94A98 /* Mics.swift in Sources */,
+				56959810255C5ADC0087575E /* Color+Extension.swift in Sources */,
+				56C9389B255D6E4200E94A98 /* FullNameController.swift in Sources */,
 				5695981A255C64260087575E /* LoginController.swift in Sources */,
+				56C93893255CAE1E00E94A98 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
