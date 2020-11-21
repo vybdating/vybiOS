@@ -74,7 +74,7 @@ struct ProfileController: View {
                     print("SELECTED \(selected)")
                 }).padding(.top, 16)
                 
-                NavigationLink(destination: PhoneNumberController(), tag: NavigationPushedAction.phoneNumberAction, selection: $selection) {
+                NavigationLink(destination:  EmptyView(), tag: NavigationPushedAction.phoneNumberAction, selection: $selection) {
                     DefaultButton(title: "Next", action:{
                         self.selection = NavigationPushedAction.phoneNumberAction
                     }).clipped()

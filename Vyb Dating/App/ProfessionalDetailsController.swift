@@ -53,7 +53,7 @@ struct ProfessionalDetailsController: View {
             //: VSTACK
            
             
-                NavigationLink(destination: PhoneNumberController(), tag: NavigationPushedAction.phoneNumberAction, selection: $selection) {
+                NavigationLink(destination: EmptyView(), tag: NavigationPushedAction.phoneNumberAction, selection: $selection) {
                     DefaultButton(title: "Next", action:{
                         self.selection = NavigationPushedAction.phoneNumberAction
                     }).clipped()

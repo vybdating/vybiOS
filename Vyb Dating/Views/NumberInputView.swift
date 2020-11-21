@@ -8,40 +8,43 @@
 import SwiftUI
 
 struct NumberInputView: View {
-    //MARK: Prooperties
-    @State var phoneNumber: String = ""
-    @State var countryFlag: String = "US"
-    @State var code: String = "1"
-    private let action: () -> Void
+    
+    //MARK: Properties
+    @State private var country: CountryItem? = nil
+    @State private var showCountryView = false
+    
+    @Binding var code: String
+    @Binding var number: String
     
     private func getinfo()  {
         if let locale = Locale.current.regionCode {
-            let localCountryCode = Mics.getCountryCallingCode(countryRegionCode: locale)
-            self.countryFlag = locale.uppercased().toEmoji()
-            self.code = "+\(localCountryCode)"
-            print("CODE \(locale.uppercased())")
-        }
-    }
-    
-    //MARK: set the action
-    init(action: @escaping () -> Void) {
-        self.action = action
+            guard let localCountryCode = Mics.getCountryCallingCode(countryRegionCode: locale) else {return}
+            let countryFlag = locale.uppercased().toEmoji()
+            
+            let id = NSLocale.localeIdentifier(fromComponents: [NSLocale.Key.countryCode.rawValue: localCountryCode])
+
+            var name = ""
+            name = NSLocale(localeIdentifier: "en_UK").displayName(forKey: NSLocale.Key.identifier, value: id) ?? ""
+            
+            self.country = CountryItem(id: localCountryCode, name: name, code: localCountryCode, imageName: countryFlag)
+             self.code = "+"  + localCountryCode
+            }
     }
     
     //MARK: Body
     var body: some View {
         HStack(alignment: .center, spacing: 5){
             Spacer()
-            Button(action: self.action) {
+            Button(action: {
+                self.showCountryView = true
+                print("STARTS")
+            }) {
                 HStack (alignment: .center, spacing: 0) {
-                    Text("\(self.countryFlag)")
+                    Text("\(self.country?.imageName ?? "")")
                         .frame(width: 30, height: 30, alignment: .center)
                         .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                         .clipped()
-                        .onAppear {
-                            self.getinfo()
-                        }
-                    
+                      
                     Image("DownArrow")
                         .resizable()
                         .imageScale(.small)
@@ -58,7 +61,7 @@ struct NumberInputView: View {
                 .background(Rectangle().fill(Color.white.opacity(0.8)))
                 .clipped()
             
-            TextField("Enter Phone Number", text: $phoneNumber)
+            TextField("Enter Phone Number", text: $number)
                 .textContentType(.telephoneNumber)
                 .keyboardType(.numberPad)
                 .padding([.top,.bottom],16)
@@ -67,15 +70,34 @@ struct NumberInputView: View {
                 .foregroundColor(Color.black)
                 .accentColor(Color.black)
                 .background(Color.clear)
-        }.background(RoundedRectangle(cornerRadius: 40).fill(Color.textFieldGrey))
+        }.sheet(isPresented: $showCountryView) {
+            CountryPickerView { (item) in
+                self.country = item
+                guard let dialCoode = Mics.getCountryCallingCode(countryRegionCode: item.code) else {return}
+                self.code = "+"  + dialCoode
+            }
+        }
+        .onAppear(){
+            getinfo()
+        }
+        .background(RoundedRectangle(cornerRadius: 40).fill(Color.textFieldGrey))
     
     }
 }
 
 struct NumberInputView_Previews: PreviewProvider {
+
     static var previews: some View {
-        NumberInputView(action: {
-            
-        }).previewLayout(.sizeThatFits)
+        PreviewWrapper()
     }
+
+    struct PreviewWrapper: View {
+        @State(initialValue: "") var code: String
+        @State(initialValue: "") var number: String
+        
+        var body: some View {
+            NumberInputView(code: $code, number: $number).previewLayout(.sizeThatFits)
+        }
+    }
+
 }

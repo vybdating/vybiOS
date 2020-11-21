@@ -104,7 +104,7 @@ struct VerificationCodeController: View {
                 .clipped()
                 //: HSTACK
                
-                    NavigationLink(destination: PhoneNumberController(), tag: NavigationPushedAction.phoneNumberAction, selection: $selection) {
+                    NavigationLink(destination:  EmptyView(), tag: NavigationPushedAction.phoneNumberAction, selection: $selection) {
                         DefaultButton(title: "Continue", action:{
                             self.verifyWithPhoneNumber()
                         }).clipped()

@@ -64,7 +64,7 @@ struct LoginController: View {
                         }).clipped()
                     }
                     
-                    NavigationLink(destination: PhoneNumberController(), tag: NavigationPushedAction.linkedInAction, selection: $selection) {
+                    NavigationLink(destination:  EmptyView(), tag: NavigationPushedAction.linkedInAction, selection: $selection) {
                         LinkedInButtonView(action:{
                             self.selection = NavigationPushedAction.linkedInAction
                         }).clipped()

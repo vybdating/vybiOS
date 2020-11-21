@@ -49,7 +49,7 @@ struct DateOfBirthController: View {
                 .frame(width: UIScreen.main.bounds.width - 32, height: .infinity, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                 .clipped()
            
-            NavigationLink(destination: PhoneNumberController(), tag: NavigationPushedAction.phoneNumberAction, selection: $selection) {
+            NavigationLink(destination:  EmptyView(), tag: NavigationPushedAction.phoneNumberAction, selection: $selection) {
                 DefaultButton(title: "Next", action:{
                     self.selection = NavigationPushedAction.phoneNumberAction
                 }).clipped()

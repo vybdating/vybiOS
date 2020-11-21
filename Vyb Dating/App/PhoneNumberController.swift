@@ -11,19 +11,20 @@ import SwiftUI
 struct PhoneNumberController: View {
     //MARK: Properties
     @State var showAlert = false
-    @State var showCountryView = false
     @State var alertMessage = "Enter a valid phone to proceed."
+    @State var confirmNumberMessage = "Proceed with the number: "
+    @State var confirmNumberPrompt = false
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-
+    @State private var code : String = ""
+    @State private var number : String = ""
+    
+    //MARK: init the phone number action
     private func startCheckingNumber(){
-//        let phone = numberInputView.code + numberInputView.phoneNumber
-//        print("NO. \(phone)")
-//        if  numberInputView.phoneNumber.isEmpty {
-//            self.showAlert = true
-//            return
-//        }
-        
-//        print("VALID NO. \(phone)")
+        if  number.isEmpty {
+            self.showAlert = true
+            return
+        }
+        self.confirmNumberPrompt = true
     }
     
     //MARK:Body
@@ -39,18 +40,15 @@ struct PhoneNumberController: View {
                     .font(.body)
                 
                 VStack (alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: 32) {
-                        NumberInputView(action: {
-                            //MARK: START Country picker action
-                            print("CLICKED")
-                            self.showCountryView = true
-                        })
+                        NumberInputView(code: $code, number: $number)
                         DefaultButton(title: "Get Started" ,action:{
                             self.startCheckingNumber()
                         }).clipped().padding(.top, 64)
                 }.padding([.top],64)
                 //: VSTACK
                 Spacer()
-            }.padding([.leading,.trailing],32)
+            }
+            .padding([.leading,.trailing],32)
             .navigationTitle("")
             .navigationBarTitle(Text(""))
             .navigationBarBackButtonHidden(true)
@@ -67,17 +65,29 @@ struct PhoneNumberController: View {
                         }
                 ).alert(isPresented: $showAlert) { () -> Alert in
                     Alert(title: Text(Constants.displayName), message: Text("\(alertMessage)"))
-                }.sheet(isPresented: $showCountryView) {
-                    CountryPickerView.init(countries: [CountryItem]()) { (code) in
-                        
-                    }
+                }.alert(isPresented: $confirmNumberPrompt) {
+                    Alert(
+                        title: Text(Constants.displayName),
+                        message: Text("\(confirmNumberMessage) \(self.code)\(self.number)"),
+                        dismissButton: .default(Text("PROCEED").foregroundColor(Color.primaryVybe), action: {
+                            print("DONE")
+                        })
+                    )
                 }
         }
     }
 }
 
 struct PhoneNumberController_Previews: PreviewProvider {
+    
     static var previews: some View {
-        PhoneNumberController()
+        PreviewWrapper()
     }
+    
+    struct PreviewWrapper: View {
+      
+        var body: some View {
+            PhoneNumberController()
+        }
+      }
 }

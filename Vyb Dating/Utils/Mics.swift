@@ -11,10 +11,10 @@ import Foundation
 struct Mics {
     
     //MARK: get counntry code form list
-    static func getCountryCallingCode(countryRegionCode:String) -> String {
+    static func getCountryCallingCode(countryRegionCode:String) -> String? {
         let prefixCodes = getCountries()
         let countryDialingCode = prefixCodes[countryRegionCode]
-        return countryDialingCode!
+        return countryDialingCode
         
     }
     

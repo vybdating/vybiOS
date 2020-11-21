@@ -10,20 +10,23 @@ import SwiftUI
 struct CountryPickerView: View {
     //MARK: PROPERTIES
     @State var countries = [CountryItem]()
-    var country: (String) -> Void
     @Environment(\.presentationMode) var presentationMode
     @State private var searchText : String = ""
+    let action: (CountryItem) -> Void
     
     //MARK: BODY
     var body: some View {
         NavigationView {
             VStack(alignment: .leading, spacing: /*@START_MENU_TOKEN@*/nil/*@END_MENU_TOKEN@*/) {
+                //MARK: search bar
                 SearchBar(text: $searchText, placeholder: "Search country")
+                //MARK: 
                 List(countries.filter({ (countryItem) -> Bool in
                     self.searchText.isEmpty ? true : countryItem.name.lowercased().contains(self.searchText.lowercased())
                 })) { country in
                     Button(action: {
-                        print("CLICKED \(country.name)")
+                        print("PICKED \(country.name)")
+                        self.action(country)
                         presentationMode.wrappedValue.dismiss()
                     }, label: {
                         CountryItemView(countryItem: country)
@@ -69,9 +72,11 @@ struct CountryItemView: View {
 }
 
 struct CountryPickerController_Previews: PreviewProvider {
+    
     static var previews: some View {
-        CountryPickerView() { (coutry) in
+        CountryPickerView { (item) in
             
         }
     }
+
 }
