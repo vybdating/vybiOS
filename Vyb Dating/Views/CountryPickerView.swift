@@ -19,7 +19,9 @@ struct CountryPickerView: View {
         NavigationView {
             VStack(alignment: .leading, spacing: /*@START_MENU_TOKEN@*/nil/*@END_MENU_TOKEN@*/) {
                 SearchBar(text: $searchText, placeholder: "Search country")
-                List(countries) { country in
+                List(countries.filter({ (countryItem) -> Bool in
+                    self.searchText.isEmpty ? true : countryItem.name.lowercased().contains(self.searchText.lowercased())
+                })) { country in
                     Button(action: {
                         print("CLICKED \(country.name)")
                         presentationMode.wrappedValue.dismiss()
