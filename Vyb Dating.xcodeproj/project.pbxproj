@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55630CFFD492C3180509B699 /* Pods_Vyb_Dating_Vyb_DatingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D49AC9431300BECB8CC2F1B /* Pods_Vyb_Dating_Vyb_DatingUITests.framework */; };
+		5602F23125635A7600B1B1D8 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5602F23025635A7600B1B1D8 /* ImagePicker.swift */; };
+		5602F29D25694CF600B1B1D8 /* CountryPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5602F29C25694CF600B1B1D8 /* CountryPickerView.swift */; };
+		5602F2AE256952E400B1B1D8 /* CountryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5602F2AD256952E400B1B1D8 /* CountryItem.swift */; };
+		5602F2B625696F9800B1B1D8 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5602F2B525696F9800B1B1D8 /* SearchBarView.swift */; };
 		569597FC255C158F0087575E /* DefaultButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569597FB255C158F0087575E /* DefaultButtonView.swift */; };
 		56959807255C41CC0087575E /* NumberInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56959806255C41CC0087575E /* NumberInputView.swift */; };
 		56959810255C5ADC0087575E /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5695980F255C5ADC0087575E /* Color+Extension.swift */; };
@@ -29,6 +34,8 @@
 		56F422A9255E960400A1ABAC /* ProfilePictureContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F422A8255E960400A1ABAC /* ProfilePictureContoller.swift */; };
 		56F422AE255EA86800A1ABAC /* ProfessionalDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F422AD255EA86800A1ABAC /* ProfessionalDetailsController.swift */; };
 		56F422B3255EABBF00A1ABAC /* VerificationCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F422B2255EABBF00A1ABAC /* VerificationCodeController.swift */; };
+		8B0A8235DA30FB8D06BC1623 /* Pods_Vyb_Dating.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88B91E8B9F221F1777026783 /* Pods_Vyb_Dating.framework */; };
+		F4EAC9DBAF45C6398641379E /* Pods_Vyb_DatingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDB40D62ACE2205F97EBBE5F /* Pods_Vyb_DatingTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +56,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		100E9F1726F1E82CA080D031 /* Pods-Vyb Dating.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vyb Dating.debug.xcconfig"; path = "Target Support Files/Pods-Vyb Dating/Pods-Vyb Dating.debug.xcconfig"; sourceTree = "<group>"; };
+		2982DB4B8104FDCEFC709A58 /* Pods-Vyb Dating-Vyb DatingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vyb Dating-Vyb DatingUITests.release.xcconfig"; path = "Target Support Files/Pods-Vyb Dating-Vyb DatingUITests/Pods-Vyb Dating-Vyb DatingUITests.release.xcconfig"; sourceTree = "<group>"; };
+		49EACDB9D17078C24EFDE1CC /* Pods-Vyb DatingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vyb DatingTests.release.xcconfig"; path = "Target Support Files/Pods-Vyb DatingTests/Pods-Vyb DatingTests.release.xcconfig"; sourceTree = "<group>"; };
+		5602F23025635A7600B1B1D8 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		5602F29C25694CF600B1B1D8 /* CountryPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryPickerView.swift; sourceTree = "<group>"; };
+		5602F2AD256952E400B1B1D8 /* CountryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryItem.swift; sourceTree = "<group>"; };
+		5602F2B525696F9800B1B1D8 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		569597FB255C158F0087575E /* DefaultButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultButtonView.swift; sourceTree = "<group>"; };
 		56959806255C41CC0087575E /* NumberInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberInputView.swift; sourceTree = "<group>"; };
 		5695980F255C5ADC0087575E /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
@@ -77,6 +91,12 @@
 		56F422A8255E960400A1ABAC /* ProfilePictureContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePictureContoller.swift; sourceTree = "<group>"; };
 		56F422AD255EA86800A1ABAC /* ProfessionalDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessionalDetailsController.swift; sourceTree = "<group>"; };
 		56F422B2255EABBF00A1ABAC /* VerificationCodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationCodeController.swift; sourceTree = "<group>"; };
+		7B0E80B3B42349C304CD7F5C /* Pods-Vyb Dating.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vyb Dating.release.xcconfig"; path = "Target Support Files/Pods-Vyb Dating/Pods-Vyb Dating.release.xcconfig"; sourceTree = "<group>"; };
+		868D7BF9AC4F4BC0A6BCC986 /* Pods-Vyb Dating-Vyb DatingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vyb Dating-Vyb DatingUITests.debug.xcconfig"; path = "Target Support Files/Pods-Vyb Dating-Vyb DatingUITests/Pods-Vyb Dating-Vyb DatingUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		88B91E8B9F221F1777026783 /* Pods_Vyb_Dating.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vyb_Dating.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D49AC9431300BECB8CC2F1B /* Pods_Vyb_Dating_Vyb_DatingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vyb_Dating_Vyb_DatingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDB40D62ACE2205F97EBBE5F /* Pods_Vyb_DatingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vyb_DatingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD5B31733345BAC22ED3EB25 /* Pods-Vyb DatingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vyb DatingTests.debug.xcconfig"; path = "Target Support Files/Pods-Vyb DatingTests/Pods-Vyb DatingTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B0A8235DA30FB8D06BC1623 /* Pods_Vyb_Dating.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4EAC9DBAF45C6398641379E /* Pods_Vyb_DatingTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,12 +120,34 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55630CFFD492C3180509B699 /* Pods_Vyb_Dating_Vyb_DatingUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		43E558E272522533DB6CBAF4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				100E9F1726F1E82CA080D031 /* Pods-Vyb Dating.debug.xcconfig */,
+				7B0E80B3B42349C304CD7F5C /* Pods-Vyb Dating.release.xcconfig */,
+				868D7BF9AC4F4BC0A6BCC986 /* Pods-Vyb Dating-Vyb DatingUITests.debug.xcconfig */,
+				2982DB4B8104FDCEFC709A58 /* Pods-Vyb Dating-Vyb DatingUITests.release.xcconfig */,
+				FD5B31733345BAC22ED3EB25 /* Pods-Vyb DatingTests.debug.xcconfig */,
+				49EACDB9D17078C24EFDE1CC /* Pods-Vyb DatingTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		5602F22F25635A6300B1B1D8 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				5602F23025635A7600B1B1D8 /* ImagePicker.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		569597F5255C14AA0087575E /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,10 +167,12 @@
 		569597F9255C14B70087575E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5602F29C25694CF600B1B1D8 /* CountryPickerView.swift */,
 				569597FB255C158F0087575E /* DefaultButtonView.swift */,
 				56959806255C41CC0087575E /* NumberInputView.swift */,
 				56C9388C255C88B200E94A98 /* LinkedInButtonView.swift */,
 				56C938D5255DA66C00E94A98 /* PickerInputView.swift */,
+				5602F2B525696F9800B1B1D8 /* SearchBarView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -134,6 +180,7 @@
 		569597FA255C14E00087575E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5602F2AD256952E400B1B1D8 /* CountryItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -155,6 +202,8 @@
 				56AA38ED255B75D10049997E /* Vyb DatingTests */,
 				56AA38F8255B75D10049997E /* Vyb DatingUITests */,
 				56AA38DA255B75CE0049997E /* Products */,
+				43E558E272522533DB6CBAF4 /* Pods */,
+				C75496892037C765599D7483 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -171,6 +220,7 @@
 		56AA38DB255B75CE0049997E /* Vyb Dating */ = {
 			isa = PBXGroup;
 			children = (
+				5602F22F25635A6300B1B1D8 /* Shared */,
 				56C93891255CAE0A00E94A98 /* Utils */,
 				5695980E255C5AB20087575E /* Extensions */,
 				569597FA255C14E00087575E /* Models */,
@@ -218,6 +268,16 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		C75496892037C765599D7483 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				88B91E8B9F221F1777026783 /* Pods_Vyb_Dating.framework */,
+				8D49AC9431300BECB8CC2F1B /* Pods_Vyb_Dating_Vyb_DatingUITests.framework */,
+				EDB40D62ACE2205F97EBBE5F /* Pods_Vyb_DatingTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -225,6 +285,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 56AA38FE255B75D10049997E /* Build configuration list for PBXNativeTarget "Vyb Dating" */;
 			buildPhases = (
+				57CC196D1EFB19DE1E4E8752 /* [CP] Check Pods Manifest.lock */,
 				56AA38D5255B75CE0049997E /* Sources */,
 				56AA38D6255B75CE0049997E /* Frameworks */,
 				56AA38D7255B75CE0049997E /* Resources */,
@@ -242,6 +303,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 56AA3901255B75D10049997E /* Build configuration list for PBXNativeTarget "Vyb DatingTests" */;
 			buildPhases = (
+				F269D4140C3645765A463E2B /* [CP] Check Pods Manifest.lock */,
 				56AA38E6255B75D10049997E /* Sources */,
 				56AA38E7255B75D10049997E /* Frameworks */,
 				56AA38E8255B75D10049997E /* Resources */,
@@ -260,6 +322,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 56AA3904255B75D10049997E /* Build configuration list for PBXNativeTarget "Vyb DatingUITests" */;
 			buildPhases = (
+				0344951D39F96A8CBEAF0198 /* [CP] Check Pods Manifest.lock */,
 				56AA38F1255B75D10049997E /* Sources */,
 				56AA38F2255B75D10049997E /* Frameworks */,
 				56AA38F3255B75D10049997E /* Resources */,
@@ -342,6 +405,75 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0344951D39F96A8CBEAF0198 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Vyb Dating-Vyb DatingUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		57CC196D1EFB19DE1E4E8752 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Vyb Dating-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F269D4140C3645765A463E2B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Vyb DatingTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		56AA38D5255B75CE0049997E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -349,11 +481,14 @@
 			files = (
 				56C9388D255C88B200E94A98 /* LinkedInButtonView.swift in Sources */,
 				56959807255C41CC0087575E /* NumberInputView.swift in Sources */,
+				5602F2AE256952E400B1B1D8 /* CountryItem.swift in Sources */,
 				56AA38DF255B75CE0049997E /* PhoneNumberController.swift in Sources */,
 				56C938D6255DA66C00E94A98 /* PickerInputView.swift in Sources */,
 				569597FC255C158F0087575E /* DefaultButtonView.swift in Sources */,
 				56C938CC255D997A00E94A98 /* String+Extension.swift in Sources */,
+				5602F29D25694CF600B1B1D8 /* CountryPickerView.swift in Sources */,
 				56C938D1255DA30400E94A98 /* ProfileController.swift in Sources */,
+				5602F23125635A7600B1B1D8 /* ImagePicker.swift in Sources */,
 				56F422A9255E960400A1ABAC /* ProfilePictureContoller.swift in Sources */,
 				56AA38DD255B75CE0049997E /* Vyb_DatingApp.swift in Sources */,
 				56F422A4255E8BF000A1ABAC /* DateOfBirthController.swift in Sources */,
@@ -362,6 +497,7 @@
 				56959810255C5ADC0087575E /* Color+Extension.swift in Sources */,
 				56C9389B255D6E4200E94A98 /* FullNameController.swift in Sources */,
 				56F422B3255EABBF00A1ABAC /* VerificationCodeController.swift in Sources */,
+				5602F2B625696F9800B1B1D8 /* SearchBarView.swift in Sources */,
 				5695981A255C64260087575E /* LoginController.swift in Sources */,
 				56F422AE255EA86800A1ABAC /* ProfessionalDetailsController.swift in Sources */,
 				56C93893255CAE1E00E94A98 /* Constants.swift in Sources */,
@@ -518,6 +654,7 @@
 		};
 		56AA38FF255B75D10049997E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 100E9F1726F1E82CA080D031 /* Pods-Vyb Dating.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -539,6 +676,7 @@
 		};
 		56AA3900255B75D10049997E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B0E80B3B42349C304CD7F5C /* Pods-Vyb Dating.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -560,6 +698,7 @@
 		};
 		56AA3902255B75D10049997E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD5B31733345BAC22ED3EB25 /* Pods-Vyb DatingTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -581,6 +720,7 @@
 		};
 		56AA3903255B75D10049997E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49EACDB9D17078C24EFDE1CC /* Pods-Vyb DatingTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -602,6 +742,7 @@
 		};
 		56AA3905255B75D10049997E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 868D7BF9AC4F4BC0A6BCC986 /* Pods-Vyb Dating-Vyb DatingUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -621,6 +762,7 @@
 		};
 		56AA3906255B75D10049997E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2982DB4B8104FDCEFC709A58 /* Pods-Vyb Dating-Vyb DatingUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

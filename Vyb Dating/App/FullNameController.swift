@@ -16,9 +16,12 @@ struct FullNameController: View {
     @State var alertMessage = "Something went wrong, Ttry again."
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
 
+    var phoneNumber = ""
     
     //MARK:Body
     var body: some View {
+        
+        ScrollView{
         
             VStack (alignment: .leading, spacing: 4) {
                   Text("What's your name")
@@ -51,10 +54,11 @@ struct FullNameController: View {
                           .accentColor(Color.black)
                           .background(RoundedRectangle(cornerRadius: 40).fill(Color.textFieldGrey))
                     
-                    Text("we dont share your last name o your profile.")
+                    Text("we don't share your last name o your profile.")
                         .foregroundColor(.black)
                         .font(.callout)
-                        .padding(.leading, 16)
+                        .padding([.leading,.trailing], 16)
+                    
                 }
                 
                
@@ -84,7 +88,7 @@ struct FullNameController: View {
                 ).alert(isPresented: $showAlert) { () -> Alert in
                     Alert(title: Text(Constants.displayName), message: Text("\(alertMessage)"))
                 }
-        
+        }
     }
 }
 

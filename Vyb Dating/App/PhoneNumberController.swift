@@ -7,30 +7,28 @@
 
 import SwiftUI
 
+
 struct PhoneNumberController: View {
     //MARK: Properties
     @State var showAlert = false
+    @State var showCountryView = false
     @State var alertMessage = "Enter a valid phone to proceed."
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
 
-    //Number view called
-    var numberInputView =  NumberInputView(action: {
-        //MARK: START Country picker action
-    })
-    
     private func startCheckingNumber(){
-        let phone = numberInputView.code + numberInputView.phoneNumber
-        print("NO. \(phone)")
-        if  numberInputView.phoneNumber.isEmpty {
-            self.showAlert = true
-            return
-        }
+//        let phone = numberInputView.code + numberInputView.phoneNumber
+//        print("NO. \(phone)")
+//        if  numberInputView.phoneNumber.isEmpty {
+//            self.showAlert = true
+//            return
+//        }
         
-        print("VALID NO. \(phone)")
+//        print("VALID NO. \(phone)")
     }
     
     //MARK:Body
     var body: some View {
+        ScrollView {
             VStack(alignment: .leading, spacing: 4) {
                 Text("What's your number?")
                     .foregroundColor(.black)
@@ -41,7 +39,11 @@ struct PhoneNumberController: View {
                     .font(.body)
                 
                 VStack (alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: 32) {
-                        numberInputView
+                        NumberInputView(action: {
+                            //MARK: START Country picker action
+                            print("CLICKED")
+                            self.showCountryView = true
+                        })
                         DefaultButton(title: "Get Started" ,action:{
                             self.startCheckingNumber()
                         }).clipped().padding(.top, 64)
@@ -65,7 +67,12 @@ struct PhoneNumberController: View {
                         }
                 ).alert(isPresented: $showAlert) { () -> Alert in
                     Alert(title: Text(Constants.displayName), message: Text("\(alertMessage)"))
+                }.sheet(isPresented: $showCountryView) {
+                    CountryPickerView.init(countries: [CountryItem]()) { (code) in
+                        
+                    }
                 }
+        }
     }
 }
 

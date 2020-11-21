@@ -19,6 +19,7 @@ struct NumberInputView: View {
             let localCountryCode = Mics.getCountryCallingCode(countryRegionCode: locale)
             self.countryFlag = locale.uppercased().toEmoji()
             self.code = "+\(localCountryCode)"
+            print("CODE \(locale.uppercased())")
         }
     }
     

@@ -46,6 +46,8 @@ struct DateOfBirthController: View {
                 .datePickerStyle(WheelDatePickerStyle())
                 .colorMultiply(Color.primaryVybe)
                 .accentColor(Color.primaryVybe)
+                .frame(width: UIScreen.main.bounds.width - 32, height: .infinity, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                .clipped()
            
             NavigationLink(destination: PhoneNumberController(), tag: NavigationPushedAction.phoneNumberAction, selection: $selection) {
                 DefaultButton(title: "Next", action:{

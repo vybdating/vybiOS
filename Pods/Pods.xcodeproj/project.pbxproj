@@ -1,0 +1,755 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2E33F4DD984507BF207FD0F49E029787 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		30513B43201D06D0666DABFD86C52CAD /* Pods-Vyb Dating-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 700861550FBDFA27730ACA738CBE0790 /* Pods-Vyb Dating-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4341A54CB3499059B0FE94FC5DFE18E4 /* Pods-Vyb Dating-Vyb DatingUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B11185D2A88A9C973FA9C1BCA5402177 /* Pods-Vyb Dating-Vyb DatingUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4833A374A03A0564A8C938F2522A54A0 /* Pods-Vyb Dating-Vyb DatingUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 28FD17C485C7529EE26B754BCCC75A1A /* Pods-Vyb Dating-Vyb DatingUITests-dummy.m */; };
+		5D11E848436C545C43657279DD158E5F /* Pods-Vyb DatingTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3A2FF88F46064EEEEDB08D10EFB614 /* Pods-Vyb DatingTests-dummy.m */; };
+		6120365D9D91C535F19884336EEF66FE /* Pods-Vyb Dating-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 229D72343D6ECFDE0003CA23D3FEE735 /* Pods-Vyb Dating-dummy.m */; };
+		8CD1577EB89AF7C91461A69FBEEB8DD2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		D4648E607BDF2A2D14D8BBF5A1567335 /* Pods-Vyb DatingTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A2703E3ECE95DB16447DF1582E819DB /* Pods-Vyb DatingTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E32E36173B9752C15CC8B01335CC8708 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F4F747BD981E2345527365DD4E89D9F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 590BBF7DAD7D2D3C974BE08118CB1743;
+			remoteInfo = "Pods-Vyb Dating";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0A2703E3ECE95DB16447DF1582E819DB /* Pods-Vyb DatingTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Vyb DatingTests-umbrella.h"; sourceTree = "<group>"; };
+		1ADAD720DBF8E66085A4BDF6BE7287E2 /* Pods-Vyb DatingTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Vyb DatingTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		2140E64371397246E934D4548F791C2A /* Pods-Vyb Dating-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Vyb Dating-acknowledgements.markdown"; sourceTree = "<group>"; };
+		229D72343D6ECFDE0003CA23D3FEE735 /* Pods-Vyb Dating-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Vyb Dating-dummy.m"; sourceTree = "<group>"; };
+		28FD17C485C7529EE26B754BCCC75A1A /* Pods-Vyb Dating-Vyb DatingUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Vyb Dating-Vyb DatingUITests-dummy.m"; sourceTree = "<group>"; };
+		2EEF8031E01B2CB5BDEB794017AC944C /* Pods-Vyb DatingTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Vyb DatingTests-Info.plist"; sourceTree = "<group>"; };
+		3F858139623A38BD6022E06AE6051658 /* Pods-Vyb Dating.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Vyb Dating.release.xcconfig"; sourceTree = "<group>"; };
+		539BE33CD38DE87F4BAA2C7B456C7A6A /* Pods-Vyb Dating-Vyb DatingUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Vyb Dating-Vyb DatingUITests.modulemap"; sourceTree = "<group>"; };
+		62CCDA392053304F82C13AC854B120FC /* Pods-Vyb Dating.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Vyb Dating.modulemap"; sourceTree = "<group>"; };
+		66F13C975B6E1C4D335F5DCA5027A8D8 /* Pods-Vyb DatingTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Vyb DatingTests.modulemap"; sourceTree = "<group>"; };
+		700861550FBDFA27730ACA738CBE0790 /* Pods-Vyb Dating-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Vyb Dating-umbrella.h"; sourceTree = "<group>"; };
+		70B6BB3F29AE109B5B808A65640CCBD7 /* Pods-Vyb Dating-Vyb DatingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Vyb Dating-Vyb DatingUITests.release.xcconfig"; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7D73E1514345E89602DB1F4AE26670B8 /* Pods-Vyb DatingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Vyb DatingTests.release.xcconfig"; sourceTree = "<group>"; };
+		8212370A46D32FCBFDB9BCAD51694C3F /* Pods-Vyb Dating-Vyb DatingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Vyb Dating-Vyb DatingUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		90FCCBC86A409178D68EC076E3F2A0B6 /* Pods_Vyb_Dating.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Vyb_Dating.framework; path = "Pods-Vyb Dating.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		90FF3D8502F9A2632F87E0D67B603C03 /* Pods-Vyb DatingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Vyb DatingTests.debug.xcconfig"; sourceTree = "<group>"; };
+		91A45E3786901B9452930A78CBE3AFCB /* Pods-Vyb Dating-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Vyb Dating-acknowledgements.plist"; sourceTree = "<group>"; };
+		9473E7664D0E8DE157C5E4596A90E058 /* Pods_Vyb_DatingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Vyb_DatingTests.framework; path = "Pods-Vyb DatingTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		985FC3481A43F069AF487C5D6682629D /* Pods-Vyb Dating-Vyb DatingUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Vyb Dating-Vyb DatingUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A01A0D169F3AECD3F0B05B05F5C131B5 /* Pods-Vyb Dating-Vyb DatingUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Vyb Dating-Vyb DatingUITests-Info.plist"; sourceTree = "<group>"; };
+		B11185D2A88A9C973FA9C1BCA5402177 /* Pods-Vyb Dating-Vyb DatingUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Vyb Dating-Vyb DatingUITests-umbrella.h"; sourceTree = "<group>"; };
+		B511193EDD49B29CEA3CD936E7A482FE /* Pods-Vyb DatingTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Vyb DatingTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		C26C4B4AE66ED678CD3F27C7EF078E9C /* Pods-Vyb Dating-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Vyb Dating-Info.plist"; sourceTree = "<group>"; };
+		C4807D6EEE977829C3A7BC6BC7F0F387 /* Pods-Vyb Dating-Vyb DatingUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Vyb Dating-Vyb DatingUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		C4FEA70347E3BEB2E425C462F4F875F3 /* Pods-Vyb Dating.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Vyb Dating.debug.xcconfig"; sourceTree = "<group>"; };
+		CD3A2FF88F46064EEEEDB08D10EFB614 /* Pods-Vyb DatingTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Vyb DatingTests-dummy.m"; sourceTree = "<group>"; };
+		FBC93D03764624F096DF7233E51CF393 /* Pods_Vyb_Dating_Vyb_DatingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Vyb_Dating_Vyb_DatingUITests.framework; path = "Pods-Vyb Dating-Vyb DatingUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0BA5A1082619769C2753E60C5587B119 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E33F4DD984507BF207FD0F49E029787 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27E3F655FD481408985F243509F40F1A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E32E36173B9752C15CC8B01335CC8708 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E5ED363C2EC2852C378DCD88D6DABFC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CD1577EB89AF7C91461A69FBEEB8DD2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0DF78111720B0DDF889AD6ACE2AF6F39 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				90FCCBC86A409178D68EC076E3F2A0B6 /* Pods_Vyb_Dating.framework */,
+				FBC93D03764624F096DF7233E51CF393 /* Pods_Vyb_Dating_Vyb_DatingUITests.framework */,
+				9473E7664D0E8DE157C5E4596A90E058 /* Pods_Vyb_DatingTests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3CCD1036719924DD3D9977A66AF0D65F /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6A479E105FDDF049FF54B034C0906A67 /* Pods-Vyb Dating */,
+				40695AA12DB4F411BD3B0E984CDEF0E2 /* Pods-Vyb Dating-Vyb DatingUITests */,
+				F7257BF70413FE1C94153145544F92D7 /* Pods-Vyb DatingTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		40695AA12DB4F411BD3B0E984CDEF0E2 /* Pods-Vyb Dating-Vyb DatingUITests */ = {
+			isa = PBXGroup;
+			children = (
+				539BE33CD38DE87F4BAA2C7B456C7A6A /* Pods-Vyb Dating-Vyb DatingUITests.modulemap */,
+				985FC3481A43F069AF487C5D6682629D /* Pods-Vyb Dating-Vyb DatingUITests-acknowledgements.markdown */,
+				C4807D6EEE977829C3A7BC6BC7F0F387 /* Pods-Vyb Dating-Vyb DatingUITests-acknowledgements.plist */,
+				28FD17C485C7529EE26B754BCCC75A1A /* Pods-Vyb Dating-Vyb DatingUITests-dummy.m */,
+				A01A0D169F3AECD3F0B05B05F5C131B5 /* Pods-Vyb Dating-Vyb DatingUITests-Info.plist */,
+				B11185D2A88A9C973FA9C1BCA5402177 /* Pods-Vyb Dating-Vyb DatingUITests-umbrella.h */,
+				8212370A46D32FCBFDB9BCAD51694C3F /* Pods-Vyb Dating-Vyb DatingUITests.debug.xcconfig */,
+				70B6BB3F29AE109B5B808A65640CCBD7 /* Pods-Vyb Dating-Vyb DatingUITests.release.xcconfig */,
+			);
+			name = "Pods-Vyb Dating-Vyb DatingUITests";
+			path = "Target Support Files/Pods-Vyb Dating-Vyb DatingUITests";
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		6A479E105FDDF049FF54B034C0906A67 /* Pods-Vyb Dating */ = {
+			isa = PBXGroup;
+			children = (
+				62CCDA392053304F82C13AC854B120FC /* Pods-Vyb Dating.modulemap */,
+				2140E64371397246E934D4548F791C2A /* Pods-Vyb Dating-acknowledgements.markdown */,
+				91A45E3786901B9452930A78CBE3AFCB /* Pods-Vyb Dating-acknowledgements.plist */,
+				229D72343D6ECFDE0003CA23D3FEE735 /* Pods-Vyb Dating-dummy.m */,
+				C26C4B4AE66ED678CD3F27C7EF078E9C /* Pods-Vyb Dating-Info.plist */,
+				700861550FBDFA27730ACA738CBE0790 /* Pods-Vyb Dating-umbrella.h */,
+				C4FEA70347E3BEB2E425C462F4F875F3 /* Pods-Vyb Dating.debug.xcconfig */,
+				3F858139623A38BD6022E06AE6051658 /* Pods-Vyb Dating.release.xcconfig */,
+			);
+			name = "Pods-Vyb Dating";
+			path = "Target Support Files/Pods-Vyb Dating";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				0DF78111720B0DDF889AD6ACE2AF6F39 /* Products */,
+				3CCD1036719924DD3D9977A66AF0D65F /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F7257BF70413FE1C94153145544F92D7 /* Pods-Vyb DatingTests */ = {
+			isa = PBXGroup;
+			children = (
+				66F13C975B6E1C4D335F5DCA5027A8D8 /* Pods-Vyb DatingTests.modulemap */,
+				1ADAD720DBF8E66085A4BDF6BE7287E2 /* Pods-Vyb DatingTests-acknowledgements.markdown */,
+				B511193EDD49B29CEA3CD936E7A482FE /* Pods-Vyb DatingTests-acknowledgements.plist */,
+				CD3A2FF88F46064EEEEDB08D10EFB614 /* Pods-Vyb DatingTests-dummy.m */,
+				2EEF8031E01B2CB5BDEB794017AC944C /* Pods-Vyb DatingTests-Info.plist */,
+				0A2703E3ECE95DB16447DF1582E819DB /* Pods-Vyb DatingTests-umbrella.h */,
+				90FF3D8502F9A2632F87E0D67B603C03 /* Pods-Vyb DatingTests.debug.xcconfig */,
+				7D73E1514345E89602DB1F4AE26670B8 /* Pods-Vyb DatingTests.release.xcconfig */,
+			);
+			name = "Pods-Vyb DatingTests";
+			path = "Target Support Files/Pods-Vyb DatingTests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3A834E8D7C97B5012888A5E42D981A37 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30513B43201D06D0666DABFD86C52CAD /* Pods-Vyb Dating-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4832F4D7CA843A91A445D5150586A7F0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4341A54CB3499059B0FE94FC5DFE18E4 /* Pods-Vyb Dating-Vyb DatingUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC345C19684D32C8DC10F21C3C7FF02F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4648E607BDF2A2D14D8BBF5A1567335 /* Pods-Vyb DatingTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		34DFCE6072678D2BCC6A59D287DC5AFF /* Pods-Vyb Dating-Vyb DatingUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 39B61097083FB6FD282BA562B983AD6B /* Build configuration list for PBXNativeTarget "Pods-Vyb Dating-Vyb DatingUITests" */;
+			buildPhases = (
+				4832F4D7CA843A91A445D5150586A7F0 /* Headers */,
+				C0A1265119A9E14DB4DB805BA0B28658 /* Sources */,
+				0BA5A1082619769C2753E60C5587B119 /* Frameworks */,
+				91128A5CF2FB9750A4A7912C9CA5686F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Vyb Dating-Vyb DatingUITests";
+			productName = "Pods-Vyb Dating-Vyb DatingUITests";
+			productReference = FBC93D03764624F096DF7233E51CF393 /* Pods_Vyb_Dating_Vyb_DatingUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		590BBF7DAD7D2D3C974BE08118CB1743 /* Pods-Vyb Dating */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5DAB33147D782102F0715908A3423FF6 /* Build configuration list for PBXNativeTarget "Pods-Vyb Dating" */;
+			buildPhases = (
+				3A834E8D7C97B5012888A5E42D981A37 /* Headers */,
+				AD2EBA56B185196166495AD848CA2399 /* Sources */,
+				9E5ED363C2EC2852C378DCD88D6DABFC /* Frameworks */,
+				F42E6BC6D0454E3AE79CE0FE089088AD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Vyb Dating";
+			productName = "Pods-Vyb Dating";
+			productReference = 90FCCBC86A409178D68EC076E3F2A0B6 /* Pods_Vyb_Dating.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B561713314FDD315260C4E0BBB4DBBD0 /* Pods-Vyb DatingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D67B8544A0AACF284FC734C26095E7A0 /* Build configuration list for PBXNativeTarget "Pods-Vyb DatingTests" */;
+			buildPhases = (
+				FC345C19684D32C8DC10F21C3C7FF02F /* Headers */,
+				09B0B4957D395571735F4CF9C71CF2CE /* Sources */,
+				27E3F655FD481408985F243509F40F1A /* Frameworks */,
+				536E7B3B4B65798E6ADDB964D84A522F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4355B71A596DF9FA05E73A1AB22CBC0F /* PBXTargetDependency */,
+			);
+			name = "Pods-Vyb DatingTests";
+			productName = "Pods-Vyb DatingTests";
+			productReference = 9473E7664D0E8DE157C5E4596A90E058 /* Pods_Vyb_DatingTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 0DF78111720B0DDF889AD6ACE2AF6F39 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				590BBF7DAD7D2D3C974BE08118CB1743 /* Pods-Vyb Dating */,
+				34DFCE6072678D2BCC6A59D287DC5AFF /* Pods-Vyb Dating-Vyb DatingUITests */,
+				B561713314FDD315260C4E0BBB4DBBD0 /* Pods-Vyb DatingTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		536E7B3B4B65798E6ADDB964D84A522F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91128A5CF2FB9750A4A7912C9CA5686F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F42E6BC6D0454E3AE79CE0FE089088AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		09B0B4957D395571735F4CF9C71CF2CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D11E848436C545C43657279DD158E5F /* Pods-Vyb DatingTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD2EBA56B185196166495AD848CA2399 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6120365D9D91C535F19884336EEF66FE /* Pods-Vyb Dating-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0A1265119A9E14DB4DB805BA0B28658 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4833A374A03A0564A8C938F2522A54A0 /* Pods-Vyb Dating-Vyb DatingUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4355B71A596DF9FA05E73A1AB22CBC0F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Vyb Dating";
+			target = 590BBF7DAD7D2D3C974BE08118CB1743 /* Pods-Vyb Dating */;
+			targetProxy = F4F747BD981E2345527365DD4E89D9F7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		019D7D27B35B2DC9ACFE8A45EFE3CFB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8212370A46D32FCBFDB9BCAD51694C3F /* Pods-Vyb Dating-Vyb DatingUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Vyb Dating-Vyb DatingUITests/Pods-Vyb Dating-Vyb DatingUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Vyb Dating-Vyb DatingUITests/Pods-Vyb Dating-Vyb DatingUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		23A94582CC8B1FDE8889B6D32CB133F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4FEA70347E3BEB2E425C462F4F875F3 /* Pods-Vyb Dating.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Vyb Dating/Pods-Vyb Dating-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Vyb Dating/Pods-Vyb Dating.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2C776DE0E3BCB3496A43F0BFCA3C4630 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90FF3D8502F9A2632F87E0D67B603C03 /* Pods-Vyb DatingTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Vyb DatingTests/Pods-Vyb DatingTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Vyb DatingTests/Pods-Vyb DatingTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4BC7450F9457737EE3E637BA155B56F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		51B9B4C2E4E8867286CB0A5B7292B175 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D73E1514345E89602DB1F4AE26670B8 /* Pods-Vyb DatingTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Vyb DatingTests/Pods-Vyb DatingTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Vyb DatingTests/Pods-Vyb DatingTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7231E8285D363ED66A0A97AC0DA8387C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F858139623A38BD6022E06AE6051658 /* Pods-Vyb Dating.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Vyb Dating/Pods-Vyb Dating-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Vyb Dating/Pods-Vyb Dating.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8B5A46FF8D3C1289CDEE3BAFACABCD2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		D60A21F014705E56A17EB33C06BF0615 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70B6BB3F29AE109B5B808A65640CCBD7 /* Pods-Vyb Dating-Vyb DatingUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Vyb Dating-Vyb DatingUITests/Pods-Vyb Dating-Vyb DatingUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Vyb Dating-Vyb DatingUITests/Pods-Vyb Dating-Vyb DatingUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		39B61097083FB6FD282BA562B983AD6B /* Build configuration list for PBXNativeTarget "Pods-Vyb Dating-Vyb DatingUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				019D7D27B35B2DC9ACFE8A45EFE3CFB0 /* Debug */,
+				D60A21F014705E56A17EB33C06BF0615 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BC7450F9457737EE3E637BA155B56F7 /* Debug */,
+				8B5A46FF8D3C1289CDEE3BAFACABCD2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5DAB33147D782102F0715908A3423FF6 /* Build configuration list for PBXNativeTarget "Pods-Vyb Dating" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23A94582CC8B1FDE8889B6D32CB133F3 /* Debug */,
+				7231E8285D363ED66A0A97AC0DA8387C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D67B8544A0AACF284FC734C26095E7A0 /* Build configuration list for PBXNativeTarget "Pods-Vyb DatingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C776DE0E3BCB3496A43F0BFCA3C4630 /* Debug */,
+				51B9B4C2E4E8867286CB0A5B7292B175 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

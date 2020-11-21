@@ -15,7 +15,16 @@ struct ProfilePictureContoller: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     let gradient = LinearGradient(gradient: Gradient(colors: [Color.primaryVybe,Color.vybGreen]), startPoint: .top, endPoint: .bottom)
+    
+    @State private var showingImagePicker = false
+    @State private var inputImage: UIImage?
+    @State private var receivedImage: Image?
 
+    func loadImage() {
+        guard let inputImage = inputImage else { return }
+        self.receivedImage = Image(uiImage: inputImage)
+    }
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 4, content: {
            Text("Profile Picture")
@@ -28,23 +37,38 @@ struct ProfilePictureContoller: View {
                .padding(.bottom, 32)
            
            VStack(alignment: .center, spacing: 16){
-        
-                    ZStack{
-                        RoundedRectangle(cornerRadius: 50)
-                            .stroke(Color.textFieldGrey, lineWidth: 0)
-                            .shadow(color: .black, radius: 2, x: 0, y: 2)
-                            .frame(width: 150, height: 150, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                            .background(gradient)
-                            .cornerRadius(50)
-                        
-                        Image("UserProfile")
-                            .resizable()
-                            .frame(width: 120, height: 120, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                            .cornerRadius(50)
-                            .scaledToFit()
-                            .clipped()
+                    Button(action: {
+                        self.showingImagePicker = true
+                    }) {
+                        ZStack{
+                            RoundedRectangle(cornerRadius: 50)
+                                .stroke(Color.textFieldGrey, lineWidth: 0)
+                                .shadow(color: .black, radius: 2, x: 0, y: 2)
+                                .frame(width: 150, height: 150, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                .background(gradient)
+                                .cornerRadius(50)
+                            
+                            if (self.inputImage == nil){
+                                 Image("UserProfile")
+                                    .resizable()
+                                    .frame(width: 120, height: 120, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                    .cornerRadius(50)
+                                    .scaledToFill()
+                                    .clipped()
+                            }
+                            
+                            if (self.inputImage != nil){
+                                 Image(uiImage: self.inputImage!)
+                                    .resizable()
+                                    .renderingMode(.original)
+                                    .frame(width: 120, height: 120, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                    .cornerRadius(50)
+                                    .scaledToFill()
+                                    .clipped()
+                            }
+                        }
                     }
-                   
+
                NavigationLink(destination: PhoneNumberController(), tag: NavigationPushedAction.phoneNumberAction, selection: $selection) {
                    DefaultButton(title: "Next", action:{
                        self.selection = NavigationPushedAction.phoneNumberAction
@@ -53,7 +77,11 @@ struct ProfilePictureContoller: View {
                
            }
            Spacer()
-       }).padding([.leading,.trailing],32)
+       })
+        .sheet(isPresented: $showingImagePicker, onDismiss: loadImage) {
+            ImagePicker(image: self.$inputImage)
+        }
+        .padding([.leading,.trailing],32)
         .navigationTitle("")
         .navigationBarTitle(Text(""))
         .navigationBarBackButtonHidden(true)

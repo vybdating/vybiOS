@@ -1,0 +1,6 @@
+framework module Pods_Vyb_Dating {
+  umbrella header "Pods-Vyb Dating-umbrella.h"
+
+  export *
+  module * { export * }
+}
