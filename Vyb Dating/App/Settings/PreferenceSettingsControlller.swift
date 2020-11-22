@@ -21,8 +21,8 @@ struct PreferenceSettingsControlller: View {
             Form {
                
                 Section {
-                    SettingsRowView(title: "Age", value: "18 to 30", icon: "gear")
-                    SettingsRowView(title: "Height", value: "Accra", icon: "gear")
+                    SettingsRowView(title: "Age", value: "18 to 30", icon: "bandage")
+                    SettingsRowView(title: "Height", value: "Accra", icon: "square.and.line.vertical.and.square")
                 }
                 //SECTION 1
                 .background(Color.clear)
@@ -32,8 +32,8 @@ struct PreferenceSettingsControlller: View {
                 
                 
                 Section {
-                    SettingsRowView(title: "Education", value: "18 to 30", icon: "gear")
-                    SettingsRowView(title: "Religion", value: "Accra", icon: "gear")
+                    SettingsRowView(title: "Education", value: "18 to 30", icon: "house")
+                    SettingsRowView(title: "Religion", value: "Accra", icon: "hand.thumbsup")
                 }
                 //SECTION 1
                 .background(Color.clear)
@@ -42,9 +42,9 @@ struct PreferenceSettingsControlller: View {
                 .padding(2)
                
                 Section {
-                    SettingsRowView(title: "Race", value: "Accra", icon: "gear")
-                    SettingsRowView(title: "Body Type", value: "Accra", icon: "gear")
-                    SettingsRowView(title: "Gender", value: "M", icon: "gear")
+                    SettingsRowView(title: "Race", value: "Accra", icon: "person.crop.circle")
+                    SettingsRowView(title: "Body Type", value: "Accra", icon: "hand.raised")
+                    SettingsRowView(title: "Gender", value: "M", icon: "smiley")
                 }
                 //SECTION 2
                 .background(Color.clear)
@@ -53,7 +53,7 @@ struct PreferenceSettingsControlller: View {
                 .padding(2)
                
                 Section {
-                    SettingsRowView(title: "Distance", value: "Accra", icon: "gear")
+                    SettingsRowView(title: "Distance", value: "Accra", icon: "location.north.line")
                 }
                 //SECTION 3
                 .background(Color.clear)

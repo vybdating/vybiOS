@@ -40,9 +40,9 @@ struct ProfileSettingsController: View {
                 .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                 
                 Section {
-                    SettingsRowView(title: "Location", value: "Accra", icon: "gear")
-                    SettingsRowView(title: "Height", value: "Accra", icon: "gear")
-                    SettingsRowView(title: "Religion", value: "Accra", icon: "gear")
+                    SettingsRowView(title: "Location", value: "Accra", icon: "location.circle")
+                    SettingsRowView(title: "Height", value: "Accra", icon: "chart.bar")
+                    SettingsRowView(title: "Religion", value: "Accra", icon: "person.circle")
                 }
                 //SECTION 1
                 .background(Color.clear)
@@ -50,11 +50,10 @@ struct ProfileSettingsController: View {
                 .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 8))
                 .padding(2)
                 
-               
                 Section {
-                    SettingsRowView(title: "Race", value: "Accra", icon: "gear")
-                    SettingsRowView(title: "Body Type", value: "Accra", icon: "gear")
-                    SettingsRowView(title: "School", value: "Accra", icon: "gear")
+                    SettingsRowView(title: "Race", value: "Accra", icon: "person.crop.circle")
+                    SettingsRowView(title: "Body Type", value: "Accra", icon: "hand.raised")
+                    SettingsRowView(title: "School", value: "Accra", icon: "house")
                 }
                 //SECTION 2
                 .background(Color.clear)
@@ -63,9 +62,9 @@ struct ProfileSettingsController: View {
                 .padding(2)
                
                 Section {
-                    SettingsRowView(title: "Job Title", value: "Accra", icon: "gear")
-                    SettingsRowView(title: "Industry", value: "Accra", icon: "gear")
-                    SettingsRowView(title: "Relationship Status", value: "Accra", icon: "gear")
+                    SettingsRowView(title: "Job Title", value: "Accra", icon: "briefcase")
+                    SettingsRowView(title: "Industry", value: "Accra", icon: "house")
+                    SettingsRowView(title: "Relationship Status", value: "Accra", icon: "checkmark.square")
                 }
                 //SECTION 3
                 .background(Color.clear)
@@ -74,9 +73,9 @@ struct ProfileSettingsController: View {
                 .padding(2)
                 
                 Section {
-                    SettingsRowView(title: "Do you smoke?", value: "Accra", icon: "gear")
-                    SettingsRowView(title: "Do you drink?", value: "Accra", icon: "gear")
-                    SettingsRowView(title: "Do you want children?", value: "Yes", icon: "gear")
+                    SettingsRowView(title: "Do you smoke?", value: "Accra", icon: "smoke")
+                    SettingsRowView(title: "Do you drink?", value: "Accra", icon: "waveform")
+                                SettingsRowView(title: "Do you want children?", value: "Yes", icon: "person.and.person")
                 }
                 //SECTION 3
                 .background(Color.clear)
