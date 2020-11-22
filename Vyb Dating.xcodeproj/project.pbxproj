@@ -29,6 +29,10 @@
 		56A198372569D8F100CBBFC4 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56A1982D2569D8F100CBBFC4 /* Roboto-Regular.ttf */; };
 		56A198382569D8F100CBBFC4 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56A1982E2569D8F100CBBFC4 /* Roboto-ThinItalic.ttf */; };
 		56A198402569DBF100CBBFC4 /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A1983F2569DBF100CBBFC4 /* Font+Extension.swift */; };
+		56A19856256A909000CBBFC4 /* MainSettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A19855256A909000CBBFC4 /* MainSettingController.swift */; };
+		56A1985B256A957A00CBBFC4 /* ProfileSettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A1985A256A957A00CBBFC4 /* ProfileSettingsController.swift */; };
+		56A19860256A95E500CBBFC4 /* PreferenceSettingsControlller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A1985F256A95E500CBBFC4 /* PreferenceSettingsControlller.swift */; };
+		56A19865256AA97900CBBFC4 /* SettingsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A19864256AA97900CBBFC4 /* SettingsRowView.swift */; };
 		56AA38DD255B75CE0049997E /* Vyb_DatingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AA38DC255B75CE0049997E /* Vyb_DatingApp.swift */; };
 		56AA38DF255B75CE0049997E /* PhoneNumberController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AA38DE255B75CE0049997E /* PhoneNumberController.swift */; };
 		56AA38E1255B75D00049997E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56AA38E0255B75D00049997E /* Assets.xcassets */; };
@@ -94,6 +98,10 @@
 		56A1983F2569DBF100CBBFC4 /* Font+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extension.swift"; sourceTree = "<group>"; };
 		56A198442569DF2100CBBFC4 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		56A198452569DF2F00CBBFC4 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		56A19855256A909000CBBFC4 /* MainSettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSettingController.swift; sourceTree = "<group>"; };
+		56A1985A256A957A00CBBFC4 /* ProfileSettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingsController.swift; sourceTree = "<group>"; };
+		56A1985F256A95E500CBBFC4 /* PreferenceSettingsControlller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceSettingsControlller.swift; sourceTree = "<group>"; };
+		56A19864256AA97900CBBFC4 /* SettingsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRowView.swift; sourceTree = "<group>"; };
 		56AA38D9255B75CE0049997E /* Vyb Dating.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vyb Dating.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		56AA38DC255B75CE0049997E /* Vyb_DatingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vyb_DatingApp.swift; sourceTree = "<group>"; };
 		56AA38DE255B75CE0049997E /* PhoneNumberController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberController.swift; sourceTree = "<group>"; };
@@ -177,6 +185,7 @@
 		569597F5255C14AA0087575E /* App */ = {
 			isa = PBXGroup;
 			children = (
+				56A19851256A710600CBBFC4 /* Settings */,
 				56AA38DC255B75CE0049997E /* Vyb_DatingApp.swift */,
 				56AA38DE255B75CE0049997E /* PhoneNumberController.swift */,
 				56959819255C64260087575E /* LoginController.swift */,
@@ -201,6 +210,7 @@
 				56C938D5255DA66C00E94A98 /* PickerInputView.swift */,
 				5602F2B525696F9800B1B1D8 /* SearchBarView.swift */,
 				56A198172569B5D000CBBFC4 /* CustomView.swift */,
+				56A19864256AA97900CBBFC4 /* SettingsRowView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -240,6 +250,16 @@
 				56A1982E2569D8F100CBBFC4 /* Roboto-ThinItalic.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		56A19851256A710600CBBFC4 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				56A19855256A909000CBBFC4 /* MainSettingController.swift */,
+				56A1985A256A957A00CBBFC4 /* ProfileSettingsController.swift */,
+				56A1985F256A95E500CBBFC4 /* PreferenceSettingsControlller.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		56AA38D0255B75CE0049997E = {
@@ -550,13 +570,17 @@
 				56A198402569DBF100CBBFC4 /* Font+Extension.swift in Sources */,
 				5602F23125635A7600B1B1D8 /* ImagePicker.swift in Sources */,
 				56F422A9255E960400A1ABAC /* ProfilePictureContoller.swift in Sources */,
+				56A1985B256A957A00CBBFC4 /* ProfileSettingsController.swift in Sources */,
 				56AA38DD255B75CE0049997E /* Vyb_DatingApp.swift in Sources */,
+				56A19856256A909000CBBFC4 /* MainSettingController.swift in Sources */,
 				56F422A4255E8BF000A1ABAC /* DateOfBirthController.swift in Sources */,
+				56A19860256A95E500CBBFC4 /* PreferenceSettingsControlller.swift in Sources */,
 				56959815255C5D3C0087575E /* GenericView+Extension.swift in Sources */,
 				56C938BE255D81B800E94A98 /* Mics.swift in Sources */,
 				56959810255C5ADC0087575E /* Color+Extension.swift in Sources */,
 				56C9389B255D6E4200E94A98 /* FullNameController.swift in Sources */,
 				56F422B3255EABBF00A1ABAC /* VerificationCodeController.swift in Sources */,
+				56A19865256AA97900CBBFC4 /* SettingsRowView.swift in Sources */,
 				5602F2B625696F9800B1B1D8 /* SearchBarView.swift in Sources */,
 				5695981A255C64260087575E /* LoginController.swift in Sources */,
 				56F422AE255EA86800A1ABAC /* ProfessionalDetailsController.swift in Sources */,

@@ -73,7 +73,7 @@ struct ProfilePictureContoller: View {
                    DefaultButton(title: "Next", action:{
                        self.selection = NavigationPushedAction.phoneNumberAction
                    }).clipped()
-               }.padding(.top, 64)
+               }.padding(.top, 32)
                
            }
            Spacer()

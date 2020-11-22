@@ -12,6 +12,13 @@ struct LoginController: View {
     @State var selection: NavigationPushedAction? = nil
     @Environment(\.openURL) var openURL
     
+    
+    init() {
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+        UINavigationBar.appearance().shadowImage = UIImage()
+    }
+    
+    
     //MARK:Body
     var body: some View {
         NavigationView {
@@ -102,8 +109,9 @@ struct LoginController: View {
                 .padding(.bottom, 64)
                 
             }.padding(32)
-         }.navigationTitle("")
-          .navigationBarTitle(Text(""))
+         }
+         .navigationTitle("")
+         .navigationBarTitle("")
          .navigationBarBackButtonHidden(true)
         }
     }

@@ -34,22 +34,22 @@ struct ProfessionalDetailsController: View {
                 TextField("Job Title", text: $jobTitle)
                      .textContentType(.givenName)
                      .keyboardType(.alphabet)
-                     .padding(16)
+                     .padding(10)
                      .font(Font.robotoThin(size: 16))
                      .foregroundColor(Color.black)
                      .accentColor(Color.black)
-                     .background(RoundedRectangle(cornerRadius: 40).fill(Color.textFieldGrey))
+                     .background(RoundedRectangle(cornerRadius: 20).fill(Color.textFieldGrey))
                     .frame(height: 44, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                     .clipped()
                 
                 TextField("School Eg. NYU", text: $school)
                       .textContentType(.familyName)
                       .keyboardType(.alphabet)
-                      .padding(16)
+                      .padding(10)
                       .font(Font.robotoThin(size: 16))
                       .foregroundColor(Color.black)
                       .accentColor(Color.black)
-                      .background(RoundedRectangle(cornerRadius: 40).fill(Color.textFieldGrey))
+                      .background(RoundedRectangle(cornerRadius: 20).fill(Color.textFieldGrey))
                     .frame(height: 44, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                     .clipped()
                 
@@ -61,7 +61,7 @@ struct ProfessionalDetailsController: View {
                     DefaultButton(title: "Next", action:{
                         self.selection = NavigationPushedAction.phoneNumberAction
                     }).clipped()
-                }.padding(.top, 64)
+                }.padding(.top, 32)
             
                 Spacer()
             

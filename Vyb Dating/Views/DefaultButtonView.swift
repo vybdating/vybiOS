@@ -12,6 +12,8 @@ struct DefaultButtonStyle: ButtonStyle {
     let backgroundEndColor: Color
     let foregroundColor: Color
     let isDisabled: Bool
+    let font: Font
+    let buttonHeight: CGFloat
     
     func makeBody(configuration: Self.Configuration) -> some View {
         let currentForegroundColor = isDisabled || configuration.isPressed ? foregroundColor.opacity(0.9) : foregroundColor
@@ -24,34 +26,35 @@ struct DefaultButtonStyle: ButtonStyle {
             .padding()
             .foregroundColor(currentForegroundColor)
             .background(isDisabled || configuration.isPressed ? gradientPressed : gradient)
-            // This is the key part, we are using both an overlay as well as cornerRadius
-            .cornerRadius(40)
+            .cornerRadius(buttonHeight)
             .overlay(
-                RoundedRectangle(cornerRadius: 40)
+                RoundedRectangle(cornerRadius: buttonHeight)
                     .stroke(currentForegroundColor, lineWidth: 0)
                     .shadow(color: .black, radius: 2, x: 0, y: 2)
-        )
+            )
             .padding([.top, .bottom], 0)
-            .font(Font.robotoRegular(size: 20))
+            .font(font)
     }
 }
 
 struct DefaultButton: View {
     //MARK: Properties
-    private static let buttonHorizontalMargins: CGFloat = 40
     var backgroundStartColor: Color
     var backgroundEndColor: Color
     var foregroundColor: Color
     private let title: String
     private let action: () -> Void
-    // It would be nice to make this into a binding.
     private let disabled: Bool
+    private let font: Font
+    private var buttonHeight: CGFloat
     
     init(title: String,
          disabled: Bool = false,
          backgroundStartColor: Color = Color.vybDeepGreen,
          backgroundEndColor: Color = Color.primaryVybe,
          foregroundColor: Color = Color.white,
+         font: Font = Font.robotoRegular(size: 20),
+         buttonHeight: CGFloat = 44,
          action: @escaping () -> Void) {
         self.backgroundStartColor = backgroundStartColor
         self.backgroundEndColor = backgroundEndColor
@@ -59,6 +62,8 @@ struct DefaultButton: View {
         self.title = title
         self.action = action
         self.disabled = disabled
+        self.font = font
+        self.buttonHeight = buttonHeight
     }
     
     //MARK: Body
@@ -72,8 +77,9 @@ struct DefaultButton: View {
             //: BUTTON
             .buttonStyle(DefaultButtonStyle(backgroundStartColor: backgroundStartColor, backgroundEndColor: backgroundEndColor,
                                           foregroundColor: foregroundColor,
-                                          isDisabled: disabled))
+                                          isDisabled: disabled, font: font, buttonHeight: buttonHeight))
                 .disabled(self.disabled)
+            .clipped()
            
         }
     }

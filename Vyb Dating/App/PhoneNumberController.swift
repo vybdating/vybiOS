@@ -19,6 +19,8 @@ struct PhoneNumberController: View {
     @State private var code : String = ""
     @State private var number : String = ""
     
+    
+    
     //MARK: init the phone number action
     private func startCheckingNumber(){
         if  number.isEmpty {
@@ -44,6 +46,7 @@ struct PhoneNumberController: View {
                 
                 VStack (alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: 32) {
                         NumberInputView(code: $code, number: $number)
+                            //NUMBER VIEW
                         DefaultButton(title: "Get Started" ,action:{
                             self.startCheckingNumber()
                         }).clipped().padding(.top, 0)
@@ -52,9 +55,6 @@ struct PhoneNumberController: View {
                 Spacer()
             }
             .padding([.leading,.trailing],32)
-            .navigationTitle("")
-            .navigationBarTitle(Text(""))
-            .navigationBarBackButtonHidden(true)
             .navigationBarItems(leading:
                         Button(action: {
                             self.presentationMode.wrappedValue.dismiss()
@@ -62,23 +62,26 @@ struct PhoneNumberController: View {
                             BackIconView()
                         }
                 )
+            .navigationTitle("")
+            .navigationBarTitle("")
+            .navigationBarTitle("", displayMode: .inline)
+            .navigationBarBackButtonHidden(true)
             //Error alert session start
             .alert(isPresented: $showAlert) { () -> Alert in
                     Alert(title: Text(Constants.displayName), message: Text("\(alertMessage)"))
                 }
             //Number confirmation prompt start
-            .alert(isPresented: $confirmNumberPrompt) {
+            .alert(isPresented: $confirmNumberPrompt) { () -> Alert in
                     Alert(
                         title: Text(Constants.displayName),
                         message: Text("\(confirmNumberMessage) \(self.code)\(self.number)"),
-                        dismissButton: .default(Text("PROCEED").foregroundColor(Color.primaryVybe), action: {
+                        dismissButton: .default(Text("PROCEED").foregroundColor( Color.primaryVybe), action: {
                             self.showVerification = true
                     
                         })
                     )
             }//MESSAGE ALERT
-            
-         }
+         }//SCROLLVIEW END
     }
 }
 

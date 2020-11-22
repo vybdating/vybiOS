@@ -20,22 +20,51 @@ struct ProfileController: View {
     
     //MARK: 
     var heightPickerFeet: some View {
-        HStack{
-            Picker(selection: $feetSelected, label: Text("Feet")) {
-                   ForEach(0..<10) {
-                     Text("\($0)").tag($0)
-                    }
-            }.labelsHidden()
+        VStack(alignment: .center, spacing: nil) {
+            HStack(alignment: .center, spacing: 4 ) {
+                Text("Feet")
+                Spacer()
+                Text("Inch")
+            }
+            .padding()
             .clipped()
-            Spacer()
-            Picker(selection: $inchSelected, label: Text("Inch")) {
-                ForEach(0..<10) {
-                  Text("\($0)").tag($0)
-                 }
-            }.labelsHidden()
+            HStack (alignment: .center, spacing: 4 ){
+                Picker(selection: $feetSelected, label: Text("Feet")) {
+                       ForEach(0..<10) {
+                         Text("\($0)")
+                            .multilineTextAlignment(.center)
+                            .foregroundColor(Color.primaryVybe)
+                            .padding()
+                            .clipped()
+                            .tag($0)
+                        }
+                }
+                .colorMultiply(Color.primaryVybe)
+                .labelsHidden()
+                .padding()
+                .clipped()
+                Spacer()
+                Picker(selection: $inchSelected, label: Text("Inch")) {
+                    ForEach(0..<10) {
+                        Text("\($0)")
+                            .multilineTextAlignment(.center)
+                            .foregroundColor(Color.primaryVybe)
+                            .padding()
+                            .clipped()
+                            .tag($0)
+                     }
+                }
+                .padding()
+                .labelsHidden()
+                .colorMultiply(Color.primaryVybe)
+                .clipped()
+            }
+            .padding()
             .clipped()
+            Button("Dismiss") {
+                self.showHeightPicker = false
+                        }
         }
-        
     }
     
     //MARK: Body
@@ -106,7 +135,7 @@ struct ProfileController: View {
                  Alert(title: Text(Constants.displayName), message: Text("\(alertMessage)"))
              }.sheet(isPresented: $showHeightPicker, content: {
                 self.heightPickerFeet
-            })
+             })
       
     }
 }

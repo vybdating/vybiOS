@@ -120,7 +120,7 @@ struct VerificationCodeController: View {
             
         }.padding([.leading,.trailing],32)
         .navigationTitle("")
-        .navigationBarTitle(Text(""))
+        .navigationBarTitle("", displayMode: .inline)
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading:
                     Button(action: {
