@@ -29,13 +29,13 @@ struct PickerInputView: View {
         }) {
             HStack(spacing: 0) {
                 Text(self.selectedType.isEmpty ? placeHolder : self.selectedType)
-                    .font(.headline)
-                    .foregroundColor(self.selectedType.isEmpty ? Color.gray : Color.primaryVybe)
+                    .font(Font.robotoThin(size: 16))
+                    .foregroundColor(self.selectedType.isEmpty ? Color.black : Color.primaryVybe)
                 Spacer()
                 Image("DownArrow")
                     .resizable()
                     .imageScale(.small)
-                    .frame(width: 20, height: 20, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                    .frame(width: 16, height: 16, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                     .scaledToFill()
                     .clipped()
          

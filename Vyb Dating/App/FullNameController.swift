@@ -24,22 +24,22 @@ struct FullNameController: View {
         ScrollView{
         
             VStack (alignment: .leading, spacing: 4) {
-                  Text("What's your name")
+                Text("What's your name")
                         .foregroundColor(.black)
-                        .font(Font.system(size: 30, weight: .bold))
+                        .font(Font.robotoBold(size: 30))
                       
                 Text("People identify you by these details.\nMake it cont")
                     .foregroundColor(.gray)
-                    .font(.body)
+                    .font(Font.robotoThin(size: 15))
                     .padding(.bottom, 32)
                     
                   
-                VStack (alignment: .leading, spacing: 16) {
+                VStack (alignment: .center, spacing: 16) {
                     TextField("Enter First Name", text: $firstName)
                          .textContentType(.givenName)
                          .keyboardType(.alphabet)
                          .padding(16)
-                         .font(.title3)
+                         .font(Font.robotoThin(size: 16))
                          .foregroundColor(Color.black)
                          .accentColor(Color.black)
                          .background(RoundedRectangle(cornerRadius: 40).fill(Color.textFieldGrey))
@@ -49,14 +49,15 @@ struct FullNameController: View {
                           .textContentType(.familyName)
                           .keyboardType(.alphabet)
                           .padding(16)
-                          .font(.title3)
+                          .font(Font.robotoThin(size: 16))
                           .foregroundColor(Color.black)
                           .accentColor(Color.black)
                           .background(RoundedRectangle(cornerRadius: 40).fill(Color.textFieldGrey))
                     
                     Text("we don't share your last name o your profile.")
                         .foregroundColor(.black)
-                        .font(.callout)
+                        .font(Font.robotoThin(size: 12))
+                        .multilineTextAlignment(.center)
                         .padding([.leading,.trailing], 16)
                     
                 }
@@ -78,12 +79,7 @@ struct FullNameController: View {
                         Button(action: {
                             self.presentationMode.wrappedValue.dismiss()
                         }) {
-                            Image("NavigationBack")
-                                .resizable()
-                                .imageScale(.large)
-                                .scaledToFit()
-                                .frame(width: 32, height: 64, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                                .clipped()
+                            BackIconView()
                         }
                 ).alert(isPresented: $showAlert) { () -> Alert in
                     Alert(title: Text(Constants.displayName), message: Text("\(alertMessage)"))

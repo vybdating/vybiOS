@@ -17,6 +17,18 @@
 		56959810255C5ADC0087575E /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5695980F255C5ADC0087575E /* Color+Extension.swift */; };
 		56959815255C5D3C0087575E /* GenericView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56959814255C5D3C0087575E /* GenericView+Extension.swift */; };
 		5695981A255C64260087575E /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56959819255C64260087575E /* LoginController.swift */; };
+		56A198182569B5D000CBBFC4 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A198172569B5D000CBBFC4 /* CustomView.swift */; };
+		56A1981D2569CAA400CBBFC4 /* PreferenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A1981C2569CAA400CBBFC4 /* PreferenceController.swift */; };
+		56A1982F2569D8F100CBBFC4 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56A198252569D8F100CBBFC4 /* Roboto-Medium.ttf */; };
+		56A198312569D8F100CBBFC4 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56A198272569D8F100CBBFC4 /* Roboto-Black.ttf */; };
+		56A198322569D8F100CBBFC4 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56A198282569D8F100CBBFC4 /* Roboto-Italic.ttf */; };
+		56A198332569D8F100CBBFC4 /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56A198292569D8F100CBBFC4 /* Roboto-BlackItalic.ttf */; };
+		56A198342569D8F100CBBFC4 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56A1982A2569D8F100CBBFC4 /* Roboto-Light.ttf */; };
+		56A198352569D8F100CBBFC4 /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56A1982B2569D8F100CBBFC4 /* Roboto-BoldItalic.ttf */; };
+		56A198362569D8F100CBBFC4 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56A1982C2569D8F100CBBFC4 /* Roboto-MediumItalic.ttf */; };
+		56A198372569D8F100CBBFC4 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56A1982D2569D8F100CBBFC4 /* Roboto-Regular.ttf */; };
+		56A198382569D8F100CBBFC4 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56A1982E2569D8F100CBBFC4 /* Roboto-ThinItalic.ttf */; };
+		56A198402569DBF100CBBFC4 /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A1983F2569DBF100CBBFC4 /* Font+Extension.swift */; };
 		56AA38DD255B75CE0049997E /* Vyb_DatingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AA38DC255B75CE0049997E /* Vyb_DatingApp.swift */; };
 		56AA38DF255B75CE0049997E /* PhoneNumberController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AA38DE255B75CE0049997E /* PhoneNumberController.swift */; };
 		56AA38E1255B75D00049997E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56AA38E0255B75D00049997E /* Assets.xcassets */; };
@@ -68,6 +80,20 @@
 		5695980F255C5ADC0087575E /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		56959814255C5D3C0087575E /* GenericView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GenericView+Extension.swift"; sourceTree = "<group>"; };
 		56959819255C64260087575E /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		56A198172569B5D000CBBFC4 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		56A1981C2569CAA400CBBFC4 /* PreferenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceController.swift; sourceTree = "<group>"; };
+		56A198252569D8F100CBBFC4 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		56A198272569D8F100CBBFC4 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		56A198282569D8F100CBBFC4 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
+		56A198292569D8F100CBBFC4 /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
+		56A1982A2569D8F100CBBFC4 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		56A1982B2569D8F100CBBFC4 /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
+		56A1982C2569D8F100CBBFC4 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
+		56A1982D2569D8F100CBBFC4 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		56A1982E2569D8F100CBBFC4 /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
+		56A1983F2569DBF100CBBFC4 /* Font+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extension.swift"; sourceTree = "<group>"; };
+		56A198442569DF2100CBBFC4 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		56A198452569DF2F00CBBFC4 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		56AA38D9255B75CE0049997E /* Vyb Dating.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vyb Dating.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		56AA38DC255B75CE0049997E /* Vyb_DatingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vyb_DatingApp.swift; sourceTree = "<group>"; };
 		56AA38DE255B75CE0049997E /* PhoneNumberController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberController.swift; sourceTree = "<group>"; };
@@ -160,6 +186,7 @@
 				56F422A8255E960400A1ABAC /* ProfilePictureContoller.swift */,
 				56F422AD255EA86800A1ABAC /* ProfessionalDetailsController.swift */,
 				56F422B2255EABBF00A1ABAC /* VerificationCodeController.swift */,
+				56A1981C2569CAA400CBBFC4 /* PreferenceController.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -173,6 +200,7 @@
 				56C9388C255C88B200E94A98 /* LinkedInButtonView.swift */,
 				56C938D5255DA66C00E94A98 /* PickerInputView.swift */,
 				5602F2B525696F9800B1B1D8 /* SearchBarView.swift */,
+				56A198172569B5D000CBBFC4 /* CustomView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -191,8 +219,27 @@
 				5695980F255C5ADC0087575E /* Color+Extension.swift */,
 				56959814255C5D3C0087575E /* GenericView+Extension.swift */,
 				56C938CB255D997A00E94A98 /* String+Extension.swift */,
+				56A1983F2569DBF100CBBFC4 /* Font+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		56A198242569D85600CBBFC4 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				56A198452569DF2F00CBBFC4 /* Roboto-Thin.ttf */,
+				56A198442569DF2100CBBFC4 /* Roboto-Bold.ttf */,
+				56A198272569D8F100CBBFC4 /* Roboto-Black.ttf */,
+				56A198292569D8F100CBBFC4 /* Roboto-BlackItalic.ttf */,
+				56A1982B2569D8F100CBBFC4 /* Roboto-BoldItalic.ttf */,
+				56A198282569D8F100CBBFC4 /* Roboto-Italic.ttf */,
+				56A1982A2569D8F100CBBFC4 /* Roboto-Light.ttf */,
+				56A198252569D8F100CBBFC4 /* Roboto-Medium.ttf */,
+				56A1982C2569D8F100CBBFC4 /* Roboto-MediumItalic.ttf */,
+				56A1982D2569D8F100CBBFC4 /* Roboto-Regular.ttf */,
+				56A1982E2569D8F100CBBFC4 /* Roboto-ThinItalic.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		56AA38D0255B75CE0049997E = {
@@ -220,6 +267,7 @@
 		56AA38DB255B75CE0049997E /* Vyb Dating */ = {
 			isa = PBXGroup;
 			children = (
+				56A198242569D85600CBBFC4 /* Fonts */,
 				5602F22F25635A6300B1B1D8 /* Shared */,
 				56C93891255CAE0A00E94A98 /* Utils */,
 				5695980E255C5AB20087575E /* Extensions */,
@@ -384,8 +432,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56A198382569D8F100CBBFC4 /* Roboto-ThinItalic.ttf in Resources */,
+				56A198352569D8F100CBBFC4 /* Roboto-BoldItalic.ttf in Resources */,
+				56A198372569D8F100CBBFC4 /* Roboto-Regular.ttf in Resources */,
+				56A198322569D8F100CBBFC4 /* Roboto-Italic.ttf in Resources */,
 				56AA38E4255B75D00049997E /* Preview Assets.xcassets in Resources */,
+				56A198332569D8F100CBBFC4 /* Roboto-BlackItalic.ttf in Resources */,
+				56A198312569D8F100CBBFC4 /* Roboto-Black.ttf in Resources */,
+				56A198362569D8F100CBBFC4 /* Roboto-MediumItalic.ttf in Resources */,
 				56AA38E1255B75D00049997E /* Assets.xcassets in Resources */,
+				56A198342569D8F100CBBFC4 /* Roboto-Light.ttf in Resources */,
+				56A1982F2569D8F100CBBFC4 /* Roboto-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,7 +544,10 @@
 				569597FC255C158F0087575E /* DefaultButtonView.swift in Sources */,
 				56C938CC255D997A00E94A98 /* String+Extension.swift in Sources */,
 				5602F29D25694CF600B1B1D8 /* CountryPickerView.swift in Sources */,
+				56A1981D2569CAA400CBBFC4 /* PreferenceController.swift in Sources */,
+				56A198182569B5D000CBBFC4 /* CustomView.swift in Sources */,
 				56C938D1255DA30400E94A98 /* ProfileController.swift in Sources */,
+				56A198402569DBF100CBBFC4 /* Font+Extension.swift in Sources */,
 				5602F23125635A7600B1B1D8 /* ImagePicker.swift in Sources */,
 				56F422A9255E960400A1ABAC /* ProfilePictureContoller.swift in Sources */,
 				56AA38DD255B75CE0049997E /* Vyb_DatingApp.swift in Sources */,
@@ -660,6 +720,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Vyb Dating/Preview Content\"";
+				DEVELOPMENT_TEAM = 96DV2UJ68K;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Vyb Dating/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -682,6 +743,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Vyb Dating/Preview Content\"";
+				DEVELOPMENT_TEAM = 96DV2UJ68K;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Vyb Dating/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;

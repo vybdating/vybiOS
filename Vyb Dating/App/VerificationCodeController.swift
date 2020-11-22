@@ -17,38 +17,36 @@ struct VerificationCodeController: View {
     @State var codeTwo: String = ""
     @State var codeThree: String = ""
     @State var codeFour: String = ""
-    @State var phoneNumber: String = "(000) 000 - 0000"
+    @State var phoneNumber: String
     
     private func verifyWithPhoneNumber(){
         let code: String = codeOne + codeTwo + codeThree + codeFour
         
-        print("CODE \(code)")
         //MARK: validate the string
         if code.count != 4 {
             self.showAlert = true
             return
         }
         
-        self.selection = NavigationPushedAction.phoneNumberAction
+        self.selection = NavigationPushedAction.phoneNumberVerificationAction
     }
     
     var body: some View {
         VStack (alignment: .leading, spacing: 4) {
              Text("Enter 4 digit code")
                     .foregroundColor(.black)
-                    .font(Font.system(size: 30, weight: .bold))
+                    .font(Font.robotoBold(size: 30))
             
              Text("The code was sent to your mobile number.")
                  .foregroundColor(.gray)
-                 .font(.body)
+                 .font(Font.robotoThin(size: 15))
                
-            VStack {
+            VStack(alignment: .center, spacing: 16) {
                 Text("\(phoneNumber)")
                     .foregroundColor(Color.primaryVybe)
-                    .font(.title)
+                    .font(.title2)
                     .multilineTextAlignment(.center)
                     .padding([.top,.bottom], 16)
-                    .frame(width: .infinity, height: .infinity, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                     .clipped()
                 
                 HStack (alignment: .center, spacing: 16) {
@@ -100,15 +98,20 @@ struct VerificationCodeController: View {
                           .background(RoundedRectangle(cornerRadius: 4).fill(Color.textFieldGrey))
                     
                 }.padding([.top,.bottom], 16)
-                .frame(width: .infinity, height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                .frame(height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                 .clipped()
-                //: HSTACK
-               
-                    NavigationLink(destination:  EmptyView(), tag: NavigationPushedAction.phoneNumberAction, selection: $selection) {
+                
+                ProgressView()
+                        .scaleEffect(1.5, anchor: .center)
+                    .progressViewStyle(CircularProgressViewStyle(tint: Color.vybGreen))
+                
+                
+                  //: HSTACK
+                    NavigationLink(destination:  FullNameController(), tag: NavigationPushedAction.phoneNumberVerificationAction, selection: $selection) {
                         DefaultButton(title: "Continue", action:{
                             self.verifyWithPhoneNumber()
                         }).clipped()
-                    }.padding(.top, 64)
+                    }.padding(.top, 32)
             }
             
            
@@ -123,21 +126,20 @@ struct VerificationCodeController: View {
                     Button(action: {
                         self.presentationMode.wrappedValue.dismiss()
                     }) {
-                        Image("NavigationBack")
-                            .resizable()
-                            .imageScale(.large)
-                            .scaledToFit()
-                            .frame(width: 32, height: 64, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                            .clipped()
+                        BackIconView()
                     }
             ).alert(isPresented: $showAlert) { () -> Alert in
+                Alert(title: Text(Constants.displayName), message: Text("\(alertMessage)"))
+            }.alert(isPresented: $showAlert) { () -> Alert in
                 Alert(title: Text(Constants.displayName), message: Text("\(alertMessage)"))
             }
     }
 }
 
+#if DEBUG
 struct VerificationCodeController_Previews: PreviewProvider {
     static var previews: some View {
-        VerificationCodeController()
+        VerificationCodeController(phoneNumber: "+233")
     }
 }
+#endif

@@ -42,7 +42,7 @@ struct NumberInputView: View {
                 HStack (alignment: .center, spacing: 0) {
                     Text("\(self.country?.imageName ?? "")")
                         .frame(width: 30, height: 30, alignment: .center)
-                        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                        .font(Font.robotoBold(size: 30))
                         .clipped()
                       
                     Image("DownArrow")
@@ -65,8 +65,8 @@ struct NumberInputView: View {
                 .textContentType(.telephoneNumber)
                 .keyboardType(.numberPad)
                 .padding([.top,.bottom],16)
-                .padding([.leading,.trailing],4)
-                .font(.title3)
+                .padding([.leading,.trailing],16)
+                .font(Font.robotoThin(size: 20))
                 .foregroundColor(Color.black)
                 .accentColor(Color.black)
                 .background(Color.clear)

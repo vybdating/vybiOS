@@ -50,9 +50,9 @@ struct LoginController: View {
                     
                 
                 Text(Constants.tagLine)
-                    .foregroundColor(.black)
+                    .foregroundColor(.white)
                     .multilineTextAlignment(.center)
-                    .font(.title3)
+                    .font(Font.robotoThin(size: 18))
                     .padding(.bottom, 64)
 
                 Spacer()
@@ -74,6 +74,7 @@ struct LoginController: View {
                 Text("We do not post on your page")
                     .font(Font.system(size: 12, weight: .light))
                     .foregroundColor(.white)
+                    .font(Font.robotoThin(size: 8))
                     .multilineTextAlignment(.center)
                     .padding(.top, 16)
                     .padding(.bottom, 16)
@@ -84,12 +85,13 @@ struct LoginController: View {
                 }) {
                     VStack{
                         Text("By continuing you agree to our")
-                            .font(.body)
+                            .font(Font.robotoThin(size: 14))
                             .multilineTextAlignment(.center)
                             .foregroundColor(.white)
                         
                         Text("Terms of service")
-                            .font(.body)
+                            .underline()
+                            .font(Font.robotoThin(size: 14))
                             .multilineTextAlignment(.center)
                             .foregroundColor(.blue)
                     }
@@ -102,6 +104,7 @@ struct LoginController: View {
             }.padding(32)
          }.navigationTitle("")
           .navigationBarTitle(Text(""))
+         .navigationBarBackButtonHidden(true)
         }
     }
 }

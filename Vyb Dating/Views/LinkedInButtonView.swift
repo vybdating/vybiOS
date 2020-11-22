@@ -40,7 +40,7 @@ struct LinkedInButtonView: View {
                 .shadow(color: .black, radius: 2, x: 0, y: 2)
     )
         .padding([.top, .bottom], 0)
-        .font(Font.system(size: 20, weight: .bold))
+        .font(Font.robotoRegular(size: 20))
     }
 }
 

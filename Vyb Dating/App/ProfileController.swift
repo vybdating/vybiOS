@@ -11,68 +11,78 @@ struct ProfileController: View {
     //MARK: Properties
     @State var selection: NavigationPushedAction? = nil
     @State var showAlert = false
+    @State var showHeightPicker = false
     @State var alertMessage = "Something went wrong, Try again."
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State var feetSelected = 5
     @State var inchSelected = 5
     let bodyTypes = ["Ectomorphs","Endomorphs","Mesomorphs"]
     
-   
+    //MARK: 
+    var heightPickerFeet: some View {
+        HStack{
+            Picker(selection: $feetSelected, label: Text("Feet")) {
+                   ForEach(0..<10) {
+                     Text("\($0)").tag($0)
+                    }
+            }.labelsHidden()
+            .clipped()
+            Spacer()
+            Picker(selection: $inchSelected, label: Text("Inch")) {
+                ForEach(0..<10) {
+                  Text("\($0)").tag($0)
+                 }
+            }.labelsHidden()
+            .clipped()
+        }
+        
+    }
+    
     //MARK: Body
     var body: some View {
          VStack(alignment: .leading, spacing: 4, content: {
             Text("Profile")
                 .foregroundColor(.black)
-                .font(Font.system(size: 30, weight: .bold))
+                .font(Font.robotoBold(size: 30))
                 
             Text("we dont share your information with anyone.")
                 .foregroundColor(.gray)
-                .font(.body)
+                .font(Font.robotoThin(size: 15))
                 .padding(.bottom, 32)
             
             VStack(alignment: .leading, spacing: 16){
-                VStack (alignment: .leading, spacing: 8) {
-                    Text("Height")
-                        .foregroundColor(.black)
-                        .font(.headline)
-                        .padding(.bottom, 0)
-                    
-                    HStack(alignment: .center, spacing: /*@START_MENU_TOKEN@*/nil/*@END_MENU_TOKEN@*/) {
-                        VStack {
-                            Text("Feet")
-                                .foregroundColor(.gray)
-                                .font(.body)
-                                .padding(.bottom, 0)
-                            Picker(selection: $feetSelected, label: Text("Feet")) {
-                                   ForEach(0..<10) {
-                                     Text("\($0)").tag($0)
-                                    }
-                            }.labelsHidden()
-                            .clipped()
-                        }
-                        .labelsHidden()
-                        .frame(width: 150, height: .infinity, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                        .clipped()
+                Button(action: {
+                    self.showHeightPicker = true
+                }, label: {
+                    HStack(spacing: 0) {
+                        Text("Height")
+                            .font(Font.robotoThin(size: 16))
+                            .foregroundColor(Color.black )
                         Spacer()
-                        VStack {
-                            Text("Inch")
-                                .foregroundColor(.gray)
-                                .font(.body)
-                                .padding(.bottom, 0)
-                            Picker(selection: $inchSelected, label: Text("Inch")) {
-                                ForEach(0..<10) {
-                                  Text("\($0)").tag($0)
-                                 }
-                            }
-                        }.frame(width: 150, height: .infinity, alignment: .center)
-                        .clipped()
-                    }
-                    .clipped()
-                }
+                        Image("DownArrow")
+                            .resizable()
+                            .imageScale(.small)
+                            .frame(width: 16, height: 16, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                            .scaledToFill()
+                            .clipped()
+                 
+                    }.padding(16)
+                }).foregroundColor(.black)
+                .background(RoundedRectangle(cornerRadius: 44)
+                                .stroke(Color.textFieldGrey, lineWidth: 0)
+                                .shadow(color: .black, radius: 2, x: 0, y: 2)
+                                .frame(width: .infinity, height: 44, alignment: .leading)
+                                .background(Color.textFieldGrey)
+                                .cornerRadius(44))
+                .cornerRadius(22)
+                .padding([.top, .bottom], 0)
+                .font(Font.system(size: 19, weight: .semibold))
+                .frame(width: .infinity, height: 44, alignment: .leading)
+                .clipped()
                
                 PickerInputView(placeHolder: "Body Type", options: self.bodyTypes, selection: { selected in
                     print("SELECTED \(selected)")
-                }).padding(.top, 16)
+                })
                 
                 NavigationLink(destination:  EmptyView(), tag: NavigationPushedAction.phoneNumberAction, selection: $selection) {
                     DefaultButton(title: "Next", action:{
@@ -90,16 +100,13 @@ struct ProfileController: View {
                      Button(action: {
                          self.presentationMode.wrappedValue.dismiss()
                      }) {
-                         Image("NavigationBack")
-                             .resizable()
-                             .imageScale(.large)
-                             .scaledToFit()
-                             .frame(width: 32, height: 64, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                             .clipped()
+                        BackIconView()
                      }
              ).alert(isPresented: $showAlert) { () -> Alert in
                  Alert(title: Text(Constants.displayName), message: Text("\(alertMessage)"))
-             }
+             }.sheet(isPresented: $showHeightPicker, content: {
+                self.heightPickerFeet
+            })
       
     }
 }

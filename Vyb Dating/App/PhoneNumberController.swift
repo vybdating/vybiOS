@@ -14,6 +14,7 @@ struct PhoneNumberController: View {
     @State var alertMessage = "Enter a valid phone to proceed."
     @State var confirmNumberMessage = "Proceed with the number: "
     @State var confirmNumberPrompt = false
+    @State var showVerification = false
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State private var code : String = ""
     @State private var number : String = ""
@@ -29,21 +30,23 @@ struct PhoneNumberController: View {
     
     //MARK:Body
     var body: some View {
-        ScrollView {
+         ScrollView {
             VStack(alignment: .leading, spacing: 4) {
+                //MARK: show next screen
+                NavigationLink(destination: VerificationCodeController( phoneNumber: "\(code)\(number)"), isActive: $showVerification) { EmptyView() }
                 Text("What's your number?")
                     .foregroundColor(.black)
-                    .font(Font.system(size: 30, weight: .bold))
+                    .font(Font.robotoBold(size: 30))
                     
                 Text("We dont share your information with anyone.")
                     .foregroundColor(.gray)
-                    .font(.body)
+                    .font(Font.robotoThin(size: 15))
                 
                 VStack (alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: 32) {
                         NumberInputView(code: $code, number: $number)
                         DefaultButton(title: "Get Started" ,action:{
                             self.startCheckingNumber()
-                        }).clipped().padding(.top, 64)
+                        }).clipped().padding(.top, 0)
                 }.padding([.top],64)
                 //: VSTACK
                 Spacer()
@@ -56,25 +59,26 @@ struct PhoneNumberController: View {
                         Button(action: {
                             self.presentationMode.wrappedValue.dismiss()
                         }) {
-                            Image("NavigationBack")
-                                .resizable()
-                                .imageScale(.large)
-                                .scaledToFit()
-                                .frame(width: 32, height: 64, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                                .clipped()
+                            BackIconView()
                         }
-                ).alert(isPresented: $showAlert) { () -> Alert in
+                )
+            //Error alert session start
+            .alert(isPresented: $showAlert) { () -> Alert in
                     Alert(title: Text(Constants.displayName), message: Text("\(alertMessage)"))
-                }.alert(isPresented: $confirmNumberPrompt) {
+                }
+            //Number confirmation prompt start
+            .alert(isPresented: $confirmNumberPrompt) {
                     Alert(
                         title: Text(Constants.displayName),
                         message: Text("\(confirmNumberMessage) \(self.code)\(self.number)"),
                         dismissButton: .default(Text("PROCEED").foregroundColor(Color.primaryVybe), action: {
-                            print("DONE")
+                            self.showVerification = true
+                    
                         })
                     )
-                }
-        }
+            }//MESSAGE ALERT
+            
+         }
     }
 }
 

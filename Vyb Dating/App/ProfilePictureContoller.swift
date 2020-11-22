@@ -29,11 +29,11 @@ struct ProfilePictureContoller: View {
         VStack(alignment: .leading, spacing: 4, content: {
            Text("Profile Picture")
                .foregroundColor(.black)
-               .font(Font.system(size: 30, weight: .bold))
+               .font(Font.robotoBold(size: 30))
                
            Text("This is will be your only picture on Vyb.\nChoose carefully.")
                .foregroundColor(.gray)
-               .font(.body)
+               .font(Font.robotoThin(size: 15))
                .padding(.bottom, 32)
            
            VStack(alignment: .center, spacing: 16){
@@ -89,12 +89,7 @@ struct ProfilePictureContoller: View {
                     Button(action: {
                         self.presentationMode.wrappedValue.dismiss()
                     }) {
-                        Image("NavigationBack")
-                            .resizable()
-                            .imageScale(.large)
-                            .scaledToFit()
-                            .frame(width: 32, height: 64, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                            .clipped()
+                        BackIconView()
                     }
             ).alert(isPresented: $showAlert) { () -> Alert in
                 Alert(title: Text(Constants.displayName), message: Text("\(alertMessage)"))

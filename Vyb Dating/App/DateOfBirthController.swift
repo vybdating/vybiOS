@@ -34,11 +34,11 @@ struct DateOfBirthController: View {
         VStack(alignment: .leading, spacing: 4) {
             Text("What's your date of birth?")
                   .foregroundColor(.black)
-                  .font(Font.system(size: 30, weight: .bold))
+                  .font(Font.robotoBold(size: 30))
             
             Text("Your date of birth will really help.")
                 .foregroundColor(.gray)
-                .font(.body)
+                .font(Font.robotoThin(size: 15))
                 .padding(.bottom, 32)
             
             DatePicker("Picker", selection: $pickerDate, in: dateClosedRange, displayedComponents: .date)
@@ -46,6 +46,7 @@ struct DateOfBirthController: View {
                 .datePickerStyle(WheelDatePickerStyle())
                 .colorMultiply(Color.primaryVybe)
                 .accentColor(Color.primaryVybe)
+                .font(Font.robotoThin(size: 16))
                 .frame(width: UIScreen.main.bounds.width - 32, height: .infinity, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                 .clipped()
            
@@ -64,12 +65,7 @@ struct DateOfBirthController: View {
                     Button(action: {
                         self.presentationMode.wrappedValue.dismiss()
                     }) {
-                        Image("NavigationBack")
-                            .resizable()
-                            .imageScale(.large)
-                            .scaledToFit()
-                            .frame(width: 32, height: 64, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                            .clipped()
+                        BackIconView()
                     }
             ).alert(isPresented: $showAlert) { () -> Alert in
                 Alert(title: Text(Constants.displayName), message: Text("\(alertMessage)"))

@@ -21,11 +21,11 @@ struct ProfessionalDetailsController: View {
         VStack (alignment: .leading, spacing: 4) {
               Text("Professional Details")
                     .foregroundColor(.black)
-                    .font(Font.system(size: 30, weight: .bold))
+                    .font(Font.robotoBold(size: 30))
             
               Text("With your professional details, we can easily match you with the right person.")
                  .foregroundColor(.gray)
-                 .font(.body)
+                 .font(Font.robotoThin(size: 15))
                  .padding(.bottom, 32)
             
             
@@ -35,19 +35,23 @@ struct ProfessionalDetailsController: View {
                      .textContentType(.givenName)
                      .keyboardType(.alphabet)
                      .padding(16)
-                     .font(.title3)
+                     .font(Font.robotoThin(size: 16))
                      .foregroundColor(Color.black)
                      .accentColor(Color.black)
                      .background(RoundedRectangle(cornerRadius: 40).fill(Color.textFieldGrey))
+                    .frame(height: 44, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                    .clipped()
                 
                 TextField("School Eg. NYU", text: $school)
                       .textContentType(.familyName)
                       .keyboardType(.alphabet)
                       .padding(16)
-                      .font(.title3)
+                      .font(Font.robotoThin(size: 16))
                       .foregroundColor(Color.black)
                       .accentColor(Color.black)
                       .background(RoundedRectangle(cornerRadius: 40).fill(Color.textFieldGrey))
+                    .frame(height: 44, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                    .clipped()
                 
             }
             //: VSTACK
@@ -69,12 +73,7 @@ struct ProfessionalDetailsController: View {
                     Button(action: {
                         self.presentationMode.wrappedValue.dismiss()
                     }) {
-                        Image("NavigationBack")
-                            .resizable()
-                            .imageScale(.large)
-                            .scaledToFit()
-                            .frame(width: 32, height: 64, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                            .clipped()
+                        BackIconView()
                     }
             ).alert(isPresented: $showAlert) { () -> Alert in
                 Alert(title: Text(Constants.displayName), message: Text("\(alertMessage)"))
