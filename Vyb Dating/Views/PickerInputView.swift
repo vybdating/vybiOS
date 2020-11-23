@@ -30,7 +30,7 @@ struct PickerInputView: View {
             HStack(spacing: 0) {
                 Text(self.selectedType.isEmpty ? placeHolder : self.selectedType)
                     .font(Font.robotoThin(size: 16))
-                    .foregroundColor(self.selectedType.isEmpty ? Color.black : Color.primaryVybe)
+                    .foregroundColor(Color.black)
                 Spacer()
                 Image("DownArrow")
                     .resizable()
@@ -46,13 +46,13 @@ struct PickerInputView: View {
         .background(RoundedRectangle(cornerRadius: 44)
                         .stroke(Color.textFieldGrey, lineWidth: 0)
                         .shadow(color: .black, radius: 2, x: 0, y: 2)
-                        .frame(width: .infinity, height: 44, alignment: .leading)
+                        .frame(height: 44, alignment: .leading)
                         .background(Color.textFieldGrey)
                         .cornerRadius(44))
         .cornerRadius(22)
         .padding([.top, .bottom], 0)
         .font(Font.system(size: 19, weight: .semibold))
-        .frame(width: .infinity, height: 44, alignment: .leading)
+        .frame(height: 44, alignment: .leading)
         .clipped()
         .actionSheet(isPresented: $showingActionSheet) {
             ActionSheet(title: Text(Constants.displayName), message: Text("Select Action"), buttons: optionActions

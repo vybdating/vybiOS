@@ -12,6 +12,9 @@
 		5602F29D25694CF600B1B1D8 /* CountryPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5602F29C25694CF600B1B1D8 /* CountryPickerView.swift */; };
 		5602F2AE256952E400B1B1D8 /* CountryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5602F2AD256952E400B1B1D8 /* CountryItem.swift */; };
 		5602F2B625696F9800B1B1D8 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5602F2B525696F9800B1B1D8 /* SearchBarView.swift */; };
+		567D5AA7256C24B500F91645 /* VybDating.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 567D5AA5256C24B500F91645 /* VybDating.xcdatamodeld */; };
+		567D5AFD256C3B5000F91645 /* HeightPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D5AFC256C3B5000F91645 /* HeightPickerView.swift */; };
+		567D5B02256C605C00F91645 /* PickerButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D5B01256C605C00F91645 /* PickerButtonView.swift */; };
 		569597FC255C158F0087575E /* DefaultButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569597FB255C158F0087575E /* DefaultButtonView.swift */; };
 		56959807255C41CC0087575E /* NumberInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56959806255C41CC0087575E /* NumberInputView.swift */; };
 		56959810255C5ADC0087575E /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5695980F255C5ADC0087575E /* Color+Extension.swift */; };
@@ -39,6 +42,8 @@
 		56AA38E4255B75D00049997E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56AA38E3255B75D00049997E /* Preview Assets.xcassets */; };
 		56AA38EF255B75D10049997E /* Vyb_DatingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AA38EE255B75D10049997E /* Vyb_DatingTests.swift */; };
 		56AA38FA255B75D10049997E /* Vyb_DatingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AA38F9255B75D10049997E /* Vyb_DatingUITests.swift */; };
+		56B69824256B290500281739 /* CharacterInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B69823256B290500281739 /* CharacterInputView.swift */; };
+		56B69868256BF57400281739 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B69867256BF57400281739 /* PersistenceController.swift */; };
 		56C9388D255C88B200E94A98 /* LinkedInButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C9388C255C88B200E94A98 /* LinkedInButtonView.swift */; };
 		56C93893255CAE1E00E94A98 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C93892255CAE1E00E94A98 /* Constants.swift */; };
 		56C9389B255D6E4200E94A98 /* FullNameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C9389A255D6E4200E94A98 /* FullNameController.swift */; };
@@ -79,6 +84,9 @@
 		5602F29C25694CF600B1B1D8 /* CountryPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryPickerView.swift; sourceTree = "<group>"; };
 		5602F2AD256952E400B1B1D8 /* CountryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryItem.swift; sourceTree = "<group>"; };
 		5602F2B525696F9800B1B1D8 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		567D5AA6256C24B500F91645 /* VybDating.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VybDating.xcdatamodel; sourceTree = "<group>"; };
+		567D5AFC256C3B5000F91645 /* HeightPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightPickerView.swift; sourceTree = "<group>"; };
+		567D5B01256C605C00F91645 /* PickerButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerButtonView.swift; sourceTree = "<group>"; };
 		569597FB255C158F0087575E /* DefaultButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultButtonView.swift; sourceTree = "<group>"; };
 		56959806255C41CC0087575E /* NumberInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberInputView.swift; sourceTree = "<group>"; };
 		5695980F255C5ADC0087575E /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
@@ -114,6 +122,8 @@
 		56AA38F5255B75D10049997E /* Vyb DatingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Vyb DatingUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		56AA38F9255B75D10049997E /* Vyb_DatingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vyb_DatingUITests.swift; sourceTree = "<group>"; };
 		56AA38FB255B75D10049997E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		56B69823256B290500281739 /* CharacterInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterInputView.swift; sourceTree = "<group>"; };
+		56B69867256BF57400281739 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		56C9388C255C88B200E94A98 /* LinkedInButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedInButtonView.swift; sourceTree = "<group>"; };
 		56C93892255CAE1E00E94A98 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		56C9389A255D6E4200E94A98 /* FullNameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullNameController.swift; sourceTree = "<group>"; };
@@ -211,6 +221,9 @@
 				5602F2B525696F9800B1B1D8 /* SearchBarView.swift */,
 				56A198172569B5D000CBBFC4 /* CustomView.swift */,
 				56A19864256AA97900CBBFC4 /* SettingsRowView.swift */,
+				56B69823256B290500281739 /* CharacterInputView.swift */,
+				567D5AFC256C3B5000F91645 /* HeightPickerView.swift */,
+				567D5B01256C605C00F91645 /* PickerButtonView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -294,6 +307,8 @@
 				569597FA255C14E00087575E /* Models */,
 				569597F9255C14B70087575E /* Views */,
 				569597F5255C14AA0087575E /* App */,
+				56B69867256BF57400281739 /* PersistenceController.swift */,
+				567D5AA5256C24B500F91645 /* VybDating.xcdatamodeld */,
 				56AA38E0255B75D00049997E /* Assets.xcassets */,
 				56AA38E5255B75D00049997E /* Info.plist */,
 				56AA38E2255B75D00049997E /* Preview Content */,
@@ -563,9 +578,11 @@
 				56C938D6255DA66C00E94A98 /* PickerInputView.swift in Sources */,
 				569597FC255C158F0087575E /* DefaultButtonView.swift in Sources */,
 				56C938CC255D997A00E94A98 /* String+Extension.swift in Sources */,
+				56B69824256B290500281739 /* CharacterInputView.swift in Sources */,
 				5602F29D25694CF600B1B1D8 /* CountryPickerView.swift in Sources */,
 				56A1981D2569CAA400CBBFC4 /* PreferenceController.swift in Sources */,
 				56A198182569B5D000CBBFC4 /* CustomView.swift in Sources */,
+				567D5AFD256C3B5000F91645 /* HeightPickerView.swift in Sources */,
 				56C938D1255DA30400E94A98 /* ProfileController.swift in Sources */,
 				56A198402569DBF100CBBFC4 /* Font+Extension.swift in Sources */,
 				5602F23125635A7600B1B1D8 /* ImagePicker.swift in Sources */,
@@ -576,12 +593,15 @@
 				56F422A4255E8BF000A1ABAC /* DateOfBirthController.swift in Sources */,
 				56A19860256A95E500CBBFC4 /* PreferenceSettingsControlller.swift in Sources */,
 				56959815255C5D3C0087575E /* GenericView+Extension.swift in Sources */,
+				56B69868256BF57400281739 /* PersistenceController.swift in Sources */,
+				567D5AA7256C24B500F91645 /* VybDating.xcdatamodeld in Sources */,
 				56C938BE255D81B800E94A98 /* Mics.swift in Sources */,
 				56959810255C5ADC0087575E /* Color+Extension.swift in Sources */,
 				56C9389B255D6E4200E94A98 /* FullNameController.swift in Sources */,
 				56F422B3255EABBF00A1ABAC /* VerificationCodeController.swift in Sources */,
 				56A19865256AA97900CBBFC4 /* SettingsRowView.swift in Sources */,
 				5602F2B625696F9800B1B1D8 /* SearchBarView.swift in Sources */,
+				567D5B02256C605C00F91645 /* PickerButtonView.swift in Sources */,
 				5695981A255C64260087575E /* LoginController.swift in Sources */,
 				56F422AE255EA86800A1ABAC /* ProfessionalDetailsController.swift in Sources */,
 				56C93893255CAE1E00E94A98 /* Constants.swift in Sources */,
@@ -906,6 +926,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		567D5AA5256C24B500F91645 /* VybDating.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				567D5AA6256C24B500F91645 /* VybDating.xcdatamodel */,
+			);
+			currentVersion = 567D5AA6256C24B500F91645 /* VybDating.xcdatamodel */;
+			path = VybDating.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 56AA38D1255B75CE0049997E /* Project object */;
 }

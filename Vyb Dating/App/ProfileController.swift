@@ -14,62 +14,21 @@ struct ProfileController: View {
     @State var showHeightPicker = false
     @State var alertMessage = "Something went wrong, Try again."
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    @State var feetSelected = 5
-    @State var inchSelected = 5
+  
     let bodyTypes = ["Ectomorphs","Endomorphs","Mesomorphs"]
+    @State var feetSelected = 5
+    @State var inchSelected = 2
+    @State var startPicker = false
     
-    //MARK: 
-    var heightPickerFeet: some View {
-        VStack(alignment: .center, spacing: nil) {
-            HStack(alignment: .center, spacing: 4 ) {
-                Text("Feet")
-                Spacer()
-                Text("Inch")
-            }
-            .padding()
-            .clipped()
-            HStack (alignment: .center, spacing: 4 ){
-                Picker(selection: $feetSelected, label: Text("Feet")) {
-                       ForEach(0..<10) {
-                         Text("\($0)")
-                            .multilineTextAlignment(.center)
-                            .foregroundColor(Color.primaryVybe)
-                            .padding()
-                            .clipped()
-                            .tag($0)
-                        }
-                }
-                .colorMultiply(Color.primaryVybe)
-                .labelsHidden()
-                .padding()
-                .clipped()
-                Spacer()
-                Picker(selection: $inchSelected, label: Text("Inch")) {
-                    ForEach(0..<10) {
-                        Text("\($0)")
-                            .multilineTextAlignment(.center)
-                            .foregroundColor(Color.primaryVybe)
-                            .padding()
-                            .clipped()
-                            .tag($0)
-                     }
-                }
-                .padding()
-                .labelsHidden()
-                .colorMultiply(Color.primaryVybe)
-                .clipped()
-            }
-            .padding()
-            .clipped()
-            Button("Dismiss") {
-                self.showHeightPicker = false
-                        }
-        }
+    var selectHeight: String  {
+        startPicker ? "\(feetSelected)'' \(inchSelected)'" : "Height"
     }
     
+
     //MARK: Body
     var body: some View {
          VStack(alignment: .leading, spacing: 4, content: {
+           
             Text("Profile")
                 .foregroundColor(.black)
                 .font(Font.robotoBold(size: 30))
@@ -80,34 +39,15 @@ struct ProfileController: View {
                 .padding(.bottom, 32)
             
             VStack(alignment: .leading, spacing: 16){
-                Button(action: {
-                    self.showHeightPicker = true
-                }, label: {
-                    HStack(spacing: 0) {
-                        Text("Height")
-                            .font(Font.robotoThin(size: 16))
-                            .foregroundColor(Color.black )
-                        Spacer()
-                        Image("DownArrow")
-                            .resizable()
-                            .imageScale(.small)
-                            .frame(width: 16, height: 16, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                            .scaledToFill()
-                            .clipped()
-                 
-                    }.padding(16)
-                }).foregroundColor(.black)
-                .background(RoundedRectangle(cornerRadius: 44)
-                                .stroke(Color.textFieldGrey, lineWidth: 0)
-                                .shadow(color: .black, radius: 2, x: 0, y: 2)
-                                .frame(width: .infinity, height: 44, alignment: .leading)
-                                .background(Color.textFieldGrey)
-                                .cornerRadius(44))
-                .cornerRadius(22)
-                .padding([.top, .bottom], 0)
-                .font(Font.system(size: 19, weight: .semibold))
-                .frame(width: .infinity, height: 44, alignment: .leading)
-                .clipped()
+                
+                //MARK: navigate to height picker screen
+                NavigationLink(destination: HeightPickerView(feetSelected: $feetSelected, inchSelected: $inchSelected), isActive: $showHeightPicker) {
+                    
+                    PickerButtonView(placeHolderText: "\(selectHeight)" ,action: {
+                        self.startPicker = true
+                        self.showHeightPicker = true
+                    })
+                }
                
                 PickerInputView(placeHolder: "Body Type", options: self.bodyTypes, selection: { selected in
                     print("SELECTED \(selected)")
@@ -120,10 +60,13 @@ struct ProfileController: View {
                 }.padding(.top, 64)
                 
             }
+            //: VSTACK
             Spacer()
-        }).padding([.leading,.trailing],32)
+        })
+         //VSTACK
+         .padding([.leading,.trailing],32)
          .navigationTitle("")
-         .navigationBarTitle(Text(""))
+         .navigationBarTitle(Text(""), displayMode: .inline)
          .navigationBarBackButtonHidden(true)
          .navigationBarItems(leading:
                      Button(action: {
@@ -133,12 +76,10 @@ struct ProfileController: View {
                      }
              ).alert(isPresented: $showAlert) { () -> Alert in
                  Alert(title: Text(Constants.displayName), message: Text("\(alertMessage)"))
-             }.sheet(isPresented: $showHeightPicker, content: {
-                self.heightPickerFeet
-             })
-      
-    }
+             }
+        }
 }
+
 
 struct ProfileController_Previews: PreviewProvider {
     static var previews: some View {

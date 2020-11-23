@@ -14,11 +14,14 @@ struct PreferenceController: View {
     @State var alertMessage = "Something went wrong, Try again."
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     let bodyTypes = ["Ectomorphs","Endomorphs","Mesomorphs"]
-    
+    @State var feetSelected = 5
+    @State var inchSelected = 5
+    @State var showHeightPicker = false
     
     //MARK: Body
     var body: some View {
-         VStack(alignment: .leading, spacing: 4, content: {
+         VStack (alignment: .leading, spacing: 4) {
+            
             Text("Preferences")
                 .foregroundColor(.black)
                 .font(Font.robotoBold(size: 30))
@@ -32,11 +35,15 @@ struct PreferenceController: View {
                 PickerInputView(placeHolder: "Age", options: self.bodyTypes, selection: { selected in
                     print("SELECTED \(selected)")
                 })
-                
-                PickerInputView(placeHolder: "Height", options: self.bodyTypes, selection: { selected in
-                    print("SELECTED \(selected)")
-                })
-                
+            
+                //MARK: navigate to the height picker screen
+                NavigationLink(destination: HeightPickerView(feetSelected: $feetSelected, inchSelected: $inchSelected), isActive: $showHeightPicker) {
+                    
+                    PickerButtonView(placeHolderText: "Height" ,action: {
+                        self.showHeightPicker = true
+                    })
+                }
+            
                 PickerInputView(placeHolder: "Education", options: self.bodyTypes, selection: { selected in
                     print("SELECTED \(selected)")
                 })
@@ -53,7 +60,9 @@ struct PreferenceController: View {
                 
             }
             Spacer()
-        }).padding([.leading,.trailing],32)
+        }
+         //VSTACK
+         .padding([.leading,.trailing],32)
          .navigationTitle("")
          .navigationBarTitle(Text(""))
          .navigationBarBackButtonHidden(true)

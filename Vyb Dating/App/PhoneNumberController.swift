@@ -37,7 +37,6 @@ struct PhoneNumberController: View {
                 //MARK: show next screen
                 NavigationLink(destination: VerificationCodeController( phoneNumber: "\(code)\(number)"), isActive: $showVerification) { EmptyView() }
                 Text("What's your number?")
-                    .foregroundColor(.black)
                     .font(Font.robotoBold(size: 30))
                     
                 Text("We dont share your information with anyone.")
@@ -82,6 +81,7 @@ struct PhoneNumberController: View {
                     )
             }//MESSAGE ALERT
          }//SCROLLVIEW END
+         .background(Color.vybBackground)
     }
 }
 

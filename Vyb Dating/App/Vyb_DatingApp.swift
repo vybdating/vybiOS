@@ -6,12 +6,19 @@
 //
 
 import SwiftUI
+import CoreData
 
 @main
 struct Vyb_DatingApp: App {
+    let persistenceController = PersistenceController.shared
+    
     var body: some Scene {
         WindowGroup {
-            LoginController()
+            LoginController().environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
+        
     }
+
+
 }
+

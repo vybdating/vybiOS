@@ -67,8 +67,6 @@ struct NumberInputView: View {
                 .padding([.top,.bottom],16)
                 .padding([.leading,.trailing],16)
                 .font(Font.robotoThin(size: 20))
-                .foregroundColor(Color.black)
-                .accentColor(Color.black)
                 .background(Color.clear)
         }.sheet(isPresented: $showCountryView) {
             CountryPickerView { (item) in
