@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,9 @@
 		567D5AA7256C24B500F91645 /* VybDating.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 567D5AA5256C24B500F91645 /* VybDating.xcdatamodeld */; };
 		567D5AFD256C3B5000F91645 /* HeightPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D5AFC256C3B5000F91645 /* HeightPickerView.swift */; };
 		567D5B02256C605C00F91645 /* PickerButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D5B01256C605C00F91645 /* PickerButtonView.swift */; };
+		567D5B12256D728600F91645 /* HomeTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D5B11256D728600F91645 /* HomeTabController.swift */; };
+		567D5B1A256D731D00F91645 /* VideoRoomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D5B19256D731D00F91645 /* VideoRoomController.swift */; };
+		567D5B23256D740900F91645 /* ChatMessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D5B22256D740900F91645 /* ChatMessageController.swift */; };
 		569597FC255C158F0087575E /* DefaultButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569597FB255C158F0087575E /* DefaultButtonView.swift */; };
 		56959807255C41CC0087575E /* NumberInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56959806255C41CC0087575E /* NumberInputView.swift */; };
 		56959810255C5ADC0087575E /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5695980F255C5ADC0087575E /* Color+Extension.swift */; };
@@ -87,6 +90,9 @@
 		567D5AA6256C24B500F91645 /* VybDating.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VybDating.xcdatamodel; sourceTree = "<group>"; };
 		567D5AFC256C3B5000F91645 /* HeightPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightPickerView.swift; sourceTree = "<group>"; };
 		567D5B01256C605C00F91645 /* PickerButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerButtonView.swift; sourceTree = "<group>"; };
+		567D5B11256D728600F91645 /* HomeTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabController.swift; sourceTree = "<group>"; };
+		567D5B19256D731D00F91645 /* VideoRoomController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRoomController.swift; sourceTree = "<group>"; };
+		567D5B22256D740900F91645 /* ChatMessageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageController.swift; sourceTree = "<group>"; };
 		569597FB255C158F0087575E /* DefaultButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultButtonView.swift; sourceTree = "<group>"; };
 		56959806255C41CC0087575E /* NumberInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberInputView.swift; sourceTree = "<group>"; };
 		5695980F255C5ADC0087575E /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
@@ -192,9 +198,36 @@
 			path = Shared;
 			sourceTree = "<group>";
 		};
+		567D5B10256D723000F91645 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				567D5B11256D728600F91645 /* HomeTabController.swift */,
+				567D5B19256D731D00F91645 /* VideoRoomController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		567D5B1E256D73CE00F91645 /* MessageChat */ = {
+			isa = PBXGroup;
+			children = (
+				567D5B22256D740900F91645 /* ChatMessageController.swift */,
+			);
+			path = MessageChat;
+			sourceTree = "<group>";
+		};
+		567D5B27256D744500F91645 /* Subscription */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Subscription;
+			sourceTree = "<group>";
+		};
 		569597F5255C14AA0087575E /* App */ = {
 			isa = PBXGroup;
 			children = (
+				567D5B27256D744500F91645 /* Subscription */,
+				567D5B1E256D73CE00F91645 /* MessageChat */,
+				567D5B10256D723000F91645 /* Home */,
 				56A19851256A710600CBBFC4 /* Settings */,
 				56AA38DC255B75CE0049997E /* Vyb_DatingApp.swift */,
 				56AA38DE255B75CE0049997E /* PhoneNumberController.swift */,
@@ -372,6 +405,7 @@
 				56AA38D5255B75CE0049997E /* Sources */,
 				56AA38D6255B75CE0049997E /* Frameworks */,
 				56AA38D7255B75CE0049997E /* Resources */,
+				AE6F2987965ADE2A6BA88B2D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -409,6 +443,7 @@
 				56AA38F1255B75D10049997E /* Sources */,
 				56AA38F2255B75D10049997E /* Frameworks */,
 				56AA38F3255B75D10049997E /* Resources */,
+				62930BC92A26A3C79A1A534E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -542,6 +577,40 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		62930BC92A26A3C79A1A534E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Vyb Dating-Vyb DatingUITests/Pods-Vyb Dating-Vyb DatingUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Vyb Dating-Vyb DatingUITests/Pods-Vyb Dating-Vyb DatingUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Vyb Dating-Vyb DatingUITests/Pods-Vyb Dating-Vyb DatingUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE6F2987965ADE2A6BA88B2D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Vyb Dating/Pods-Vyb Dating-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Vyb Dating/Pods-Vyb Dating-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Vyb Dating/Pods-Vyb Dating-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F269D4140C3645765A463E2B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -577,6 +646,7 @@
 				56AA38DF255B75CE0049997E /* PhoneNumberController.swift in Sources */,
 				56C938D6255DA66C00E94A98 /* PickerInputView.swift in Sources */,
 				569597FC255C158F0087575E /* DefaultButtonView.swift in Sources */,
+				567D5B23256D740900F91645 /* ChatMessageController.swift in Sources */,
 				56C938CC255D997A00E94A98 /* String+Extension.swift in Sources */,
 				56B69824256B290500281739 /* CharacterInputView.swift in Sources */,
 				5602F29D25694CF600B1B1D8 /* CountryPickerView.swift in Sources */,
@@ -599,7 +669,9 @@
 				56959810255C5ADC0087575E /* Color+Extension.swift in Sources */,
 				56C9389B255D6E4200E94A98 /* FullNameController.swift in Sources */,
 				56F422B3255EABBF00A1ABAC /* VerificationCodeController.swift in Sources */,
+				567D5B1A256D731D00F91645 /* VideoRoomController.swift in Sources */,
 				56A19865256AA97900CBBFC4 /* SettingsRowView.swift in Sources */,
+				567D5B12256D728600F91645 /* HomeTabController.swift in Sources */,
 				5602F2B625696F9800B1B1D8 /* SearchBarView.swift in Sources */,
 				567D5B02256C605C00F91645 /* PickerButtonView.swift in Sources */,
 				5695981A255C64260087575E /* LoginController.swift in Sources */,

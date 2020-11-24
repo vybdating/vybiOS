@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import Combine
+
 
 struct VerificationCodeController: View {
     //MARK: Properties
@@ -18,6 +20,9 @@ struct VerificationCodeController: View {
     @State var codeThree: String = ""
     @State var codeFour: String = ""
     @State var phoneNumber: String
+    let textLimit = 1 //Your limit
+    
+    
     
     private func verifyWithPhoneNumber(){
         let code: String = codeOne + codeTwo + codeThree + codeFour
@@ -42,9 +47,10 @@ struct VerificationCodeController: View {
                  .font(Font.robotoThin(size: 15))
                
             VStack(alignment: .center, spacing: 16) {
-                Text("\(phoneNumber)")
+                
+                Text("\(phoneNumber.formatNumber())")
                     .foregroundColor(Color.primaryVybe)
-                    .font(.title2)
+                    .font(Font.robotoBlack(size: 24))
                     .multilineTextAlignment(.center)
                     .padding([.top,.bottom], 16)
                     .clipped()
@@ -54,9 +60,10 @@ struct VerificationCodeController: View {
                     TextField("*", text: $codeOne)
                          .textContentType(.oneTimeCode)
                          .keyboardType(.numberPad)
-                         .padding(8)
-                         .font(.title3)
+                         .padding(16)
+                         .font(Font.robotoBlack(size: 20))
                          .multilineTextAlignment(.center)
+                         .onReceive(Just(codeOne)) { _ in limitText(textLimit) }
                          .foregroundColor(Color.black)
                          .accentColor(Color.black)
                          .background(RoundedRectangle(cornerRadius: 4).fill(Color.textFieldGrey))
@@ -66,8 +73,11 @@ struct VerificationCodeController: View {
                     TextField("*", text: $codeTwo)
                          .textContentType(.oneTimeCode)
                          .keyboardType(.numberPad)
-                         .padding(8)
-                         .font(.title3)
+                         .padding(16)
+                         .font(Font.robotoBlack(size: 20))
+                         .onChange(of: "Value", perform: { value in
+                            
+                         })
                          .multilineTextAlignment(.center)
                          .foregroundColor(Color.black)
                          .accentColor(Color.black)
@@ -78,8 +88,8 @@ struct VerificationCodeController: View {
                     TextField("*", text: $codeThree)
                          .textContentType(.oneTimeCode)
                          .keyboardType(.numberPad)
-                         .padding(8)
-                         .font(.title3)
+                         .padding(16)
+                         .font(Font.robotoBlack(size: 20))
                          .multilineTextAlignment(.center)
                          .foregroundColor(Color.black)
                          .accentColor(Color.black)
@@ -90,22 +100,22 @@ struct VerificationCodeController: View {
                     TextField("*", text: $codeFour)
                         .textContentType(.oneTimeCode)
                           .keyboardType(.numberPad)
-                          .padding(8)
-                          .font(.title3)
+                          .padding(16)
+                          .font(Font.robotoBlack(size: 20))
                           .multilineTextAlignment(.center)
                           .foregroundColor(Color.black)
                           .accentColor(Color.black)
                           .background(RoundedRectangle(cornerRadius: 4).fill(Color.textFieldGrey))
                     
                 }.padding([.top,.bottom], 16)
-                .frame(height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                .frame(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                 .clipped()
                 
-                ProgressView()
-                        .scaleEffect(1.5, anchor: .center)
-                    .progressViewStyle(CircularProgressViewStyle(tint: Color.vybGreen))
-                
-                
+//                ProgressView()
+//                        .scaleEffect(1.5, anchor: .center)
+//                    .progressViewStyle(CircularProgressViewStyle(tint: Color.vybGreen))
+//
+//
                   //: HSTACK
                     NavigationLink(destination:  FullNameController(), tag: NavigationPushedAction.phoneNumberVerificationAction, selection: $selection) {
                         DefaultButton(title: "Continue", action:{
@@ -130,16 +140,22 @@ struct VerificationCodeController: View {
                     }
             ).alert(isPresented: $showAlert) { () -> Alert in
                 Alert(title: Text(Constants.displayName), message: Text("\(alertMessage)"))
-            }.alert(isPresented: $showAlert) { () -> Alert in
-                Alert(title: Text(Constants.displayName), message: Text("\(alertMessage)"))
             }
     }
+    
+    //Function to keep text length in limits
+    func limitText(_ upper: Int) {
+        if codeOne.count > upper {
+            codeOne = String(codeOne.prefix(upper))
+        }
+    }
+    
 }
 
 #if DEBUG
 struct VerificationCodeController_Previews: PreviewProvider {
     static var previews: some View {
-        VerificationCodeController(phoneNumber: "+233")
+        VerificationCodeController(phoneNumber: "+233500294411")
     }
 }
 #endif

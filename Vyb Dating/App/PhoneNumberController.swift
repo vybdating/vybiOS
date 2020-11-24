@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import PhoneNumberKit
+
 
 
 struct PhoneNumberController: View {
@@ -18,24 +20,47 @@ struct PhoneNumberController: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State private var code : String = ""
     @State private var number : String = ""
+    let phoneNumberKit = PhoneNumberKit()
     
+    //MARK: number with code
+    var fullNumber: String {
+        "\(code)\(number)"
+    }
     
+    //MARK: message on the alert popup
+    var promptMessage: String {
+        !self.confirmNumberPrompt ? alertMessage : "\(confirmNumberMessage) \(self.code)\(self.number)"
+    }
+    
+    //MARK: action on the alert popup
+    var alertAction: String {
+        !self.confirmNumberPrompt ? "OK" : "PROCEED"
+    }
     
     //MARK: init the phone number action
     private func startCheckingNumber(){
-        if  number.isEmpty {
+        
+        print("No. \(fullNumber)")
+        
+        if  !phoneNumberKit.isValidPhoneNumber(fullNumber) {
+            self.confirmNumberPrompt = false
             self.showAlert = true
             return
         }
+        
+        //MARK: number valid proceed
         self.confirmNumberPrompt = true
+        self.showAlert = true
+       
     }
+    
+   
     
     //MARK:Body
     var body: some View {
          ScrollView {
             VStack(alignment: .leading, spacing: 4) {
-                //MARK: show next screen
-                NavigationLink(destination: VerificationCodeController( phoneNumber: "\(code)\(number)"), isActive: $showVerification) { EmptyView() }
+                
                 Text("What's your number?")
                     .font(Font.robotoBold(size: 30))
                     
@@ -44,11 +69,21 @@ struct PhoneNumberController: View {
                     .font(Font.robotoThin(size: 15))
                 
                 VStack (alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: 32) {
-                        NumberInputView(code: $code, number: $number)
-                            //NUMBER VIEW
+                   
+                    NumberInputView(code: $code, number: $number)
+                    //NUMBER VIEW
+                    
+                    //MARK: show next screen
+                    NavigationLink(destination: VerificationCodeController( phoneNumber: "\(code)\(number)"), isActive: $showVerification) {
+        
                         DefaultButton(title: "Get Started" ,action:{
                             self.startCheckingNumber()
-                        }).clipped().padding(.top, 0)
+                        })
+                        //: BUTTON
+                        .clipped()
+                        .padding(.top, 0)
+                    }
+                    
                 }.padding([.top],64)
                 //: VSTACK
                 Spacer()
@@ -65,18 +100,15 @@ struct PhoneNumberController: View {
             .navigationBarTitle("")
             .navigationBarTitle("", displayMode: .inline)
             .navigationBarBackButtonHidden(true)
-            //Error alert session start
+            //display alert message
             .alert(isPresented: $showAlert) { () -> Alert in
-                    Alert(title: Text(Constants.displayName), message: Text("\(alertMessage)"))
-                }
-            //Number confirmation prompt start
-            .alert(isPresented: $confirmNumberPrompt) { () -> Alert in
                     Alert(
                         title: Text(Constants.displayName),
-                        message: Text("\(confirmNumberMessage) \(self.code)\(self.number)"),
-                        dismissButton: .default(Text("PROCEED").foregroundColor( Color.primaryVybe), action: {
-                            self.showVerification = true
-                    
+                        message: Text("\(promptMessage)"),
+                        dismissButton: .default(Text(self.alertAction).foregroundColor( Color.primaryVybe), action: {
+                            if (self.confirmNumberPrompt){
+                                self.showVerification = true
+                            }
                         })
                     )
             }//MESSAGE ALERT

@@ -48,12 +48,35 @@ struct ProfilePictureContoller: View {
                                 .background(gradient)
                                 .cornerRadius(50)
                             
+                            ZStack{
+                                
+                                RoundedRectangle(cornerRadius: 15)
+                                    .stroke(Color.white, lineWidth: 4)
+                                    .shadow(color: .white, radius: 0, x: 0, y: 0)
+                                    .background(Color.primaryVybe)
+                                    .cornerRadius(15)
+                                    .frame(width: 40, height: 40, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                    .clipped()
+                                //: REC
+                                
+                                Image(systemName: "plus")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .imageScale(.small)
+                                    .foregroundColor(Color.white)
+                                    .frame(width: 20, height: 20, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                    .clipped()
+                                //: IMAGE
+                                    
+                            }.offset(x: 75, y: -30)
+                            //: ZSTACK
+                            
                             if (self.inputImage == nil){
                                  Image("UserProfile")
                                     .resizable()
+                                    .scaledToFill()
                                     .frame(width: 120, height: 120, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                                     .cornerRadius(50)
-                                    .scaledToFill()
                                     .clipped()
                             }
                             
@@ -61,9 +84,9 @@ struct ProfilePictureContoller: View {
                                  Image(uiImage: self.inputImage!)
                                     .resizable()
                                     .renderingMode(.original)
+                                    .scaledToFill()
                                     .frame(width: 120, height: 120, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                                     .cornerRadius(50)
-                                    .scaledToFill()
                                     .clipped()
                             }
                         }

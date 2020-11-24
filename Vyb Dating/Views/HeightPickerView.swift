@@ -14,7 +14,7 @@ struct HeightPickerView: View {
     @Binding var inchSelected: Int
     
     var selectHeight: String  {
-        "\(feetSelected)'' \(inchSelected)'"
+        "\(feetSelected)' \(inchSelected)''"
     }
     
     //MARK: BODY

@@ -16,17 +16,42 @@ struct ProfileSettingsController: View {
     
     //MARK: BODY
     var body: some View {
-        VStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: 0) {
+       
             Form {
-                VStack(alignment: .center, spacing: 0) {
+                VStack(alignment: .center, spacing: 4) {
+                    Spacer()
                     ZStack{
+                        
                         Image("Background")
                             .resizable()
+                            .scaledToFill()
                             .frame(width: 100, height: 100, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                            .scaledToFit()
                             .cornerRadius(100)
                             .imageScale(.large)
                             .clipped()
+                          
+                        ZStack{
+                            
+                            Circle()
+                                .foregroundColor(Color.vybGreen)
+                                .background(Color.vybGreen)
+                                .frame(width: 32, height: 32, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                .cornerRadius(32)
+                                .opacity(0.6)
+                                .clipped()
+                            //: CIRCLE
+                            
+                            Image(systemName: "camera")
+                                .resizable()
+                                .scaledToFit()
+                                .imageScale(.small)
+                                .foregroundColor(Color.white)
+                                .frame(width: 18, height: 18, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                .clipped()
+                            //: IMAGE
+                                
+                        }.offset(x: 50, y: 0)
+                        
                     }
                     //ZSTACK
                     Text(Constants.displayName)
@@ -35,9 +60,10 @@ struct ProfileSettingsController: View {
                         .padding([.top,.bottom], 8)
                 }
                 //: VSTACK
+                .listRowBackground(Color.textFieldGrey)
                 .frame(width: UIScreen.main.bounds.width - 48, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                .clipped()
                 .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                .clipped()
                 
                 Section {
                     SettingsRowView(title: "Location", value: "Accra", icon: "location.circle")
@@ -45,7 +71,6 @@ struct ProfileSettingsController: View {
                     SettingsRowView(title: "Religion", value: "Accra", icon: "person.circle")
                 }
                 //SECTION 1
-                .background(Color.clear)
                 .listRowBackground(Color.textFieldGrey)
                 .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 8))
                 .padding(2)
@@ -56,7 +81,6 @@ struct ProfileSettingsController: View {
                     SettingsRowView(title: "School", value: "Accra", icon: "house")
                 }
                 //SECTION 2
-                .background(Color.clear)
                 .listRowBackground(Color.textFieldGrey)
                 .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 8))
                 .padding(2)
@@ -67,7 +91,6 @@ struct ProfileSettingsController: View {
                     SettingsRowView(title: "Relationship Status", value: "Accra", icon: "checkmark.square")
                 }
                 //SECTION 3
-                .background(Color.clear)
                 .listRowBackground(Color.textFieldGrey)
                 .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 8))
                 .padding(2)
@@ -78,7 +101,6 @@ struct ProfileSettingsController: View {
                                 SettingsRowView(title: "Do you want children?", value: "Yes", icon: "person.and.person")
                 }
                 //SECTION 3
-                .background(Color.clear)
                 .listRowBackground(Color.textFieldGrey)
                 .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 8))
                 .padding(2)
@@ -88,13 +110,9 @@ struct ProfileSettingsController: View {
             .padding(0)
             .listStyle(GroupedListStyle())
             .environment(\.horizontalSizeClass, .regular)
-            .background(Color.clear)
+            .background(Color.vybBackground)
         }
-        //: VSATCK
-        .padding(0)
-        .background(Color.vybBackground)
         
-    }
 }
 
 struct ProfileSettingsController_Previews: PreviewProvider {

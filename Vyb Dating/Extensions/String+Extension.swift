@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PhoneNumberKit
 
 extension String {
     
@@ -17,5 +18,19 @@ extension String {
             s.unicodeScalars.append(UnicodeScalar(base + v.value)!)
         }
         return String(s)
+    }
+    
+    //MARK: number with code
+    func formatNumber() -> String  {
+        let phoneNumberKit = PhoneNumberKit()
+        do {
+            let parsedNumber = try phoneNumberKit.parse(self)
+            return phoneNumberKit.format(parsedNumber, toType: PhoneNumberFormat.international)
+        }
+        catch {
+            print("Generic parser error")
+        }
+        
+        return ""
     }
 }

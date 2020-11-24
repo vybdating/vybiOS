@@ -66,7 +66,7 @@ struct PreferenceSettingsControlller: View {
             .padding(0)
             .listStyle(GroupedListStyle())
             .environment(\.horizontalSizeClass, .regular)
-            .background(Color.clear)
+            .background(Color.vybBackground)
         }
         //: VSATCK
         .padding(0)
