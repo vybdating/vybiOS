@@ -21,24 +21,24 @@ struct PreferenceSettingsControlller: View {
             Form {
                
                 Section {
-                    SettingsRowView(title: "Age", value: "18 to 30", icon: "bandage")
-                    SettingsRowView(title: "Height", value: "Accra", icon: "square.and.line.vertical.and.square")
+                    SettingsRowView(title: "Age", value: "18 to 30", icon: "a")
+                    SettingsRowView(title: "Height", value: "Accra", icon: "square")
                 }
                 //SECTION 1
                 .background(Color.clear)
                 .listRowBackground(Color.textFieldGrey)
-                .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 8))
+                .listRowInsets(EdgeInsets(top: 0, leading: 8, bottom: 0, trailing: 8))
                 .padding(2)
                 
                 
                 Section {
-                    SettingsRowView(title: "Education", value: "18 to 30", icon: "house")
+                    SettingsRowView(title: "Education", value: "18 to 30", icon: "briefcase")
                     SettingsRowView(title: "Religion", value: "Accra", icon: "hand.thumbsup")
                 }
                 //SECTION 1
                 .background(Color.clear)
                 .listRowBackground(Color.textFieldGrey)
-                .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 8))
+                .listRowInsets(EdgeInsets(top: 0, leading: 8, bottom: 0, trailing: 8))
                 .padding(2)
                
                 Section {
@@ -49,16 +49,16 @@ struct PreferenceSettingsControlller: View {
                 //SECTION 2
                 .background(Color.clear)
                 .listRowBackground(Color.textFieldGrey)
-                .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 8))
+                .listRowInsets(EdgeInsets(top: 0, leading: 8, bottom: 0, trailing: 8))
                 .padding(2)
                
                 Section {
-                    SettingsRowView(title: "Distance", value: "Accra", icon: "location.north.line")
+                    SettingsRowView(title: "Distance", value: "Accra", icon: "mappin")
                 }
                 //SECTION 3
                 .background(Color.clear)
                 .listRowBackground(Color.textFieldGrey)
-                .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 8))
+                .listRowInsets(EdgeInsets(top: 0, leading: 8, bottom: 0, trailing: 8))
                 .padding(2)
                 
             }

@@ -16,7 +16,6 @@ struct ProfileSettingsController: View {
     
     //MARK: BODY
     var body: some View {
-       
             Form {
                 VStack(alignment: .center, spacing: 4) {
                     Spacer()
@@ -67,12 +66,12 @@ struct ProfileSettingsController: View {
                 
                 Section {
                     SettingsRowView(title: "Location", value: "Accra", icon: "location.circle")
-                    SettingsRowView(title: "Height", value: "Accra", icon: "chart.bar")
-                    SettingsRowView(title: "Religion", value: "Accra", icon: "person.circle")
+                    SettingsRowView(title: "Height", value: "Accra", icon: "square")
+                    SettingsRowView(title: "Religion", value: "Accra", icon: "hand.thumbsup")
                 }
                 //SECTION 1
                 .listRowBackground(Color.textFieldGrey)
-                .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 8))
+                .listRowInsets(EdgeInsets(top: 0, leading: 8, bottom: 0, trailing: 8))
                 .padding(2)
                 
                 Section {
@@ -82,7 +81,7 @@ struct ProfileSettingsController: View {
                 }
                 //SECTION 2
                 .listRowBackground(Color.textFieldGrey)
-                .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 8))
+                .listRowInsets(EdgeInsets(top: 0, leading: 8, bottom: 0, trailing: 8))
                 .padding(2)
                
                 Section {
@@ -92,19 +91,20 @@ struct ProfileSettingsController: View {
                 }
                 //SECTION 3
                 .listRowBackground(Color.textFieldGrey)
-                .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 8))
+                .listRowInsets(EdgeInsets(top: 0, leading: 8, bottom: 0, trailing: 8))
                 .padding(2)
                 
-                Section {
+                Section{
                     SettingsRowView(title: "Do you smoke?", value: "Accra", icon: "smoke")
-                    SettingsRowView(title: "Do you drink?", value: "Accra", icon: "waveform")
+                    SettingsRowView(title: "Do you drink?", value: "Accra", icon: "capsule")
                                 SettingsRowView(title: "Do you want children?", value: "Yes", icon: "person.and.person")
                 }
-                //SECTION 3
+                //SECTION 4
                 .listRowBackground(Color.textFieldGrey)
-                .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 8))
+                .listRowInsets(EdgeInsets(top: 0, leading: 8, bottom: 0, trailing: 8))
                 .padding(2)
- 
+                
+                
             }
             //: FORM
             .padding(0)
@@ -112,6 +112,8 @@ struct ProfileSettingsController: View {
             .environment(\.horizontalSizeClass, .regular)
             .background(Color.vybBackground)
         }
+        
+    
         
 }
 

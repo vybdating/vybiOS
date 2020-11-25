@@ -20,7 +20,7 @@ struct HomeTabController: View {
                     self.selectedTab = 0
                 }
                 .tabItem {
-                    Image(systemName: "list.dash")
+                    Image(systemName: "message.circle.fill")
                         .resizable()
                         .font(Font.robotoRegular(size: 16))
                         .clipped()
@@ -58,7 +58,6 @@ struct HomeTabController: View {
                 .tag(2)
             //: TAB SETTINGS
         }//: TABVEW
-//        .tabViewStyle(/*@START_MENU_TOKEN@*/DefaultTabViewStyle()/*@END_MENU_TOKEN@*/)
         .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
         .background(Color.vybBackground)
         .onAppear() {

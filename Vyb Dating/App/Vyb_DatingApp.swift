@@ -14,7 +14,7 @@ struct Vyb_DatingApp: App {
     
     var body: some Scene {
         WindowGroup {
-            HomeTabController().environment(\.managedObjectContext, persistenceController.container.viewContext)
+            LoginController().environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
         
     }

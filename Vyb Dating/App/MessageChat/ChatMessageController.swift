@@ -25,7 +25,7 @@ struct ChatMessageController: View {
         //: NAVIGATION VIEW
         .onAppear(){
             UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
-            UINavigationBar.appearance().shadowImage = UIImage()
+           // UINavigationBar.appearance().shadowImage = UIImage()
         }
     }
 }
