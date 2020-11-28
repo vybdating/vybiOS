@@ -15,7 +15,6 @@ struct ProfileController: View {
     @State var alertMessage = "Something went wrong, Try again."
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
   
-    let bodyTypes = ["Ectomorphs","Endomorphs","Mesomorphs"]
     @State var feetSelected = 5
     @State var inchSelected = 2
     @State var startPicker = false
@@ -49,7 +48,7 @@ struct ProfileController: View {
                     })
                 }
                
-                PickerInputView(placeHolder: "Body Type", options: self.bodyTypes, selection: { selected in
+                PickerInputView(placeHolder: "Body Type", options: ConstantOptions.bodyTypesOptions, selection: { selected in
                     print("SELECTED \(selected)")
                 })
                 

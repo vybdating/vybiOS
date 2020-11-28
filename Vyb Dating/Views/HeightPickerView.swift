@@ -32,7 +32,7 @@ struct HeightPickerView: View {
                         .font(Font.robotoBold(size: 16))
                         .multilineTextAlignment(.center)
                     Picker(selection: $feetSelected, label: Text("Feet").font(Font.robotoBold(size: 16))) {
-                           ForEach(0..<10) {
+                           ForEach(4..<7) {
                              Text("\($0)")
                                 .foregroundColor(Color.primaryVybe)
                                 .tag($0)
@@ -49,7 +49,7 @@ struct HeightPickerView: View {
                         .font(Font.robotoBold(size: 16))
                         .multilineTextAlignment(.center)
                     Picker(selection: $inchSelected, label: Text("Inch")) {
-                        ForEach(0..<10) {
+                        ForEach(0..<11) {
                             Text("\($0)")
                                 .foregroundColor(Color.primaryVybe)
                                 .tag($0)

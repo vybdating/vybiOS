@@ -18,6 +18,19 @@
 		567D5B12256D728600F91645 /* HomeTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D5B11256D728600F91645 /* HomeTabController.swift */; };
 		567D5B1A256D731D00F91645 /* VideoRoomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D5B19256D731D00F91645 /* VideoRoomController.swift */; };
 		567D5B23256D740900F91645 /* ChatMessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D5B22256D740900F91645 /* ChatMessageController.swift */; };
+		567D5B2C256E7D3F00F91645 /* RoomItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D5B2B256E7D3F00F91645 /* RoomItemView.swift */; };
+		567D5B31256E7DD500F91645 /* RoomItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D5B30256E7DD500F91645 /* RoomItem.swift */; };
+		567D5B36256E7F1B00F91645 /* RoomBottomActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D5B35256E7F1B00F91645 /* RoomBottomActionView.swift */; };
+		567D5B3C256ED6C000F91645 /* RoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D5B3B256ED6C000F91645 /* RoomViewModel.swift */; };
+		567D5B442572D39400F91645 /* ChatMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D5B432572D39400F91645 /* ChatMessageViewModel.swift */; };
+		567D5B492572D3D300F91645 /* ChatItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D5B482572D3D300F91645 /* ChatItem.swift */; };
+		567D5B4E2572D69000F91645 /* ChatItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D5B4D2572D69000F91645 /* ChatItemView.swift */; };
+		567D5B572572DC1F00F91645 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D5B562572DC1F00F91645 /* Date+Extension.swift */; };
+		567D5B5C2572DEE500F91645 /* SubscriptionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D5B5B2572DEE500F91645 /* SubscriptionsController.swift */; };
+		567D5B622572DF7E00F91645 /* SubcriptionItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D5B612572DF7E00F91645 /* SubcriptionItemView.swift */; };
+		567D5B6A2572E0AD00F91645 /* SubscriptionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D5B692572E0AD00F91645 /* SubscriptionItem.swift */; };
+		567D5B6F2572E19200F91645 /* SubscriptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D5B6E2572E19200F91645 /* SubscriptionViewModel.swift */; };
+		567D5B742572F1CB00F91645 /* RowModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D5B732572F1CB00F91645 /* RowModifier.swift */; };
 		569597FC255C158F0087575E /* DefaultButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569597FB255C158F0087575E /* DefaultButtonView.swift */; };
 		56959807255C41CC0087575E /* NumberInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56959806255C41CC0087575E /* NumberInputView.swift */; };
 		56959810255C5ADC0087575E /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5695980F255C5ADC0087575E /* Color+Extension.swift */; };
@@ -93,6 +106,19 @@
 		567D5B11256D728600F91645 /* HomeTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabController.swift; sourceTree = "<group>"; };
 		567D5B19256D731D00F91645 /* VideoRoomController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRoomController.swift; sourceTree = "<group>"; };
 		567D5B22256D740900F91645 /* ChatMessageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageController.swift; sourceTree = "<group>"; };
+		567D5B2B256E7D3F00F91645 /* RoomItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomItemView.swift; sourceTree = "<group>"; };
+		567D5B30256E7DD500F91645 /* RoomItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomItem.swift; sourceTree = "<group>"; };
+		567D5B35256E7F1B00F91645 /* RoomBottomActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomBottomActionView.swift; sourceTree = "<group>"; };
+		567D5B3B256ED6C000F91645 /* RoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewModel.swift; sourceTree = "<group>"; };
+		567D5B432572D39400F91645 /* ChatMessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageViewModel.swift; sourceTree = "<group>"; };
+		567D5B482572D3D300F91645 /* ChatItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatItem.swift; sourceTree = "<group>"; };
+		567D5B4D2572D69000F91645 /* ChatItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatItemView.swift; sourceTree = "<group>"; };
+		567D5B562572DC1F00F91645 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		567D5B5B2572DEE500F91645 /* SubscriptionsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionsController.swift; sourceTree = "<group>"; };
+		567D5B612572DF7E00F91645 /* SubcriptionItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubcriptionItemView.swift; sourceTree = "<group>"; };
+		567D5B692572E0AD00F91645 /* SubscriptionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionItem.swift; sourceTree = "<group>"; };
+		567D5B6E2572E19200F91645 /* SubscriptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionViewModel.swift; sourceTree = "<group>"; };
+		567D5B732572F1CB00F91645 /* RowModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowModifier.swift; sourceTree = "<group>"; };
 		569597FB255C158F0087575E /* DefaultButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultButtonView.swift; sourceTree = "<group>"; };
 		56959806255C41CC0087575E /* NumberInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberInputView.swift; sourceTree = "<group>"; };
 		5695980F255C5ADC0087575E /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
@@ -202,7 +228,6 @@
 			isa = PBXGroup;
 			children = (
 				567D5B11256D728600F91645 /* HomeTabController.swift */,
-				567D5B19256D731D00F91645 /* VideoRoomController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -218,13 +243,45 @@
 		567D5B27256D744500F91645 /* Subscription */ = {
 			isa = PBXGroup;
 			children = (
+				567D5B5B2572DEE500F91645 /* SubscriptionsController.swift */,
 			);
 			path = Subscription;
+			sourceTree = "<group>";
+		};
+		567D5B3A256ED62C00F91645 /* ViewMoodel */ = {
+			isa = PBXGroup;
+			children = (
+				567D5B3B256ED6C000F91645 /* RoomViewModel.swift */,
+				567D5B432572D39400F91645 /* ChatMessageViewModel.swift */,
+				567D5B6E2572E19200F91645 /* SubscriptionViewModel.swift */,
+			);
+			path = ViewMoodel;
+			sourceTree = "<group>";
+		};
+		567D5B522572D80800F91645 /* Room */ = {
+			isa = PBXGroup;
+			children = (
+				567D5B19256D731D00F91645 /* VideoRoomController.swift */,
+			);
+			path = Room;
+			sourceTree = "<group>";
+		};
+		567D5B602572DF2900F91645 /* RowItems */ = {
+			isa = PBXGroup;
+			children = (
+				56A19864256AA97900CBBFC4 /* SettingsRowView.swift */,
+				567D5B2B256E7D3F00F91645 /* RoomItemView.swift */,
+				567D5B4D2572D69000F91645 /* ChatItemView.swift */,
+				567D5B612572DF7E00F91645 /* SubcriptionItemView.swift */,
+				567D5B732572F1CB00F91645 /* RowModifier.swift */,
+			);
+			path = RowItems;
 			sourceTree = "<group>";
 		};
 		569597F5255C14AA0087575E /* App */ = {
 			isa = PBXGroup;
 			children = (
+				567D5B522572D80800F91645 /* Room */,
 				567D5B27256D744500F91645 /* Subscription */,
 				567D5B1E256D73CE00F91645 /* MessageChat */,
 				567D5B10256D723000F91645 /* Home */,
@@ -246,6 +303,7 @@
 		569597F9255C14B70087575E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				567D5B602572DF2900F91645 /* RowItems */,
 				5602F29C25694CF600B1B1D8 /* CountryPickerView.swift */,
 				569597FB255C158F0087575E /* DefaultButtonView.swift */,
 				56959806255C41CC0087575E /* NumberInputView.swift */,
@@ -253,10 +311,10 @@
 				56C938D5255DA66C00E94A98 /* PickerInputView.swift */,
 				5602F2B525696F9800B1B1D8 /* SearchBarView.swift */,
 				56A198172569B5D000CBBFC4 /* CustomView.swift */,
-				56A19864256AA97900CBBFC4 /* SettingsRowView.swift */,
 				56B69823256B290500281739 /* CharacterInputView.swift */,
 				567D5AFC256C3B5000F91645 /* HeightPickerView.swift */,
 				567D5B01256C605C00F91645 /* PickerButtonView.swift */,
+				567D5B35256E7F1B00F91645 /* RoomBottomActionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -265,6 +323,9 @@
 			isa = PBXGroup;
 			children = (
 				5602F2AD256952E400B1B1D8 /* CountryItem.swift */,
+				567D5B30256E7DD500F91645 /* RoomItem.swift */,
+				567D5B482572D3D300F91645 /* ChatItem.swift */,
+				567D5B692572E0AD00F91645 /* SubscriptionItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -276,6 +337,7 @@
 				56959814255C5D3C0087575E /* GenericView+Extension.swift */,
 				56C938CB255D997A00E94A98 /* String+Extension.swift */,
 				56A1983F2569DBF100CBBFC4 /* Font+Extension.swift */,
+				567D5B562572DC1F00F91645 /* Date+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -333,6 +395,7 @@
 		56AA38DB255B75CE0049997E /* Vyb Dating */ = {
 			isa = PBXGroup;
 			children = (
+				567D5B3A256ED62C00F91645 /* ViewMoodel */,
 				56A198242569D85600CBBFC4 /* Fonts */,
 				5602F22F25635A6300B1B1D8 /* Shared */,
 				56C93891255CAE0A00E94A98 /* Utils */,
@@ -640,20 +703,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				567D5B6F2572E19200F91645 /* SubscriptionViewModel.swift in Sources */,
 				56C9388D255C88B200E94A98 /* LinkedInButtonView.swift in Sources */,
 				56959807255C41CC0087575E /* NumberInputView.swift in Sources */,
 				5602F2AE256952E400B1B1D8 /* CountryItem.swift in Sources */,
 				56AA38DF255B75CE0049997E /* PhoneNumberController.swift in Sources */,
+				567D5B5C2572DEE500F91645 /* SubscriptionsController.swift in Sources */,
+				567D5B6A2572E0AD00F91645 /* SubscriptionItem.swift in Sources */,
+				567D5B3C256ED6C000F91645 /* RoomViewModel.swift in Sources */,
 				56C938D6255DA66C00E94A98 /* PickerInputView.swift in Sources */,
 				569597FC255C158F0087575E /* DefaultButtonView.swift in Sources */,
 				567D5B23256D740900F91645 /* ChatMessageController.swift in Sources */,
 				56C938CC255D997A00E94A98 /* String+Extension.swift in Sources */,
 				56B69824256B290500281739 /* CharacterInputView.swift in Sources */,
 				5602F29D25694CF600B1B1D8 /* CountryPickerView.swift in Sources */,
+				567D5B622572DF7E00F91645 /* SubcriptionItemView.swift in Sources */,
 				56A1981D2569CAA400CBBFC4 /* PreferenceController.swift in Sources */,
 				56A198182569B5D000CBBFC4 /* CustomView.swift in Sources */,
 				567D5AFD256C3B5000F91645 /* HeightPickerView.swift in Sources */,
 				56C938D1255DA30400E94A98 /* ProfileController.swift in Sources */,
+				567D5B2C256E7D3F00F91645 /* RoomItemView.swift in Sources */,
 				56A198402569DBF100CBBFC4 /* Font+Extension.swift in Sources */,
 				5602F23125635A7600B1B1D8 /* ImagePicker.swift in Sources */,
 				56F422A9255E960400A1ABAC /* ProfilePictureContoller.swift in Sources */,
@@ -661,20 +730,27 @@
 				56AA38DD255B75CE0049997E /* Vyb_DatingApp.swift in Sources */,
 				56A19856256A909000CBBFC4 /* MainSettingController.swift in Sources */,
 				56F422A4255E8BF000A1ABAC /* DateOfBirthController.swift in Sources */,
+				567D5B4E2572D69000F91645 /* ChatItemView.swift in Sources */,
 				56A19860256A95E500CBBFC4 /* PreferenceSettingsControlller.swift in Sources */,
+				567D5B492572D3D300F91645 /* ChatItem.swift in Sources */,
 				56959815255C5D3C0087575E /* GenericView+Extension.swift in Sources */,
 				56B69868256BF57400281739 /* PersistenceController.swift in Sources */,
 				567D5AA7256C24B500F91645 /* VybDating.xcdatamodeld in Sources */,
 				56C938BE255D81B800E94A98 /* Mics.swift in Sources */,
 				56959810255C5ADC0087575E /* Color+Extension.swift in Sources */,
 				56C9389B255D6E4200E94A98 /* FullNameController.swift in Sources */,
+				567D5B442572D39400F91645 /* ChatMessageViewModel.swift in Sources */,
 				56F422B3255EABBF00A1ABAC /* VerificationCodeController.swift in Sources */,
 				567D5B1A256D731D00F91645 /* VideoRoomController.swift in Sources */,
+				567D5B572572DC1F00F91645 /* Date+Extension.swift in Sources */,
 				56A19865256AA97900CBBFC4 /* SettingsRowView.swift in Sources */,
+				567D5B36256E7F1B00F91645 /* RoomBottomActionView.swift in Sources */,
 				567D5B12256D728600F91645 /* HomeTabController.swift in Sources */,
 				5602F2B625696F9800B1B1D8 /* SearchBarView.swift in Sources */,
 				567D5B02256C605C00F91645 /* PickerButtonView.swift in Sources */,
+				567D5B31256E7DD500F91645 /* RoomItem.swift in Sources */,
 				5695981A255C64260087575E /* LoginController.swift in Sources */,
+				567D5B742572F1CB00F91645 /* RowModifier.swift in Sources */,
 				56F422AE255EA86800A1ABAC /* ProfessionalDetailsController.swift in Sources */,
 				56C93893255CAE1E00E94A98 /* Constants.swift in Sources */,
 			);

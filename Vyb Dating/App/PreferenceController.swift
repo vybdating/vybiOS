@@ -13,7 +13,6 @@ struct PreferenceController: View {
     @State var showAlert = false
     @State var alertMessage = "Something went wrong, Try again."
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    let bodyTypes = ["Ectomorphs","Endomorphs","Mesomorphs"]
     @State var feetSelected = 5
     @State var inchSelected = 5
     @State var showHeightPicker = false
@@ -32,7 +31,7 @@ struct PreferenceController: View {
                 .padding(.bottom, 32)
             
             VStack(alignment: .leading, spacing: 16){
-                PickerInputView(placeHolder: "Age", options: self.bodyTypes, selection: { selected in
+                PickerInputView(placeHolder: "Age", options: ConstantOptions.bodyTypesOptions, selection: { selected in
                     print("SELECTED \(selected)")
                 })
             
@@ -44,11 +43,11 @@ struct PreferenceController: View {
                     })
                 }
             
-                PickerInputView(placeHolder: "Education", options: self.bodyTypes, selection: { selected in
+                PickerInputView(placeHolder: "Education", options: ConstantOptions.educationalOptions, selection: { selected in
                     print("SELECTED \(selected)")
                 })
                 
-                PickerInputView(placeHolder: "Ethnicity", options: self.bodyTypes, selection: { selected in
+                PickerInputView(placeHolder: "Ethnicity", options: ConstantOptions.raceOptions, selection: { selected in
                     print("SELECTED \(selected)")
                 })
                 

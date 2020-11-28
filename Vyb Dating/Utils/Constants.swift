@@ -36,3 +36,36 @@ enum NavigationPushedAction: Int {
     case phoneNumberVerificationAction
 }
 
+class ConstantOptions {
+    //MARK: all levels of education
+    static let educationalOptions = ["High School", "Some college","Associate degree","Bachelor’s degree","Graduate degree","PhD/ Post Doctorate"]
+
+    //MARK: all gender options
+    static let genderOptions = ["Male","Female","Transgender"]
+
+    //MARK: all race options
+    static let raceOptions = [ "White/ Caucasian", "Latino/Hispanic", "Black/African descent", "Asian", "Native American","East Indian","Pacific Islander","Middle Eastern","Asian other"]
+
+    //MARK: all body types
+    static let bodyTypesOptions = ["Slim/Slender","Athletic/Fit","Above Average","Muscular","Curvy","A few extra pounds","Big and beautiful","Heavyset"]
+
+    //MARK: all relatonship statuses
+    static let relationshipStatuses = ["Never married","Currently separated","Divorced","Widow/Widower"]
+
+    //MARK: all children statuses
+    static let childrenOptions = ["No","Definitely","Someday"]
+
+    //MARK: all smoking options
+    static let smokingOptions = ["No","Yes - occasionally","Yes - Daily","Yes - trying to quit"]
+
+    //MARK: all drink options
+    static let drinkOptions = ["Never","Social drinker","Moderately","Regularly"]
+
+    //MARK: religious options
+    static let religiousOptions = ["Neither religious not spiritual","Spiritual but not religious","Christian","Catholic","Hindu","Buddhist","Jewish","Muslim","Sikh","Shinto","Others"]
+}
+
+
+
+
+

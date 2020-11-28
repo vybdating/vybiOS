@@ -31,7 +31,7 @@ struct ProfilePictureContoller: View {
                .foregroundColor(.black)
                .font(Font.robotoBold(size: 30))
                
-           Text("This is will be your only picture on Vyb.\nChoose carefully.")
+           Text("This is will be your only picture on Vyb. Choose carefully.")
                .foregroundColor(.gray)
                .font(Font.robotoThin(size: 15))
                .padding(.bottom, 32)
@@ -49,7 +49,6 @@ struct ProfilePictureContoller: View {
                                 .cornerRadius(50)
                             
                             ZStack{
-                                
                                 RoundedRectangle(cornerRadius: 15)
                                     .stroke(Color.white, lineWidth: 4)
                                     .shadow(color: .white, radius: 0, x: 0, y: 0)

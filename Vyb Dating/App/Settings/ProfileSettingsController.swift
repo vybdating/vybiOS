@@ -12,6 +12,12 @@ struct ProfileSettingsController: View {
     
     init() {
         UITableView.appearance().backgroundColor = UIColor.vybBackground
+        UITableView.appearance().tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: Double.leastNonzeroMagnitude))
+       
+       UITableView.appearance().contentInset.top = 0
+       UITableView.appearance().contentInset.left = 0
+       UITableView.appearance().contentInset.right = 0
+       UITableView.appearance().contentInset.bottom = 0
     }
     
     //MARK: BODY

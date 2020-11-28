@@ -12,7 +12,7 @@ struct DateOfBirthController: View {
     @State var pickerDate: Date = Calendar.current.date(byAdding: .year, value: -18, to: Date()) ?? Date()
     @State var selection: NavigationPushedAction? = nil
     @State var showAlert = false
-    @State var alertMessage = "Something went wrong, Ttry again."
+    @State var alertMessage = "Something went wrong, Try again."
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     //MARK: format the date
@@ -24,8 +24,8 @@ struct DateOfBirthController: View {
     
     //MARK: selectable date range, start now less 100 years and end now less 10 years
     var dateClosedRange: ClosedRange<Date> {
-        let min = Calendar.current.date(byAdding: .year, value: -100, to: Date())!
-        let max = Calendar.current.date(byAdding: .year, value: -10, to: Date())!
+        let min = Calendar.current.date(byAdding: .year, value: -65, to: Date())!
+        let max = Calendar.current.date(byAdding: .year, value: -17, to: Date())!
         return min...max
     }
     

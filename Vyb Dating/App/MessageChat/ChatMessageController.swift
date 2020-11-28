@@ -8,25 +8,38 @@
 import SwiftUI
 
 struct ChatMessageController: View {
+    
+    //MARK: PROPERTIES
+    @ObservedObject var viewModel = ChatMessageViewModel()
+   
+    init() {
+           UITableView.appearance().tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: Double.leastNonzeroMagnitude))
+          
+          // UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+       }
+    
+    //MARK: BODY
     var body: some View {
         NavigationView {
             VStack {
-                Text("Hello, World! Chat")
+                List(viewModel.chats, id: \.id) { item in
+                    ChatItemView(chatItem: item)
+                        .modifier(RowModifier())
+                        .animation(.linear(duration: 0.3))
+                }
+                //: LIST
+                .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                .lineSpacing(8.0)
+                .padding(.leading, -16)
+                .padding(.trailing, -16)
                     
             }
             //: VSTACK
             .background(Color.vybBackground)
-            .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-            .padding([.leading,.trailing],8)
-            .padding([.top,],10)
-            .navigationTitle(Text("Dates"))
-            .navigationBarTitle(Text("Dates"), displayMode: .inline)
+            .navigationTitle(Text("My Dates"))
+            .navigationBarTitle(Text("My Dates"), displayMode: .inline)
         }
         //: NAVIGATION VIEW
-        .onAppear(){
-            UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
-           // UINavigationBar.appearance().shadowImage = UIImage()
-        }
     }
 }
 

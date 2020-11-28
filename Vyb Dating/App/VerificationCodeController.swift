@@ -66,7 +66,7 @@ struct VerificationCodeController: View {
                          .onReceive(Just(codeOne)) { _ in limitText(textLimit) }
                          .foregroundColor(Color.black)
                          .accentColor(Color.black)
-                         .background(RoundedRectangle(cornerRadius: 4).fill(Color.textFieldGrey))
+                         .background(RoundedRectangle(cornerRadius: 8).fill(Color.textFieldGrey))
                     
                     Spacer()
                     
@@ -75,13 +75,10 @@ struct VerificationCodeController: View {
                          .keyboardType(.numberPad)
                          .padding(16)
                          .font(Font.robotoBlack(size: 20))
-                         .onChange(of: "Value", perform: { value in
-                            
-                         })
                          .multilineTextAlignment(.center)
                          .foregroundColor(Color.black)
                          .accentColor(Color.black)
-                         .background(RoundedRectangle(cornerRadius: 4).fill(Color.textFieldGrey))
+                         .background(RoundedRectangle(cornerRadius: 8).fill(Color.textFieldGrey))
                     
                     Spacer()
                     
@@ -93,7 +90,7 @@ struct VerificationCodeController: View {
                          .multilineTextAlignment(.center)
                          .foregroundColor(Color.black)
                          .accentColor(Color.black)
-                         .background(RoundedRectangle(cornerRadius: 4).fill(Color.textFieldGrey))
+                         .background(RoundedRectangle(cornerRadius: 8).fill(Color.textFieldGrey))
                     
                     Spacer()
                     
@@ -105,7 +102,7 @@ struct VerificationCodeController: View {
                           .multilineTextAlignment(.center)
                           .foregroundColor(Color.black)
                           .accentColor(Color.black)
-                          .background(RoundedRectangle(cornerRadius: 4).fill(Color.textFieldGrey))
+                          .background(RoundedRectangle(cornerRadius: 8).fill(Color.textFieldGrey))
                     
                 }.padding([.top,.bottom], 16)
                 .frame(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
@@ -143,6 +140,7 @@ struct VerificationCodeController: View {
             }
     }
     
+    //0821069039
     //Function to keep text length in limits
     func limitText(_ upper: Int) {
         if codeOne.count > upper {

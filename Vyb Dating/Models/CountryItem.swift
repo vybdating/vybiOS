@@ -8,9 +8,17 @@
 import SwiftUI
 
 
-struct CountryItem: Hashable,Identifiable {
+struct CountryItem: Identifiable {
     var id: String
     var name: String
     var code: String
     var imageName: String
+}
+
+extension CountryItem {
+
+
+    func dummyCountr() -> Self {
+        return CountryItem(id: "233", name: "Ghana", code: "233", imageName: "GH")
+    }
 }
