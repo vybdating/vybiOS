@@ -31,6 +31,13 @@
 		567D5B6A2572E0AD00F91645 /* SubscriptionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D5B692572E0AD00F91645 /* SubscriptionItem.swift */; };
 		567D5B6F2572E19200F91645 /* SubscriptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D5B6E2572E19200F91645 /* SubscriptionViewModel.swift */; };
 		567D5B742572F1CB00F91645 /* RowModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D5B732572F1CB00F91645 /* RowModifier.swift */; };
+		567D5B792572F72D00F91645 /* LinkedInLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D5B782572F72D00F91645 /* LinkedInLoginController.swift */; };
+		567D5B7E2572FA9400F91645 /* LinkedInEmailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D5B7D2572FA9400F91645 /* LinkedInEmailModel.swift */; };
+		567D5B832572FAAD00F91645 /* LinkedInProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D5B822572FAAD00F91645 /* LinkedInProfileModel.swift */; };
+		567D5B882572FC3900F91645 /* LinkedInLoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D5B872572FC3900F91645 /* LinkedInLoginPresenter.swift */; };
+		567D5B8D257315F100F91645 /* LinkedInData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D5B8C257315F100F91645 /* LinkedInData.swift */; };
+		567D5B962573A0CB00F91645 /* GenderSelectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D5B952573A0CB00F91645 /* GenderSelectionController.swift */; };
+		567D5B9B2573C71E00F91645 /* SegmentedControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D5B9A2573C71E00F91645 /* SegmentedControlView.swift */; };
 		569597FC255C158F0087575E /* DefaultButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569597FB255C158F0087575E /* DefaultButtonView.swift */; };
 		56959807255C41CC0087575E /* NumberInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56959806255C41CC0087575E /* NumberInputView.swift */; };
 		56959810255C5ADC0087575E /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5695980F255C5ADC0087575E /* Color+Extension.swift */; };
@@ -119,6 +126,13 @@
 		567D5B692572E0AD00F91645 /* SubscriptionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionItem.swift; sourceTree = "<group>"; };
 		567D5B6E2572E19200F91645 /* SubscriptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionViewModel.swift; sourceTree = "<group>"; };
 		567D5B732572F1CB00F91645 /* RowModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowModifier.swift; sourceTree = "<group>"; };
+		567D5B782572F72D00F91645 /* LinkedInLoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedInLoginController.swift; sourceTree = "<group>"; };
+		567D5B7D2572FA9400F91645 /* LinkedInEmailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedInEmailModel.swift; sourceTree = "<group>"; };
+		567D5B822572FAAD00F91645 /* LinkedInProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedInProfileModel.swift; sourceTree = "<group>"; };
+		567D5B872572FC3900F91645 /* LinkedInLoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedInLoginPresenter.swift; sourceTree = "<group>"; };
+		567D5B8C257315F100F91645 /* LinkedInData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedInData.swift; sourceTree = "<group>"; };
+		567D5B952573A0CB00F91645 /* GenderSelectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderSelectionController.swift; sourceTree = "<group>"; };
+		567D5B9A2573C71E00F91645 /* SegmentedControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlView.swift; sourceTree = "<group>"; };
 		569597FB255C158F0087575E /* DefaultButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultButtonView.swift; sourceTree = "<group>"; };
 		56959806255C41CC0087575E /* NumberInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberInputView.swift; sourceTree = "<group>"; };
 		5695980F255C5ADC0087575E /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
@@ -278,9 +292,18 @@
 			path = RowItems;
 			sourceTree = "<group>";
 		};
+		567D5B912573168A00F91645 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				567D5B782572F72D00F91645 /* LinkedInLoginController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		569597F5255C14AA0087575E /* App */ = {
 			isa = PBXGroup;
 			children = (
+				567D5B912573168A00F91645 /* ViewController */,
 				567D5B522572D80800F91645 /* Room */,
 				567D5B27256D744500F91645 /* Subscription */,
 				567D5B1E256D73CE00F91645 /* MessageChat */,
@@ -296,6 +319,8 @@
 				56F422AD255EA86800A1ABAC /* ProfessionalDetailsController.swift */,
 				56F422B2255EABBF00A1ABAC /* VerificationCodeController.swift */,
 				56A1981C2569CAA400CBBFC4 /* PreferenceController.swift */,
+				567D5B872572FC3900F91645 /* LinkedInLoginPresenter.swift */,
+				567D5B952573A0CB00F91645 /* GenderSelectionController.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -315,6 +340,7 @@
 				567D5AFC256C3B5000F91645 /* HeightPickerView.swift */,
 				567D5B01256C605C00F91645 /* PickerButtonView.swift */,
 				567D5B35256E7F1B00F91645 /* RoomBottomActionView.swift */,
+				567D5B9A2573C71E00F91645 /* SegmentedControlView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -326,6 +352,9 @@
 				567D5B30256E7DD500F91645 /* RoomItem.swift */,
 				567D5B482572D3D300F91645 /* ChatItem.swift */,
 				567D5B692572E0AD00F91645 /* SubscriptionItem.swift */,
+				567D5B7D2572FA9400F91645 /* LinkedInEmailModel.swift */,
+				567D5B822572FAAD00F91645 /* LinkedInProfileModel.swift */,
+				567D5B8C257315F100F91645 /* LinkedInData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -711,13 +740,17 @@
 				567D5B5C2572DEE500F91645 /* SubscriptionsController.swift in Sources */,
 				567D5B6A2572E0AD00F91645 /* SubscriptionItem.swift in Sources */,
 				567D5B3C256ED6C000F91645 /* RoomViewModel.swift in Sources */,
+				567D5B882572FC3900F91645 /* LinkedInLoginPresenter.swift in Sources */,
+				567D5B962573A0CB00F91645 /* GenderSelectionController.swift in Sources */,
 				56C938D6255DA66C00E94A98 /* PickerInputView.swift in Sources */,
 				569597FC255C158F0087575E /* DefaultButtonView.swift in Sources */,
 				567D5B23256D740900F91645 /* ChatMessageController.swift in Sources */,
 				56C938CC255D997A00E94A98 /* String+Extension.swift in Sources */,
 				56B69824256B290500281739 /* CharacterInputView.swift in Sources */,
 				5602F29D25694CF600B1B1D8 /* CountryPickerView.swift in Sources */,
+				567D5B9B2573C71E00F91645 /* SegmentedControlView.swift in Sources */,
 				567D5B622572DF7E00F91645 /* SubcriptionItemView.swift in Sources */,
+				567D5B832572FAAD00F91645 /* LinkedInProfileModel.swift in Sources */,
 				56A1981D2569CAA400CBBFC4 /* PreferenceController.swift in Sources */,
 				56A198182569B5D000CBBFC4 /* CustomView.swift in Sources */,
 				567D5AFD256C3B5000F91645 /* HeightPickerView.swift in Sources */,
@@ -732,6 +765,7 @@
 				56F422A4255E8BF000A1ABAC /* DateOfBirthController.swift in Sources */,
 				567D5B4E2572D69000F91645 /* ChatItemView.swift in Sources */,
 				56A19860256A95E500CBBFC4 /* PreferenceSettingsControlller.swift in Sources */,
+				567D5B8D257315F100F91645 /* LinkedInData.swift in Sources */,
 				567D5B492572D3D300F91645 /* ChatItem.swift in Sources */,
 				56959815255C5D3C0087575E /* GenericView+Extension.swift in Sources */,
 				56B69868256BF57400281739 /* PersistenceController.swift in Sources */,
@@ -748,6 +782,8 @@
 				567D5B12256D728600F91645 /* HomeTabController.swift in Sources */,
 				5602F2B625696F9800B1B1D8 /* SearchBarView.swift in Sources */,
 				567D5B02256C605C00F91645 /* PickerButtonView.swift in Sources */,
+				567D5B792572F72D00F91645 /* LinkedInLoginController.swift in Sources */,
+				567D5B7E2572FA9400F91645 /* LinkedInEmailModel.swift in Sources */,
 				567D5B31256E7DD500F91645 /* RoomItem.swift in Sources */,
 				5695981A255C64260087575E /* LoginController.swift in Sources */,
 				567D5B742572F1CB00F91645 /* RowModifier.swift in Sources */,

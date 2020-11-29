@@ -34,6 +34,12 @@ enum NavigationPushedAction: Int {
     case phoneNumberAction
     case linkedInAction
     case phoneNumberVerificationAction
+    case genderAction
+    case fullNameAction
+    case profilePicAction
+    case professionalAction
+    case preferenceAction
+    case dateOfBirthAction
 }
 
 class ConstantOptions {
@@ -66,6 +72,16 @@ class ConstantOptions {
 }
 
 
+struct LinkedInConstants {
+    
+    static let CLIENT_ID = "MY_CLIENT_ID"
+    static let CLIENT_SECRET = "MY_CLIENT_SECRET"
+    static let REDIRECT_URI = "MY_REDIRECT_URI"
+    static let SCOPE = "r_liteprofile%20r_emailaddress" //Get lite profile info and e-mail address
+    
+    static let AUTHURL = "https://www.linkedin.com/oauth/v2/authorization"
+    static let TOKENURL = "https://www.linkedin.com/oauth/v2/accessToken"
+}
 
 
 

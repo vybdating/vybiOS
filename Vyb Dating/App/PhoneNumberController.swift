@@ -64,7 +64,7 @@ struct PhoneNumberController: View {
                 Text("What's your number?")
                     .font(Font.robotoBold(size: 30))
                     
-                Text("We dont share your information with anyone.")
+                Text("We don’t share your number with anyone.")
                     .foregroundColor(.gray)
                     .font(Font.robotoThin(size: 15))
                 

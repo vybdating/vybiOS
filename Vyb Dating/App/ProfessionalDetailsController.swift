@@ -23,7 +23,7 @@ struct ProfessionalDetailsController: View {
                     .foregroundColor(.black)
                     .font(Font.robotoBold(size: 30))
             
-              Text("With your professional details, we can easily match you with the right person.")
+              Text("Enter your job title and the school that you attended.")
                  .foregroundColor(.gray)
                  .font(Font.robotoThin(size: 15))
                  .padding(.bottom, 32)

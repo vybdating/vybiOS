@@ -28,11 +28,11 @@ struct ProfileController: View {
     var body: some View {
          VStack(alignment: .leading, spacing: 4, content: {
            
-            Text("Profile")
+            Text("About me")
                 .foregroundColor(.black)
                 .font(Font.robotoBold(size: 30))
                 
-            Text("we dont share your information with anyone.")
+            Text("Choose your height, body type and race.")
                 .foregroundColor(.gray)
                 .font(Font.robotoThin(size: 15))
                 .padding(.bottom, 32)
@@ -49,6 +49,10 @@ struct ProfileController: View {
                 }
                
                 PickerInputView(placeHolder: "Body Type", options: ConstantOptions.bodyTypesOptions, selection: { selected in
+                    print("SELECTED \(selected)")
+                })
+                
+                PickerInputView(placeHolder: "Race", options: ConstantOptions.raceOptions, selection: { selected in
                     print("SELECTED \(selected)")
                 })
                 

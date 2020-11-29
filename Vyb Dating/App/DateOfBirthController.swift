@@ -36,7 +36,7 @@ struct DateOfBirthController: View {
                   .foregroundColor(.black)
                   .font(Font.robotoBold(size: 30))
             
-            Text("Your date of birth will really help.")
+            Text("You must be at least 17 years to register on vyb.")
                 .foregroundColor(.gray)
                 .font(Font.robotoThin(size: 15))
                 .padding(.bottom, 32)

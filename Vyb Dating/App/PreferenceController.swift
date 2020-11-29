@@ -13,7 +13,7 @@ struct PreferenceController: View {
     @State var showAlert = false
     @State var alertMessage = "Something went wrong, Try again."
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    @State var feetSelected = 5
+    @State var feetSelected = 4
     @State var inchSelected = 5
     @State var showHeightPicker = false
     
@@ -21,11 +21,11 @@ struct PreferenceController: View {
     var body: some View {
          VStack (alignment: .leading, spacing: 4) {
             
-            Text("Preferences")
+            Text("My Preferences")
                 .foregroundColor(.black)
                 .font(Font.robotoBold(size: 30))
                 
-            Text("Vyb will match you to date based on your preferences.")
+            Text("Vyb matches you to dates that meet your preferences.")
                 .foregroundColor(.gray)
                 .font(Font.robotoThin(size: 15))
                 .padding(.bottom, 32)

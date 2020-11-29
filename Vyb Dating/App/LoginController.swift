@@ -11,6 +11,8 @@ struct LoginController: View {
     //MARK: Properties
     @State var selection: NavigationPushedAction? = nil
     @Environment(\.openURL) var openURL
+    @State var showingLinkedLoogin = false
+    @State private var linkedInData: LinkedInData?
     
     
     init() {
@@ -71,11 +73,11 @@ struct LoginController: View {
                         }).clipped()
                     }
                     
-                    NavigationLink(destination:  EmptyView(), tag: NavigationPushedAction.linkedInAction, selection: $selection) {
-                        LinkedInButtonView(action:{
-                            self.selection = NavigationPushedAction.linkedInAction
-                        }).clipped()
-                    }
+                    LinkedInButtonView(action:{
+                        self.selection = NavigationPushedAction.linkedInAction
+                        self.showingLinkedLoogin = true
+                    }).clipped()
+                    
                 }//: VSTACK
                 
                 Text("We do not post on your page")
@@ -109,11 +111,15 @@ struct LoginController: View {
                 .padding(.bottom, 64)
                 
             }.padding(32)
+            
          }
          .navigationTitle("")
          .navigationBarTitle("")
          .navigationBarBackButtonHidden(true)
-        }
+         .sheet(isPresented: $showingLinkedLoogin) {
+            LinkedInLoginPresenter(linkedInData: $linkedInData)
+         }
+      }
     }
 }
 

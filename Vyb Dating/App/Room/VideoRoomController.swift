@@ -38,6 +38,15 @@ struct VideoRoomController: View {
             .background(Color.vybBackground)
             .navigationTitle(Text("Room"))
             .navigationBarTitle(Text("Room"), displayMode: .inline)
+            .navigationBarItems(trailing:
+                        Button(action: {
+                           print("Sahring action")
+                        }) {
+                            Image(systemName: "person.crop.circle.badge.plus")
+                                .foregroundColor(Color.primaryVybe)
+                                .font(.system(size: 24, weight: .semibold, design: .rounded))
+                        }
+                )
             
         }
         //: NAVIGATION VIEW

@@ -28,7 +28,7 @@ struct FullNameController: View {
                         .foregroundColor(.black)
                         .font(Font.robotoBold(size: 30))
                       
-                Text("People identify you by these details.\nMake it cont")
+                Text("We don’t share your last name on your profile.")
                     .foregroundColor(.gray)
                     .font(Font.robotoThin(size: 15))
                     .padding(.bottom, 32)
